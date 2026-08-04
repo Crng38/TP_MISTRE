@@ -1,0 +1,7 @@
+Running: xsim.dir/tst_FIR5_time_synth/xsimk.exe -simmode gui -wdb tst_FIR5_time_synth.wdb -simrunnum 0 -socket 63334
+Design successfully loaded
+Design Loading Memory Usage: 14496 KB (Peak: 14496 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 16844 KB (Peak: 16844 KB)
+Simulation CPU Usage: 171 ms

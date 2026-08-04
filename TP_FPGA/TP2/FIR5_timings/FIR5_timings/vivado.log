@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jul 29 12:30:36 2026
+# Process ID: 3020
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28956 C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_timings\FIR5_timings\FIR5_timings.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/FIR5_timings.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Thomas/OneDrive/Cours/M1/S7/SEA/TP_FPGA/TP2/FIR5_timings/FIR5_timings' since last save.
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionXsim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionModelSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionQuesta
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionXcelium
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionVCS
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionRiviera
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorVersionActiveHdl
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionXsim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionModelSim
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionQuesta
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionXcelium
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionVCS
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionRiviera
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimulatorGccVersionActiveHdl
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name EnableResourceEstimation
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name SimCompileState
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name UseInlineHdlIP
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name LocalIPRepoLeafDirName
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+ERROR: [Project 1-208] No val for DA Elab Attr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'dsp_mult16' is locked:
+* Project containing IP 'dsp_mult16' is read-only.
+WARNING: [Project 1-231] Project 'FIR5_timings.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1082.883 ; gain = 0.000
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+update_compile_order -fileset sources_1
+save_project_as FIR5_timings_vivado_2020_2 C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2 -force
+import_files
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'dsp_mult16'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'dsp_mult16'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: FIR5
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.266 ; gain = 239.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FIR5' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:24]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult0' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult1' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:64]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult2' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:70]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult3' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:76]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult4' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'FIR5' (1#1) [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1671.285 ; gain = 316.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1671.285 ; gain = 316.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1671.285 ; gain = 316.645
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.gen/sources_1/ip/dsp_mult16/dsp_mult16.dcp' for cell 'Mult0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1671.285 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1711.723 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1867.965 ; gain = 513.324
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1867.973 ; gain = 785.090
+launch_runs synth_1 -jobs 28
+[Wed Jul 29 17:41:22 2026] Launched dsp_mult16_synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.runs/dsp_mult16_synth_1/runme.log
+[Wed Jul 29 17:41:22 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.gen/sources_1/ip/dsp_mult16/dsp_mult16.dcp' for cell 'Mult0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1955.172 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1955.172 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_simulation -mode post-synthesis -type timing
+Command: launch_simulation -mode post-synthesis -type timing
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-synthesis timing simulation in 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead.
+INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
+INFO: [SIM-utils-25] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim/tst_FIR5_time_synth.v"
+INFO: [SIM-utils-27] Writing SDF file...
+INFO: [SIM-utils-28] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim/tst_FIR5_time_synth.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim/tst_FIR5_time_synth.v
+INFO: [SIM-utils-37] SDF generated:C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim/tst_FIR5_time_synth.sdf
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tst_FIR5' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim'
+"xvlog --incr --relax -prj tst_FIR5_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim/tst_FIR5_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR5
+INFO: [VRFC 10-311] analyzing module dsp_mult16
+INFO: [VRFC 10-311] analyzing module dsp_mult16_HD29
+INFO: [VRFC 10-311] analyzing module dsp_mult16_HD34
+INFO: [VRFC 10-311] analyzing module dsp_mult16_HD39
+INFO: [VRFC 10-311] analyzing module dsp_mult16_HD44
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_HD30
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_HD35
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_HD40
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_HD45
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_synth
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_synth_HD32
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_synth_HD37
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_synth_HD42
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_synth_HD47
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_viv
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_viv_HD31
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_viv_HD36
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_viv_HD41
+INFO: [VRFC 10-311] analyzing module dsp_mult16_dsp_macro_v1_0_1_viv_HD46
+INFO: [VRFC 10-311] analyzing module dsp_mult16_xbip_dsp48e1_wrapper_v3_0
+INFO: [VRFC 10-311] analyzing module dsp_mult16_xbip_dsp48e1_wrapper_v3_0_HD33
+INFO: [VRFC 10-311] analyzing module dsp_mult16_xbip_dsp48e1_wrapper_v3_0_HD38
+INFO: [VRFC 10-311] analyzing module dsp_mult16_xbip_dsp48e1_wrapper_v3_0_HD43
+INFO: [VRFC 10-311] analyzing module dsp_mult16_xbip_dsp48e1_wrapper_v3_0_HD48
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj tst_FIR5_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tst_FIR5'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim'
+"xelab -wto ec7d2ab17a264b10bcf7ee4e7f07da05 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tst_FIR5_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tst_FIR5 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ec7d2ab17a264b10bcf7ee4e7f07da05 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tst_FIR5_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tst_FIR5 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "tst_FIR5_time_synth.sdf", for root module "tst_FIR5/UUT".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "tst_FIR5_time_synth.sdf", for root module "tst_FIR5/UUT".
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module simprims_ver.GND
+Compiling module simprims_ver.DSP48E1(ACASCREG=0,ADREG=0,ALUMO...
+Compiling module xil_defaultlib.dsp_mult16
+Compiling module xil_defaultlib.dsp_mult16_HD29
+Compiling module xil_defaultlib.dsp_mult16_HD34
+Compiling module xil_defaultlib.dsp_mult16_HD39
+Compiling module xil_defaultlib.dsp_mult16_HD44
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.FIR5
+Compiling architecture testbench of entity xil_defaultlib.tst_fir5
+Built simulation snapshot tst_FIR5_time_synth
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim/xsim.dir/tst_FIR5_time_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul 29 20:05:49 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2452.844 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.sim/sim_1/synth/timing/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tst_FIR5_time_synth -key {Post-Synthesis:sim_1:Timing:tst_FIR5} -tclbatch {tst_FIR5.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tst_FIR5.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tst_FIR5_time_synth' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 2531.223 ; gain = 78.379
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: FIR5
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3280.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FIR5' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:24]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult0' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult1' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:64]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult2' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:70]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult3' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:76]
+INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/realtime/dsp_mult16_stub.vhdl:5' bound to instance 'Mult4' of component 'dsp_mult16' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'FIR5' (1#1) [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3280.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3280.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3280.574 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.gen/sources_1/ip/dsp_mult16/dsp_mult16.dcp' for cell 'Mult0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 3280.574 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3280.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3280.574 ; gain = 0.000
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+current_design synth_1
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg
+set_property xsim.view C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg [get_filesets sim_1]
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 29 21:37:09 2026...

@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FIR5.gen/sources_1/ip/DSP_mult16/sim/DSP_mult16.vhd" \
+"../../../../../../../../OneDrive/Cours/M1/S7/SEA/TP_FPGA/TP1_MISTRE/FIR5.vhd" \
+"../../../../../../../../OneDrive/Cours/M1/S7/SEA/TP_FPGA/TP1_MISTRE/tstFIR5.vhd" \
+
+# Do not sort compile order
+nosort

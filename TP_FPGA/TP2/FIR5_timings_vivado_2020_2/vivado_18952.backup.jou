@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 30 07:00:42 2026
+# Process ID: 18952
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29932 C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_timings_vivado_2020_2\FIR5_timings_vivado_2020_2.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.xpr
+update_compile_order -fileset sources_1
+launch_simulation -mode post-synthesis -type timing
+open_wave_config C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg
+source tst_FIR5.tcl
+restart
+run 1 us
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+current_design synth_1
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+launch_runs impl_1 -jobs 28
+wait_on_run impl_1
+open_run impl_1
+current_design rtl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg
+source tst_FIR5.tcl
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+close_sim
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg
+source tst_FIR5.tcl
+restart
+run 1 us
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+close_sim
+close_sim

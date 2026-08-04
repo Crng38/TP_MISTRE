@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jul 29 12:30:36 2026
+# Process ID: 3020
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28956 C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_timings\FIR5_timings\FIR5_timings.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/FIR5_timings.xpr
+update_compile_order -fileset sources_1
+save_project_as FIR5_timings_vivado_2020_2 C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2 -force
+import_files
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_runs synth_1 -jobs 28
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_simulation -mode post-synthesis -type timing
+source tst_FIR5.tcl
+restart
+run 1 us
+restart
+run 1 us
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+current_design synth_1
+restart
+run 1 us
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg
+set_property xsim.view C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg [get_filesets sim_1]
+save_wave_config {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/tst_FIR5_time_synth.wcfg}
+close_sim

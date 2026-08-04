@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 16 07:14:38 2026
+# Process ID: 2976
+# Current directory: C:/Users/Thomas/Desktop/TP MISTRE/TP_FPGA/FIR5/FIR5.runs/DSP_mult16_synth_1
+# Command line: vivado.exe -log DSP_mult16.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DSP_mult16.tcl
+# Log file: C:/Users/Thomas/Desktop/TP MISTRE/TP_FPGA/FIR5/FIR5.runs/DSP_mult16_synth_1/DSP_mult16.vds
+# Journal file: C:/Users/Thomas/Desktop/TP MISTRE/TP_FPGA/FIR5/FIR5.runs/DSP_mult16_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DSP_mult16.tcl -notrace

@@ -1,0 +1,39 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto d778a7d63f2b40d081f62021906e452a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_dsp48_wrapper_v3_0_4 -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L dsp_macro_v1_0_1 -L secureip -L xpm --snapshot SIM_COMPLETE_behav xil_defaultlib.SIM_COMPLETE -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package dsp_macro_v1_0_1.dsp_macro_v1_0_1_viv_comp
+Compiling package dsp_macro_v1_0_1.dsp_macro_v1_0_1_pkg
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture behavioral of entity xil_defaultlib.div_clk [div_clk_default]
+Compiling architecture table of entity xil_defaultlib.signals_gen [signals_gen_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=16...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0_4.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(acasc...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=18...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=48...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=24...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(1,1)(1,1)\]
+Compiling architecture synth of entity dsp_macro_v1_0_1.dsp_macro_synth [\dsp_macro_synth(c_xdevicefamily...]
+Compiling architecture synth of entity dsp_macro_v1_0_1.dsp_macro_v1_0_1_viv [\dsp_macro_v1_0_1_viv(c_xdevicef...]
+Compiling architecture xilinx of entity dsp_macro_v1_0_1.dsp_macro_v1_0_1 [\dsp_macro_v1_0_1(c_xdevicefamil...]
+Compiling architecture dsp_mult16_arch of entity xil_defaultlib.DSP_mult16 [dsp_mult16_default]
+Compiling architecture behavioral of entity xil_defaultlib.FIR5 [fir5_default]
+Compiling architecture struct of entity xil_defaultlib.FIR_DAC_top [fir_dac_top_default]
+Compiling architecture simu of entity xil_defaultlib.sim_complete
+Built simulation snapshot SIM_COMPLETE_behav

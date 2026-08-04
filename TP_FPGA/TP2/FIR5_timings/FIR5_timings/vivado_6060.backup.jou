@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2025.2.1 (64-bit)
+# SW Build 6403652 on Thu Mar 19 19:48:24 GMT 2026
+# IP Build 6403511 on Thu Mar 19 12:41:45 MDT 2026
+# SharedData Build 6403650 on Thu Mar 19 14:02:13 MDT 2026
+# Start of session at: Thu May 21 19:15:02 2026
+# Process ID         : 6060
+# Current directory  : C:/Users/Thomas/OneDrive/Cours/M1/S7/SEA/TP FPGA/TP2/FIR5_timings/FIR5_timings
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent17064 C:\Users\Thomas\OneDrive\Cours\M1\S7\SEA\TP FPGA\TP2\FIR5_timings\FIR5_timings\FIR5_timings.xpr
+# Log file           : C:/Users/Thomas/OneDrive/Cours/M1/S7/SEA/TP FPGA/TP2/FIR5_timings/FIR5_timings/vivado.log
+# Journal file       : C:/Users/Thomas/OneDrive/Cours/M1/S7/SEA/TP FPGA/TP2/FIR5_timings/FIR5_timings\vivado.jou
+# Running On         : PC_de_Thomas
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz
+# CPU Frequency      : 2208 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16942 MB
+# Swap memory        : 3758 MB
+# Total Virtual      : 20700 MB
+# Available Virtual  : 10914 MB
+#-----------------------------------------------------------
+start_gui
+open_project -read_only {C:/Users/Thomas/OneDrive/Cours/M1/S7/SEA/TP FPGA/TP2/FIR5_timings/FIR5_timings/FIR5_timings.xpr}
+update_compile_order -fileset sources_1
