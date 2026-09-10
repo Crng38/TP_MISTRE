@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"sim_pi_func_impl.vhd" \
+"../../../../../test_sur_7010_fpga.srcs/sim_1/new/sim_pi.vhd" \
+
+# Do not sort compile order
+nosort

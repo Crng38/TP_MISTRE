@@ -1,0 +1,73 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Sep 10 12:43:40 2026
+| Host         : PC_de_Thomas running 64-bit major release  (build 9200)
+| Command      : report_drc -file test_mesure_vitesse_wrapper_drc_opted.rpt -pb test_mesure_vitesse_wrapper_drc_opted.pb -rpx test_mesure_vitesse_wrapper_drc_opted.rpx
+| Design       : test_mesure_vitesse_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 2          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT test_mesure_vitesse_i/signal_gene_0/U0/clk_out_INST_0 is driving clock pin of 5 cells. This could lead to large hold time violations. Involved cells are:
+test_mesure_vitesse_i/signal_gene_1/U0/cpt_int_reg[0],
+test_mesure_vitesse_i/signal_gene_1/U0/cpt_int_reg[1],
+test_mesure_vitesse_i/signal_gene_1/U0/cpt_int_reg[2],
+test_mesure_vitesse_i/signal_gene_1/U0/cpt_int_reg[3]
+test_mesure_vitesse_i/signal_gene_1/U0/cpt_int_reg[4]
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT test_mesure_vitesse_i/signal_gene_1/U0/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+test_mesure_vitesse_i/decodeur_0/U0/coeff_directeur_interne_reg[0],
+test_mesure_vitesse_i/decodeur_0/U0/coeff_directeur_interne_reg[1],
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[10]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[11]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[12]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[13]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[15]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[16]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[17]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[18]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[19]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[31]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[6]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[7]__0,
+test_mesure_vitesse_i/decodeur_0/U0/vitesse_interne_reg[8]__0
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

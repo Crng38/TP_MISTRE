@@ -1,0 +1,398 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x396DC6DBDBF56EA1",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm",
+      "name": "test_driver_pwm",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xlconstant_0": "",
+      "util_vector_logic_0": "",
+      "clk_wiz_0": "",
+      "xlconcat_0": "",
+      "mult_gen_0": "",
+      "util_vector_logic_1": "",
+      "driver_moteur_0": ""
+    },
+    "ports": {
+      "driver_out": {
+        "direction": "O"
+      },
+      "pwm_out": {
+        "direction": "O"
+      },
+      "clk_50": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "test_driver_pwm_clk_50",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "K2": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "K3": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "clk_125_out": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "/clk_wiz_0_clk_out1",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "125000000",
+            "value_src": "ip_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "test_driver_pwm_xlconstant_0_0",
+        "xci_path": "ip\\test_driver_pwm_xlconstant_0_0\\test_driver_pwm_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "test_driver_pwm_util_vector_logic_0_0",
+        "xci_path": "ip\\test_driver_pwm_util_vector_logic_0_0\\test_driver_pwm_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "test_driver_pwm_clk_wiz_0_0",
+        "xci_path": "ip\\test_driver_pwm_clk_wiz_0_0\\test_driver_pwm_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "200.0"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "238.699"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "254.101"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "125"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "35"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "7"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "2"
+          },
+          "PLL_CLKIN_PERIOD": {
+            "value": "20.000"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "50"
+          },
+          "PRIM_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_FREQ_SYNTH": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "test_driver_pwm_xlconcat_0_1",
+        "xci_path": "ip\\test_driver_pwm_xlconcat_0_1\\test_driver_pwm_xlconcat_0_1.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "IN1_WIDTH": {
+            "value": "1"
+          },
+          "NUM_PORTS": {
+            "value": "2"
+          }
+        }
+      },
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "test_driver_pwm_mult_gen_0_0",
+        "xci_path": "ip\\test_driver_pwm_mult_gen_0_0\\test_driver_pwm_mult_gen_0_0.xci",
+        "inst_hier_path": "mult_gen_0",
+        "parameters": {
+          "ClockEnable": {
+            "value": "false"
+          },
+          "ConstValue": {
+            "value": "2083"
+          },
+          "MultType": {
+            "value": "Constant_Coefficient_Multiplier"
+          },
+          "OutputWidthHigh": {
+            "value": "31"
+          },
+          "PortAType": {
+            "value": "Unsigned"
+          },
+          "PortAWidth": {
+            "value": "2"
+          },
+          "Use_Custom_Output_Width": {
+            "value": "true"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "test_driver_pwm_util_vector_logic_0_2",
+        "xci_path": "ip\\test_driver_pwm_util_vector_logic_0_2\\test_driver_pwm_util_vector_logic_0_2.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "2"
+          }
+        }
+      },
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "test_driver_pwm_driver_moteur_0_0",
+        "xci_path": "ip\\test_driver_pwm_driver_moteur_0_0\\test_driver_pwm_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset_driver_in": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "dir_driver_out": {
+            "direction": "O"
+          },
+          "pwm_driver_out": {
+            "direction": "O"
+          },
+          "value_driver_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 32}",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk_pwm_driver_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      }
+    },
+    "nets": {
+      "driver_moteur_0_dir_driver_out": {
+        "ports": [
+          "driver_moteur_0/dir_driver_out",
+          "driver_out"
+        ]
+      },
+      "driver_moteur_0_pwm_driver_out": {
+        "ports": [
+          "driver_moteur_0/pwm_driver_out",
+          "pwm_out"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "util_vector_logic_0/Op1",
+          "driver_moteur_0/reset_driver_in"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "clk_125_out",
+          "driver_moteur_0/clk_pwm_driver_in"
+        ]
+      },
+      "mult_gen_0_P": {
+        "ports": [
+          "mult_gen_0/P",
+          "driver_moteur_0/value_driver_in"
+        ]
+      },
+      "bit30_in_1": {
+        "ports": [
+          "K2",
+          "xlconcat_0/In0"
+        ]
+      },
+      "bit31_in_1": {
+        "ports": [
+          "K3",
+          "xlconcat_0/In1"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "mult_gen_0/A"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "clk_50",
+          "clk_wiz_0/clk_in1",
+          "mult_gen_0/CLK"
+        ]
+      }
+    }
+  }
+}

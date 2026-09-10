@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"test_driver_pwm": {
+			"proto_instances": {
+			}
+		}
+	}
+}

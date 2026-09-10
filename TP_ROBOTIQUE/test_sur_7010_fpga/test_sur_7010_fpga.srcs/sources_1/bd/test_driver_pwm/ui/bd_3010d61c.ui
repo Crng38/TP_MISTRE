@@ -1,0 +1,35 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.869202",
+   "Default View_TopLeft":"732,-299",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port driver_out -pg 1 -lvl 8 -x 1550 -y -50 -defaultsOSRD
+preplace port pwm_out -pg 1 -lvl 8 -x 1550 -y -20 -defaultsOSRD
+preplace port clk_50 -pg 1 -lvl 0 -x -370 -y 70 -defaultsOSRD
+preplace portBus K2 -pg 1 -lvl 0 -x -370 -y -180 -defaultsOSRD
+preplace portBus K3 -pg 1 -lvl 0 -x -370 -y -150 -defaultsOSRD
+preplace portBus clk_125_out -pg 1 -lvl 8 -x 1550 -y 170 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 800 -y -190 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 6 -x 1030 -y -230 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 340 -y 70 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x -200 -y -160 -defaultsOSRD
+preplace inst mult_gen_0 -pg 1 -lvl 3 -x 340 -y -230 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 2 -x 50 -y -170 -defaultsOSRD
+preplace inst driver_moteur_0 -pg 1 -lvl 7 -x 1360 -y -30 -defaultsOSRD
+preplace netloc driver_moteur_0_dir_driver_out 1 7 1 1520 -50n
+preplace netloc driver_moteur_0_pwm_driver_out 1 7 1 N -20
+preplace netloc xlconstant_0_dout 1 5 2 880 -50 N
+preplace netloc clk_wiz_0_clk_out1 1 3 5 NJ 70 N 70 NJ 70 1170 170 N
+preplace netloc mult_gen_0_P 1 3 4 NJ -230 600 -290 NJ -290 1170
+preplace netloc bit30_in_1 1 0 1 -350 -180n
+preplace netloc bit31_in_1 1 0 1 N -150
+preplace netloc xlconcat_0_dout 1 1 1 -110 -170n
+preplace netloc util_vector_logic_1_Res 1 2 1 200 -220n
+preplace netloc Net 1 0 3 N 70 NJ 70 190
+levelinfo -pg 1 -370 -200 50 340 580 800 1030 1360 1550
+pagesize -pg 1 -db -bbox -sgen -470 -690 1700 240
+"
+}
+0
