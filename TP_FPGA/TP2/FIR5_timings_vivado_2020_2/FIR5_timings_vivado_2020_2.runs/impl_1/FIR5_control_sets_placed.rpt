@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Aug  3 15:03:01 2026
+| Date         : Tue Aug  4 11:28:24 2026
 | Host         : DESKTOP-9P149NQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file FIR5_control_sets_placed.rpt
 | Design       : FIR5
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     1 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     0 |
+| Unused register locations in slices containing registers |     5 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              80 |           31 |
+| No           | No                    | No                     |             235 |           56 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -73,7 +73,7 @@ Table of Contents
 +----------------+---------------+------------------+------------------+----------------+--------------+
 |  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |               |                  |               31 |             80 |         2.58 |
+|  clk_IBUF_BUFG |               |                  |               56 |            235 |         4.20 |
 +----------------+---------------+------------------+------------------+----------------+--------------+
 
 

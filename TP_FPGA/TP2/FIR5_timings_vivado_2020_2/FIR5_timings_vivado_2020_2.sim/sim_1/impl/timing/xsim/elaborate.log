@@ -16,6 +16,7 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package vl.vl_types
 Compiling module xil_defaultlib.glbl
+Compiling module simprims_ver.FDRE_default
 Compiling module simprims_ver.DSP48E1(ACASCREG=0,ADREG=0,ALUMO...
 Compiling module xil_defaultlib.dsp_mult16
 Compiling module xil_defaultlib.dsp_mult16_HD5
@@ -24,11 +25,11 @@ Compiling module xil_defaultlib.dsp_mult16_HD15
 Compiling module xil_defaultlib.dsp_mult16_HD20
 Compiling module simprims_ver.BUFG
 Compiling module simprims_ver.IBUF
-Compiling module simprims_ver.FDRE_default
 Compiling module simprims_ver.LUT4
 Compiling module simprims_ver.x_lut3_mux8
 Compiling module simprims_ver.LUT3
 Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT5(INIT=32'b011010011001011010...
 Compiling module simprims_ver.OBUF
 Compiling module simprims_ver.CARRY4
 Compiling module xil_defaultlib.FIR5

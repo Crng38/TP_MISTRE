@@ -21,14 +21,13 @@ entity FIR5_Add is
 end FIR5_Add;
 
 architecture A of FIR5_Add is	
-
 signal SUM : std_logic_vector (31 DOWNTO 0);		-- result of the sum
 begin
 	process (CLk)
 	begin
 		if (Clk'EVENT and CLk='1') then
 			y <= SUM(30 downto 15);		--div by 2^15
-			--	SUM <= M0+M1+M2+M3+M4;
+			-SUM <= M0+M1+M2+M3+M4;
 		end if;
 	end process;
 

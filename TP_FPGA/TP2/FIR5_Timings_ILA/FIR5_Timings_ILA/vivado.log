@@ -2,236 +2,352 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Nov 24 15:58:15 2022
-# Process ID: 3704
-# Current directory: C:/Users/vincent/AppData/Roaming/Xilinx/Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7988
-# Log file: C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/vivado.log
-# Journal file: C:/Users/vincent/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Start of session at: Tue Aug  4 13:05:45 2026
+# Process ID: 34168
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35848 C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9996-DESKTOP-VJKAB20/PrjAr/_X_' since last save.
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3704-DESKTOP-VJKAB20/PrjAr/_X_' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 982.090 ; gain = 0.000
 update_compile_order -fileset sources_1
-file mkdir D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new
-close [ open D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd w ]
-add_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd
+launch_runs impl_1 -jobs 28
+[Tue Aug  4 13:06:07 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/synth_1/runme.log
+[Tue Aug  4 13:06:07 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/impl_1/runme.log
+close [ open C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/wx.vhd w ]
+add_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/wx.vhd
 update_compile_order -fileset sources_1
+create_bd_design "design_1"
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1113.059 ; gain = 12.816
 update_compile_order -fileset sources_1
+create_bd_cell -type module -reference FIR5_Mult FIR5_Mult_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+create_bd_cell -type module -reference signals_gen signals_gen_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+create_bd_cell -type module -reference FIR5_Add FIR5_Add_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property location {3.5 849 -286} [get_bd_cells FIR5_Add_0]
+set_property location {0.5 6 -238} [get_bd_cells signals_gen_0]
+set_property location {0.5 -212 -191} [get_bd_cells signals_gen_0]
+set_property location {1.5 497 -282} [get_bd_cells FIR5_Mult_0]
+set_property location {1.5 90 -276} [get_bd_cells signals_gen_0]
+set_property location {2 488 -274} [get_bd_cells FIR5_Mult_0]
+set_property location {2 515 -254} [get_bd_cells FIR5_Mult_0]
+set_property location {2 489 -376} [get_bd_cells FIR5_Mult_0]
+set_property location {2 547 -271} [get_bd_cells FIR5_Mult_0]
+set_property location {2 509 -264} [get_bd_cells FIR5_Mult_0]
+set_property location {2 506 -279} [get_bd_cells FIR5_Mult_0]
+startgroup
+connect_bd_net [get_bd_pins FIR5_Add_0/M4] [get_bd_pins FIR5_Add_0/M3]
+endgroup
+delete_bd_objs [get_bd_nets Net]
+set_property location {2 515 -269} [get_bd_cells FIR5_Mult_0]
+set_property location {2 508 -284} [get_bd_cells FIR5_Mult_0]
+set_property location {2 597 -263} [get_bd_cells FIR5_Mult_0]
+set_property location {3 833 -284} [get_bd_cells FIR5_Add_0]
+set_property location {2 517 -310} [get_bd_cells FIR5_Mult_0]
+set_property location {2 509 -312} [get_bd_cells FIR5_Mult_0]
+set_property location {2 596 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {2.5 600 -247} [get_bd_cells FIR5_Mult_0]
+set_property location {2 613 -245} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -250} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -260} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -270} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -280} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -270} [get_bd_cells FIR5_Mult_0]
+connect_bd_net [get_bd_pins FIR5_Mult_0/M0] [get_bd_pins FIR5_Add_0/M0]
+set_property location {1.5 554 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {1.5 430 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {1.5 422 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {2 420 -260} [get_bd_cells FIR5_Mult_0]
+set_property location {2 420 -270} [get_bd_cells FIR5_Mult_0]
+connect_bd_net [get_bd_pins FIR5_Add_0/M1] [get_bd_pins FIR5_Mult_0/M1]
+connect_bd_net [get_bd_pins FIR5_Mult_0/M2] [get_bd_pins FIR5_Add_0/M2]
+connect_bd_net [get_bd_pins FIR5_Add_0/M3] [get_bd_pins FIR5_Mult_0/M3]
+connect_bd_net [get_bd_pins FIR5_Mult_0/M4] [get_bd_pins FIR5_Add_0/M4]
+set_property location {1 76 -277} [get_bd_cells signals_gen_0]
+set_property location {1 90 -270} [get_bd_cells signals_gen_0]
+set_property location {1 90 -260} [get_bd_cells signals_gen_0]
+connect_bd_net [get_bd_pins FIR5_Mult_0/x] [get_bd_pins signals_gen_0/wave]
+connect_bd_net [get_bd_pins signals_gen_0/clk] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_pins signals_gen_0/clk] [get_bd_pins FIR5_Add_0/clk]
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins FIR5_Add_0/clk] [get_bd_pins FIR5_Mult_0/clk]
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins FIR5_Add_0/clk] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_pins FIR5_Add_0/clk] [get_bd_pins signals_gen_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/wave_select]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins FIR5_Add_0/clk]
+INFO: [BD 5-455] Automation on '/FIR5_Mult_0/clk' will not be run, since it is obsolete due to previously run automations
+INFO: [BD 5-455] Automation on '/signals_gen_0/clk' will not be run, since it is obsolete due to previously run automations
+endgroup
+disconnect_bd_net /Net [get_bd_pins signals_gen_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins FIR5_Add_0/y]
+endgroup
+delete_bd_objs [get_bd_nets Net]
+set_property location {1 91 -419} [get_bd_cells clk_wiz]
+set_property location {0.5 -139 -416} [get_bd_cells clk_wiz]
+connect_bd_net [get_bd_pins clk_wiz/clk_out1] [get_bd_pins FIR5_Add_0/clk]
+connect_bd_net [get_bd_pins clk_wiz/clk_out1] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_pins signals_gen_0/clk] [get_bd_pins clk_wiz/clk_out1]
+set_property location {1 -105 -150} [get_bd_cells clk_wiz]
+startgroup
+make_bd_pins_external  [get_bd_pins clk_wiz/clk_in1]
+endgroup
+connect_bd_net [get_bd_pins signals_gen_0/reset] [get_bd_pins clk_wiz/reset]
+delete_bd_objs [get_bd_nets clk_in1_0_1] [get_bd_nets Net] [get_bd_cells clk_wiz]
+delete_bd_objs [get_bd_nets wave_select_0_1] [get_bd_ports wave_select_0]
+delete_bd_objs [get_bd_ports clk_in1_0]
+delete_bd_objs [get_bd_nets FIR5_Add_0_y] [get_bd_ports y_0]
+set_property target_constrs_file C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc [current_fileset -constrset]
+delete_bd_objs [get_bd_nets clk_wiz_clk_out1]
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/wave_select]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/reset]
+endgroup
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Add_0/clk]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Add_0/clk]'
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Add_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins FIR5_Add_0/y]
+endgroup
+set_property name wave_select [get_bd_ports wave_select_0]
+set_property name clk [get_bd_ports clk_0]
+set_property name reset [get_bd_ports reset_0]
+set_property name y [get_bd_ports y_0]
+set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property location {1 129 -9} [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/reset]
+connect_bd_net [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.ENABLE_CLOCK_MONITOR {false} CONFIG.PRIM_SOURCE {Global_buffer} CONFIG.PRIM_IN_FREQ {125} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {250} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.PRIMITIVE {PLL} CONFIG.CLKIN1_JITTER_PS {80.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {8} CONFIG.MMCM_CLKIN1_PERIOD {8.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4} CONFIG.PLL_CLKIN_PERIOD {8.000} CONFIG.CLKOUT1_JITTER {104.759} CONFIG.CLKOUT1_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0]
+WARNING: [BD 41-1684] Pin /clk_wiz_0/reset is now disabled. All connections to this pin have been removed. 
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {FIR5_Mult_0_M4 FIR5_Add_0_y signals_gen_0_wave }]
+true
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets FIR5_Add_0_y] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets FIR5_Mult_0_M4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets signals_gen_0_wave] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode NATIVE, 0 slot interface pins and 3 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /clk to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting net /FIR5_Add_0_y, to System ILA probe pin /system_ila_0/probe0 for debug.
+Debug Automation : Connecting net /FIR5_Mult_0_M4, to System ILA probe pin /system_ila_0/probe1 for debug.
+Debug Automation : Connecting net /signals_gen_0_wave, to System ILA probe pin /system_ila_0/probe2 for debug.
+endgroup
+set_property location {4 861 -20} [get_bd_cells system_ila_0]
+delete_bd_objs [get_bd_nets clk_0_1]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets clk_0_1]'
+undo
+INFO: [Common 17-17] undo 'set_property location {4 861 -20} [get_bd_cells system_ila_0]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets FIR5_Add_0_y] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets FIR5_Mult_0_M4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets signals_gen_0_wave] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                         ]'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets FIR5_Add_0_y] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets FIR5_Mult_0_M4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets signals_gen_0_wave] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                         ]
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode NATIVE, 0 slot interface pins and 3 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /clk to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting net /FIR5_Add_0_y, to System ILA probe pin /system_ila_0/probe0 for debug.
+Debug Automation : Connecting net /FIR5_Mult_0_M4, to System ILA probe pin /system_ila_0/probe1 for debug.
+Debug Automation : Connecting net /signals_gen_0_wave, to System ILA probe pin /system_ila_0/probe2 for debug.
+endgroup
+set_property location {4 896 -5} [get_bd_cells system_ila_0]
+disconnect_bd_net /clk_0_1 [get_bd_pins system_ila_0/clk]
+connect_bd_net [get_bd_pins system_ila_0/clk] [get_bd_pins clk_wiz_0/clk_out1]
+set_property location {1.5 300 -33} [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets reset_0_1]
+delete_bd_objs [get_bd_ports reset]
+set_property location {3 470 18} [get_bd_cells clk_wiz_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {2 206 -16} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins signals_gen_0/reset] [get_bd_pins xlconstant_0/dout]
+set_property location {0.5 -29 -45} [get_bd_cells xlconstant_0]
+set_property location {0.5 -78 -147} [get_bd_cells xlconstant_0]
+startgroup
+set_property -dict [list CONFIG.C_PROBE0_TYPE {1}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+make_wrapper -files [get_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+add_files -norecurse c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
+set_property top design_1_wrapper [current_fileset]
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd
-file delete -force D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd
-add_files -norecurse D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timings_ILA/archive_project_summary.txt] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timings_ILA/archive_project_summary.txt
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/archive_project_summary.txt] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/archive_project_summary.txt
-generate_target all [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/ip/dsp_mult16/dsp_mult16.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dsp_mult16'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dsp_mult16'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dsp_mult16'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dsp_mult16'...
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
-Starting synth_design
-Using part: xc7z020clg400-1
-Top: FIR5_Mult
+set_property name sw_wave [get_bd_ports wave_select]
+reset_run synth_1
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.srcs\sources_1\bd\design_1\design_1.bd> 
+launch_runs impl_1 -jobs 28
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block FIR5_Mult_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block signals_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block FIR5_Add_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1.hwh
+Generated Block Design Tcl file c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/hw_handoff/design_1_system_ila_0_1_bd.tcl
+Generated Hardware Definition File c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/synth/design_1_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_clk_wiz_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_1_system_ila_0_1
+[Tue Aug  4 13:44:03 2026] Launched design_1_system_ila_0_1_synth_1, design_1_clk_wiz_0_0_synth_1, design_1_FIR5_Add_0_0_synth_1, design_1_FIR5_Mult_0_0_synth_1, design_1_signals_gen_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_system_ila_0_1_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/design_1_system_ila_0_1_synth_1/runme.log
+design_1_clk_wiz_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/design_1_clk_wiz_0_0_synth_1/runme.log
+design_1_FIR5_Add_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/design_1_FIR5_Add_0_0_synth_1/runme.log
+design_1_FIR5_Mult_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/design_1_FIR5_Mult_0_0_synth_1/runme.log
+design_1_signals_gen_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/design_1_signals_gen_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/synth_1/runme.log
+[Tue Aug  4 13:44:03 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2957.453 ; gain = 0.000
+open_run impl_1
 INFO: [Device 21-403] Loading part xc7z020clg400-1
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1286.668 ; gain = 251.809
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'FIR5_Mult' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:23]
-INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'd:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:59' bound to instance 'Mult0' of component 'dsp_mult16' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'dsp_mult16' [d:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:67]
-	Parameter C_VERBOSITY bound to: 0 - type: integer 
-	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_HAS_CE bound to: 0 - type: integer 
-	Parameter C_HAS_INDEP_CE bound to: 0 - type: integer 
-	Parameter C_HAS_CED bound to: 0 - type: integer 
-	Parameter C_HAS_CEA bound to: 0 - type: integer 
-	Parameter C_HAS_CEB bound to: 0 - type: integer 
-	Parameter C_HAS_CEC bound to: 0 - type: integer 
-	Parameter C_HAS_CECONCAT bound to: 0 - type: integer 
-	Parameter C_HAS_CEM bound to: 0 - type: integer 
-	Parameter C_HAS_CEP bound to: 0 - type: integer 
-	Parameter C_HAS_CESEL bound to: 0 - type: integer 
-	Parameter C_HAS_SCLR bound to: 0 - type: integer 
-	Parameter C_HAS_INDEP_SCLR bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRD bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRA bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRB bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRC bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRM bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRP bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRCONCAT bound to: 0 - type: integer 
-	Parameter C_HAS_SCLRSEL bound to: 0 - type: integer 
-	Parameter C_HAS_CARRYCASCIN bound to: 0 - type: integer 
-	Parameter C_HAS_CARRYIN bound to: 0 - type: integer 
-	Parameter C_HAS_ACIN bound to: 0 - type: integer 
-	Parameter C_HAS_BCIN bound to: 0 - type: integer 
-	Parameter C_HAS_PCIN bound to: 0 - type: integer 
-	Parameter C_HAS_A bound to: 1 - type: integer 
-	Parameter C_HAS_B bound to: 1 - type: integer 
-	Parameter C_HAS_D bound to: 0 - type: integer 
-	Parameter C_HAS_CONCAT bound to: 0 - type: integer 
-	Parameter C_HAS_C bound to: 0 - type: integer 
-	Parameter C_SQUARE_FCN bound to: 0 - type: integer 
-	Parameter C_A_WIDTH bound to: 16 - type: integer 
-	Parameter C_B_WIDTH bound to: 16 - type: integer 
-	Parameter C_C_WIDTH bound to: 48 - type: integer 
-	Parameter C_D_WIDTH bound to: 18 - type: integer 
-	Parameter C_CONCAT_WIDTH bound to: 48 - type: integer 
-	Parameter C_P_MSB bound to: 31 - type: integer 
-	Parameter C_P_LSB bound to: 0 - type: integer 
-	Parameter C_SEL_WIDTH bound to: 0 - type: integer 
-	Parameter C_HAS_ACOUT bound to: 0 - type: integer 
-	Parameter C_HAS_BCOUT bound to: 0 - type: integer 
-	Parameter C_HAS_CARRYCASCOUT bound to: 0 - type: integer 
-	Parameter C_HAS_CARRYOUT bound to: 0 - type: integer 
-	Parameter C_HAS_PCOUT bound to: 0 - type: integer 
-	Parameter C_CONSTANT_1 bound to: 1 - type: integer 
-	Parameter C_LATENCY bound to: 128 - type: integer 
-	Parameter C_OPMODES bound to: 000100100000010100000000 - type: string 
-	Parameter C_REG_CONFIG bound to: 00000000000000000000000000000000 - type: string 
-	Parameter C_TEST_CORE bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'dsp_macro_v1_0_1' declared at 'd:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/hdl/dsp_macro_v1_0_rfs.vhd:5245' bound to instance 'U0' of component 'dsp_macro_v1_0_1' [d:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:204]
-INFO: [Synth 8-256] done synthesizing module 'dsp_mult16' (6#1) [d:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:67]
-INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'd:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:59' bound to instance 'Mult1' of component 'dsp_mult16' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:57]
-INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'd:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:59' bound to instance 'Mult2' of component 'dsp_mult16' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:63]
-INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'd:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:59' bound to instance 'Mult3' of component 'dsp_mult16' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:69]
-INFO: [Synth 8-3491] module 'dsp_mult16' declared at 'd:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/synth/dsp_mult16.vhd:59' bound to instance 'Mult4' of component 'dsp_mult16' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:75]
-INFO: [Synth 8-256] done synthesizing module 'FIR5_Mult' (7#1) [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd:23]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1405.086 ; gain = 370.227
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1405.086 ; gain = 370.227
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1405.086 ; gain = 370.227
----------------------------------------------------------------------------------
-INFO: [Synth 37-8] Instance 'i_synth' of a module 'dsp_macro_v1_0_1_viv' contains a secure attribute.  This instance will appear as a black box in elaborated RTL design. [d:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/ip/dsp_mult16/hdl/dsp_macro_v1_0_rfs.vhd:4486]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1405.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2957.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 115 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw_wave'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:12]
-WARNING: [Vivado 12-584] No ports matched 'y[0]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:136]
-WARNING: [Vivado 12-584] No ports matched 'y[1]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:137]
-WARNING: [Vivado 12-584] No ports matched 'y[2]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:138]
-WARNING: [Vivado 12-584] No ports matched 'y[3]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:139]
-WARNING: [Vivado 12-584] No ports matched 'y[4]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:140]
-WARNING: [Vivado 12-584] No ports matched 'y[5]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:141]
-WARNING: [Vivado 12-584] No ports matched 'y[6]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:142]
-WARNING: [Vivado 12-584] No ports matched 'y[7]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:143]
-WARNING: [Vivado 12-584] No ports matched 'y[8]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:147]
-WARNING: [Vivado 12-584] No ports matched 'y[9]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:148]
-WARNING: [Vivado 12-584] No ports matched 'y[10]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:149]
-WARNING: [Vivado 12-584] No ports matched 'y[11]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:150]
-WARNING: [Vivado 12-584] No ports matched 'y[12]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:151]
-WARNING: [Vivado 12-584] No ports matched 'y[13]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:152]
-WARNING: [Vivado 12-584] No ports matched 'y[14]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:153]
-WARNING: [Vivado 12-584] No ports matched 'y[15]'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:154]
-Finished Parsing XDC File [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/FIR5_Mult_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1456.422 ; gain = 0.000
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 2957.453 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 2957.453 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2957.453 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 58 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 52 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 1578.504 ; gain = 543.645
-14 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 1578.504 ; gain = 596.414
-set_property top FIR5_Add [current_fileset]
-refresh_design
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1622.078 ; gain = 34.961
----------------------------------------------------------------------------------
-ERROR: [Synth 8-439] module 'FIR5_Add' not found
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1672.504 ; gain = 85.387
----------------------------------------------------------------------------------
-RTL Elaboration failed
-refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1672.543 ; gain = 85.426
-ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
-update_compile_order -fileset sources_1
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
-Starting synth_design
-Using part: xc7z020clg400-1
-Top: FIR5_Add
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1683.883 ; gain = 0.000
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'FIR5_Add' [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'FIR5_Add' (1#1) [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd:23]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1683.883 ; gain = 0.000
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1683.883 ; gain = 0.000
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1683.883 ; gain = 0.000
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1683.883 ; gain = 0.000
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3012.984 ; gain = 55.531
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_FIR5_Add_0_0/design_1_FIR5_Add_0_0.dcp' for cell 'design_1_i/FIR5_Add_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_FIR5_Mult_0_0/design_1_FIR5_Mult_0_0.dcp' for cell 'design_1_i/FIR5_Mult_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.dcp' for cell 'design_1_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_signals_gen_0_0/design_1_signals_gen_0_0.dcp' for cell 'design_1_i/signals_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/design_1_system_ila_0_1.dcp' for cell 'design_1_i/system_ila_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 3060.422 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 97 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sw_wave'. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1683.883 ; gain = 0.000
+INFO: [Chipscope 16-324] Core: design_1_i/system_ila_0/U0/ila_lib UUID: e0698dbb-7e4f-5bce-a82c-fc5d3d48baa4 
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_1/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'design_1_i/system_ila_0/U0/ila_lib/U0'
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+CRITICAL WARNING: [Common 17-170] Unknown option '-add-', please type 'create_clock -help' for usage info. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc:11]
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3124.473 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 52 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 52 instances
 
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1683.883 ; gain = 0.000
-4 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1683.883 ; gain = 0.000
-close_design
-set_property generate_synth_checkpoint 0 [get_files dsp_mult16.xci]
-archive_project D:/Projets_Vivado_Win/FIR5_Timings_ILA.xpr.zip -temp_dir C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3704-DESKTOP-VJKAB20 -force -exclude_run_results
-INFO: [Coretcl 2-137] starting archive...
-INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3704-DESKTOP-VJKAB20' for archiving project
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [Coretcl 2-1211] Creating project copy for archival...
-INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
-Current project path is 'C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3704-DESKTOP-VJKAB20/PrjAr/_X_'.
-INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
-INFO: [Coretcl 2-133] re-setting run 'synth_1'...
-INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+current_design impl_1
+current_design synth_1
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
+current_design impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
+CRITICAL WARNING: [HDL 9-806] Syntax error near "-". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd:30]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "-". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd:30]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "-". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd:30]
+close_project
+CRITICAL WARNING: [HDL 9-806] Syntax error near "-". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd:30]
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  4 14:48:19 2026...

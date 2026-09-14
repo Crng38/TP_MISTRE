@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/.Xil/Vivado-3020-DESKTOP-9P149NQ/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -86,6 +83,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings/FIR5_timings/FIR5_timings.board} [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
+set_property ip_output_repo c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_timings_vivado_2020_2/FIR5_timings_vivado_2020_2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }

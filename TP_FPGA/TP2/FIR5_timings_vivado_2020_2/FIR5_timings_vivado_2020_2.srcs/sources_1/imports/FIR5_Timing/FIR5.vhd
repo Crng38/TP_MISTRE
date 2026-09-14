@@ -32,6 +32,7 @@ architecture A of FIR5 is
 	signal x1,x2,x3,x4 : std_logic_vector (15 DOWNTO 0);	-- input samples registers X-1...
 		-- x0 is not registered since it will be changed by the ADC entity only on the rising edge of clock_48k
 	signal M0,M1,M2,M3,M4 : std_logic_vector (31 DOWNTO 0);	-- outputs of multipliers
+	signal M0_int,M1_int,M2_int,M3_int,M4_int : std_logic_vector (31 DOWNTO 0);	-- outputs of multipliers
 	signal SUM : std_logic_vector (31 DOWNTO 0);		-- result of the sum
 --	signal clock50MHz : std_logic := '0';
 --	signal stateOut : integer range 0 to 7;
@@ -48,6 +49,7 @@ begin
 	Shift_Registers:process (CLk)
 	begin
 		if (Clk'EVENT and CLk='1') then
+		    M0 <= M0_int; M1 <= M1_int; M2 <= M2_int; M3 <= M3_int; M4 <= M4_int; --Mémorisation des signaux en inte
 			x1 <= x ; x2 <= x1 ; x3 <= x2 ; x4 <= x3;
 			y(15 downto 0) <= SUM(30 downto 15);		--div by 2^15
 
@@ -59,31 +61,36 @@ begin
 	       -- CLK => CLOCK_48k,
 			a	 => x,
 			b	 => b0,
-			p => M0
+			--p => M0 -- De base
+			p => M0_int --Partie 6
 		);
 	Mult1 : dsp_mult16 PORT MAP (
             --CLK => CLOCK_48k,
 			a	 => x1,
 			b	 => b1,
-			p => M1
+			-- p => M1 --De base
+			p => M1_int --Partie 6
 		);
 	Mult2 : dsp_mult16 PORT MAP (
           --  CLK => CLOCK_48k,
 			a	 => x2,
 			b	 => b2,
-			p => M2
+			-- p => M2 --De base
+			p => M2_int --Partie 6
 		);	
 	Mult3 : dsp_mult16 PORT MAP (
           --  CLK => CLOCK_48k,
 			a	 => x3,
 			b	 => b3,
-			p => M3
+			-- p => M3 --De base
+			p => M3_int --Partie 6
 		);
 	Mult4 : dsp_mult16 PORT MAP (
            -- CLK => CLOCK_48k,
 			a	 => x4,
 			b	 => b4,
-			p => M4
+			-- p => M4 --De base
+			p => M4_int --Partie 6
 		);
 
 -- Adder with result store register (no pipeline registers for multi outputs)

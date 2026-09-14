@@ -1,0 +1,10 @@
+22:48:28 **** Incremental Build of configuration Debug for project Mes_Perf_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50490 C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/PS_Only_ZyboZ7.xpfm standalone_ps7_cortexa9_0 C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Mes_Perf_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/PS_Only_ZyboZ7.xpfm --sys_config PS_Only_ZyboZ7 --bif C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Mes_Perf_system/Debug/system.bif --bitstream C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Mes_Perf/_ide/bitstream/PS_Only_ZyboZ7.bit --elf C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Mes_Perf/Debug/Mes_Perf.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Mes_Perf/_ide/bitstream/PS_Only_ZyboZ7.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Mes_Perf_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+22:48:31 Build Finished (took 3s.62ms)
+

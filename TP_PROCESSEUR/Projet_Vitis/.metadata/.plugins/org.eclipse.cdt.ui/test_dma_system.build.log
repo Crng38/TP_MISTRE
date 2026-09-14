@@ -1,0 +1,10 @@
+20:07:09 **** Build of configuration Debug for project test_dma_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 54813 C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_ET_BRAM/export/PS_ET_BRAM/PS_ET_BRAM.xpfm standalone_ps7_cortexa9_0 C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/test_dma_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_ET_BRAM/export/PS_ET_BRAM/PS_ET_BRAM.xpfm --sys_config PS_ET_BRAM --bif C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/test_dma_system/Debug/system.bif --bitstream C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/test_dma/_ide/bitstream/PS_ET_BRAM.bit --elf C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/test_dma/Debug/test_dma.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/test_dma/_ide/bitstream/PS_ET_BRAM.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/test_dma_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+20:07:13 Build Finished (took 3s.525ms)
+

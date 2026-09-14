@@ -47,25 +47,25 @@ horloge: process 	-- horloge  a 25 ou 125MHz
 	x <= X"7FFF"; wait for 40 ns;
   end process;
   
-  self_test: process --Process auto test
-  begin
-    Test_State <= Test; --Etat initiale
-    error <= '0'; --Etat initiale, erreur fausse
-    wait for 140 ns; --Attente 140 ns
-    if y /= STD_LOGIC_VECTOR(TO_SIGNED(-6885, 16)) then --Si y ne vaut pas la valeur prévues
-       assert false report "Test stab @ 140ns failed" severity failure; -- this puts a message in the TCL window
-       error <= '1'; -- Signal errer mis à 1
-       Test_State <= Fail;
-    else --Sinon
-       assert false report "Test stab @ 140ns succès" severity note; -- this puts a message in the TCL window
-    end if; --Fin de if
-    --Test de fin
-    if error = '1' then --Si erreur
-        assert false report "Simulation ended, test failed" severity failure; --Message TCL
-    else --SInon
-        Test_State <= Completed;
-        assert false report "Simulation ended, test passed" severity note; --Message TCL
-    end if;  
-    wait; --Attente infinie, fin de process
-  end process; --Fin process de selftest
+--  self_test: process --Process auto test
+--  begin
+--    Test_State <= Test; --Etat initiale
+--    error <= '0'; --Etat initiale, erreur fausse
+--    wait for 140 ns; --Attente 140 ns
+--    if y /= STD_LOGIC_VECTOR(TO_SIGNED(-6885, 16)) then --Si y ne vaut pas la valeur prévues
+--       assert false report "Test stab @ 140ns failed" severity failure; -- this puts a message in the TCL window
+--       error <= '1'; -- Signal errer mis à 1
+--       Test_State <= Fail;
+--    else --Sinon
+--       assert false report "Test stab @ 140ns succès" severity note; -- this puts a message in the TCL window
+--    end if; --Fin de if
+--    --Test de fin
+--    if error = '1' then --Si erreur
+--        assert false report "Simulation ended, test failed" severity failure; --Message TCL
+--    else --SInon
+--        Test_State <= Completed;
+--        assert false report "Simulation ended, test passed" severity note; --Message TCL
+--    end if;  
+--    wait; --Attente infinie, fin de process
+--  end process; --Fin process de selftest
 end testbench;

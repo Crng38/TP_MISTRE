@@ -11,15 +11,23 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="982533fs"></ZoomStartTime>
-      <ZoomEndTime time="1003494fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="105320fs"></ZoomStartTime>
+      <ZoomEndTime time="144361fs"></ZoomEndTime>
+      <Cursor1Time time="167140fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="302"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <NameColumnWidth column_width="360"></NameColumnWidth>
+      <ValueColumnWidth column_width="174"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="22" />
+   <wave_markers>
+      <marker time="118399" label="" />
+      <marker time="119410" label="" />
+      <marker time="128036" label="" />
+      <marker time="134380" label="" />
+      <marker time="136529" label="" />
+      <marker time="112040" label="" />
+   </wave_markers>
    <wvobject fp_name="/tst_FIR5/x" type="array">
       <obj_property name="ElementShortName">x[15:0]</obj_property>
       <obj_property name="ObjectShortName">x[15:0]</obj_property>
@@ -56,21 +64,41 @@
       <obj_property name="ElementShortName">x4[15:0]</obj_property>
       <obj_property name="ObjectShortName">x4[15:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tst_FIR5/UUT/M0_int" type="array">
+      <obj_property name="ElementShortName">M0_int[30:0]</obj_property>
+      <obj_property name="ObjectShortName">M0_int[30:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tst_FIR5/UUT/M0" type="array">
       <obj_property name="ElementShortName">M0[30:0]</obj_property>
       <obj_property name="ObjectShortName">M0[30:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tst_FIR5/UUT/M1_int" type="array">
+      <obj_property name="ElementShortName">M1_int[30:0]</obj_property>
+      <obj_property name="ObjectShortName">M1_int[30:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tst_FIR5/UUT/M1" type="array">
       <obj_property name="ElementShortName">M1[30:0]</obj_property>
       <obj_property name="ObjectShortName">M1[30:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tst_FIR5/UUT/M2_int" type="array">
+      <obj_property name="ElementShortName">M2_int[30:0]</obj_property>
+      <obj_property name="ObjectShortName">M2_int[30:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tst_FIR5/UUT/M2" type="array">
       <obj_property name="ElementShortName">M2[30:0]</obj_property>
       <obj_property name="ObjectShortName">M2[30:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tst_FIR5/UUT/M3_int" type="array">
+      <obj_property name="ElementShortName">M3_int[30:0]</obj_property>
+      <obj_property name="ObjectShortName">M3_int[30:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/tst_FIR5/UUT/M3" type="array">
       <obj_property name="ElementShortName">M3[30:0]</obj_property>
       <obj_property name="ObjectShortName">M3[30:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tst_FIR5/UUT/M4_int" type="array">
+      <obj_property name="ElementShortName">M4_int[30:0]</obj_property>
+      <obj_property name="ObjectShortName">M4_int[30:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tst_FIR5/UUT/M4" type="array">
       <obj_property name="ElementShortName">M4[30:0]</obj_property>

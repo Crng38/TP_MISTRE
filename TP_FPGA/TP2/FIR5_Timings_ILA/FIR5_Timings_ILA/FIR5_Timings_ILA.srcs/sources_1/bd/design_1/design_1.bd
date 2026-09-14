@@ -1,0 +1,426 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x3D19FB02CC73F7C9",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../FIR5_Timings_ILA.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "FIR5_Mult_0": "",
+      "signals_gen_0": "",
+      "FIR5_Add_0": "",
+      "clk_wiz_0": "",
+      "system_ila_0": "",
+      "xlconstant_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "sw_wave": {
+        "direction": "I"
+      },
+      "y": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "FIR5_Mult_0": {
+        "vlnv": "xilinx.com:module_ref:FIR5_Mult:1.0",
+        "xci_name": "design_1_FIR5_Mult_0_0",
+        "xci_path": "ip\\design_1_FIR5_Mult_0_0\\design_1_FIR5_Mult_0_0.xci",
+        "inst_hier_path": "FIR5_Mult_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "FIR5_Mult",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "x": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "M0": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "M1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "M2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "M3": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "M4": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "signals_gen_0": {
+        "vlnv": "xilinx.com:module_ref:signals_gen:1.0",
+        "xci_name": "design_1_signals_gen_0_0",
+        "xci_path": "ip\\design_1_signals_gen_0_0\\design_1_signals_gen_0_0.xci",
+        "inst_hier_path": "signals_gen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signals_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "wave": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "wave_select": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "FIR5_Add_0": {
+        "vlnv": "xilinx.com:module_ref:FIR5_Add:1.0",
+        "xci_name": "design_1_FIR5_Add_0_0",
+        "xci_path": "ip\\design_1_FIR5_Add_0_0\\design_1_FIR5_Add_0_0.xci",
+        "inst_hier_path": "FIR5_Add_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "FIR5_Add",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "M0": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "M1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "M2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "M3": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "M4": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "y": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "80.0"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "104.759"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "250"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "ENABLE_CLOCK_MONITOR": {
+            "value": "false"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "4"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "PLL_CLKIN_PERIOD": {
+            "value": "8.000"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "125"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "design_1_system_ila_0_1",
+        "xci_path": "ip\\design_1_system_ila_0_1\\design_1_system_ila_0_1.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "1"
+          },
+          "C_PROBE1_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      }
+    },
+    "nets": {
+      "FIR5_Mult_0_M0": {
+        "ports": [
+          "FIR5_Mult_0/M0",
+          "FIR5_Add_0/M0"
+        ]
+      },
+      "FIR5_Mult_0_M1": {
+        "ports": [
+          "FIR5_Mult_0/M1",
+          "FIR5_Add_0/M1"
+        ]
+      },
+      "FIR5_Mult_0_M2": {
+        "ports": [
+          "FIR5_Mult_0/M2",
+          "FIR5_Add_0/M2"
+        ]
+      },
+      "FIR5_Mult_0_M3": {
+        "ports": [
+          "FIR5_Mult_0/M3",
+          "FIR5_Add_0/M3"
+        ]
+      },
+      "FIR5_Mult_0_M4": {
+        "ports": [
+          "FIR5_Mult_0/M4",
+          "FIR5_Add_0/M4",
+          "system_ila_0/probe1"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "signals_gen_0_wave": {
+        "ports": [
+          "signals_gen_0/wave",
+          "FIR5_Mult_0/x",
+          "system_ila_0/probe2"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "wave_select_0_1": {
+        "ports": [
+          "sw_wave",
+          "signals_gen_0/wave_select"
+        ]
+      },
+      "FIR5_Add_0_y": {
+        "ports": [
+          "FIR5_Add_0/y",
+          "y",
+          "system_ila_0/probe0"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "signals_gen_0/clk",
+          "FIR5_Mult_0/clk",
+          "FIR5_Add_0/clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "system_ila_0/clk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "signals_gen_0/reset"
+        ]
+      }
+    }
+  }
+}

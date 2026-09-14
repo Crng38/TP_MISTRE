@@ -1,0 +1,10 @@
+16:01:10 **** Build of configuration Debug for project Helloworld_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 49943 C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/PS_Only_ZyboZ7.xpfm standalone_ps7_cortexa9_0 C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Helloworld_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/PS_Only_ZyboZ7.xpfm --sys_config PS_Only_ZyboZ7 --bif C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Helloworld_system/Debug/system.bif --bitstream C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Helloworld/_ide/bitstream/PS_Only_ZyboZ7.bit --elf C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Helloworld/Debug/Helloworld.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Helloworld/_ide/bitstream/PS_Only_ZyboZ7.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/Helloworld_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:01:14 Build Finished (took 3s.997ms)
+

@@ -1,0 +1,19 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][6]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                          design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][10]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                          design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][11]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][7]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                          design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][14]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                          design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][15]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][0]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                          design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][13]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][8]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                          design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][12]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][1]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][5]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][2]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][9]/D|
+|              sys_clk_pin |clk_out1_design_1_clk_wiz_0_0 |                           design_1_i/system_ila_0/U0/ila_lib/U0/ila_core_inst/shifted_data_in_reg[0][4]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

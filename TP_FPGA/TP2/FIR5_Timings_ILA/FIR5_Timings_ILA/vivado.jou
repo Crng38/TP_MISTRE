@@ -2,47 +2,199 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Nov 24 15:58:15 2022
-# Process ID: 3704
-# Current directory: C:/Users/vincent/AppData/Roaming/Xilinx/Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7988
-# Log file: C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/vivado.log
-# Journal file: C:/Users/vincent/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Start of session at: Tue Aug  4 13:05:45 2026
+# Process ID: 34168
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35848 C:\Users\Thomas\Desktop\TP_MISTRE\TP_FPGA\TP2\FIR5_Timings_ILA\FIR5_Timings_ILA\FIR5_Timings_ILA.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.xpr
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.xpr
 update_compile_order -fileset sources_1
-file mkdir D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new
-close [ open D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd w ]
-add_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/FIR5_Add.vhd
+launch_runs impl_1 -jobs 28
+wait_on_run impl_1
+close [ open C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/wx.vhd w ]
+add_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/new/wx.vhd
 update_compile_order -fileset sources_1
+create_bd_design "design_1"
 update_compile_order -fileset sources_1
+create_bd_cell -type module -reference FIR5_Mult FIR5_Mult_0
+create_bd_cell -type module -reference signals_gen signals_gen_0
+create_bd_cell -type module -reference FIR5_Add FIR5_Add_0
+set_property location {3.5 849 -286} [get_bd_cells FIR5_Add_0]
+set_property location {0.5 6 -238} [get_bd_cells signals_gen_0]
+set_property location {0.5 -212 -191} [get_bd_cells signals_gen_0]
+set_property location {1.5 497 -282} [get_bd_cells FIR5_Mult_0]
+set_property location {1.5 90 -276} [get_bd_cells signals_gen_0]
+set_property location {2 488 -274} [get_bd_cells FIR5_Mult_0]
+set_property location {2 515 -254} [get_bd_cells FIR5_Mult_0]
+set_property location {2 489 -376} [get_bd_cells FIR5_Mult_0]
+set_property location {2 547 -271} [get_bd_cells FIR5_Mult_0]
+set_property location {2 509 -264} [get_bd_cells FIR5_Mult_0]
+set_property location {2 506 -279} [get_bd_cells FIR5_Mult_0]
+startgroup
+connect_bd_net [get_bd_pins FIR5_Add_0/M4] [get_bd_pins FIR5_Add_0/M3]
+endgroup
+delete_bd_objs [get_bd_nets Net]
+set_property location {2 515 -269} [get_bd_cells FIR5_Mult_0]
+set_property location {2 508 -284} [get_bd_cells FIR5_Mult_0]
+set_property location {2 597 -263} [get_bd_cells FIR5_Mult_0]
+set_property location {3 833 -284} [get_bd_cells FIR5_Add_0]
+set_property location {2 517 -310} [get_bd_cells FIR5_Mult_0]
+set_property location {2 509 -312} [get_bd_cells FIR5_Mult_0]
+set_property location {2 596 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {2.5 600 -247} [get_bd_cells FIR5_Mult_0]
+set_property location {2 613 -245} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -250} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -260} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -270} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -280} [get_bd_cells FIR5_Mult_0]
+set_property location {2 600 -270} [get_bd_cells FIR5_Mult_0]
+connect_bd_net [get_bd_pins FIR5_Mult_0/M0] [get_bd_pins FIR5_Add_0/M0]
+set_property location {1.5 554 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {1.5 430 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {1.5 422 -249} [get_bd_cells FIR5_Mult_0]
+set_property location {2 420 -260} [get_bd_cells FIR5_Mult_0]
+set_property location {2 420 -270} [get_bd_cells FIR5_Mult_0]
+connect_bd_net [get_bd_pins FIR5_Add_0/M1] [get_bd_pins FIR5_Mult_0/M1]
+connect_bd_net [get_bd_pins FIR5_Mult_0/M2] [get_bd_pins FIR5_Add_0/M2]
+connect_bd_net [get_bd_pins FIR5_Add_0/M3] [get_bd_pins FIR5_Mult_0/M3]
+connect_bd_net [get_bd_pins FIR5_Mult_0/M4] [get_bd_pins FIR5_Add_0/M4]
+set_property location {1 76 -277} [get_bd_cells signals_gen_0]
+set_property location {1 90 -270} [get_bd_cells signals_gen_0]
+set_property location {1 90 -260} [get_bd_cells signals_gen_0]
+connect_bd_net [get_bd_pins FIR5_Mult_0/x] [get_bd_pins signals_gen_0/wave]
+connect_bd_net [get_bd_pins signals_gen_0/clk] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_pins signals_gen_0/clk] [get_bd_pins FIR5_Add_0/clk]
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins FIR5_Add_0/clk] [get_bd_pins FIR5_Mult_0/clk]
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins FIR5_Add_0/clk] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_pins FIR5_Add_0/clk] [get_bd_pins signals_gen_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/wave_select]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins FIR5_Add_0/clk]
+endgroup
+disconnect_bd_net /Net [get_bd_pins signals_gen_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins FIR5_Add_0/y]
+endgroup
+delete_bd_objs [get_bd_nets Net]
+set_property location {1 91 -419} [get_bd_cells clk_wiz]
+set_property location {0.5 -139 -416} [get_bd_cells clk_wiz]
+connect_bd_net [get_bd_pins clk_wiz/clk_out1] [get_bd_pins FIR5_Add_0/clk]
+connect_bd_net [get_bd_pins clk_wiz/clk_out1] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_pins signals_gen_0/clk] [get_bd_pins clk_wiz/clk_out1]
+set_property location {1 -105 -150} [get_bd_cells clk_wiz]
+startgroup
+make_bd_pins_external  [get_bd_pins clk_wiz/clk_in1]
+endgroup
+connect_bd_net [get_bd_pins signals_gen_0/reset] [get_bd_pins clk_wiz/reset]
+delete_bd_objs [get_bd_nets clk_in1_0_1] [get_bd_nets Net] [get_bd_cells clk_wiz]
+delete_bd_objs [get_bd_nets wave_select_0_1] [get_bd_ports wave_select_0]
+delete_bd_objs [get_bd_ports clk_in1_0]
+delete_bd_objs [get_bd_nets FIR5_Add_0_y] [get_bd_ports y_0]
+set_property target_constrs_file C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/constrs_1/imports/Zybo/Zybo-Z7-Master.xdc [current_fileset -constrset]
+delete_bd_objs [get_bd_nets clk_wiz_clk_out1]
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/wave_select]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins signals_gen_0/reset]
+endgroup
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Mult_0/clk]
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Add_0/clk]
+undo
+connect_bd_net [get_bd_ports clk_0] [get_bd_pins FIR5_Add_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins FIR5_Add_0/y]
+endgroup
+set_property name wave_select [get_bd_ports wave_select_0]
+set_property name clk [get_bd_ports clk_0]
+set_property name reset [get_bd_ports reset_0]
+set_property name y [get_bd_ports y_0]
+set_property CONFIG.FREQ_HZ 125000000 [get_bd_ports clk]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property location {1 129 -9} [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/reset]
+connect_bd_net [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.ENABLE_CLOCK_MONITOR {false} CONFIG.PRIM_SOURCE {Global_buffer} CONFIG.PRIM_IN_FREQ {125} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {250} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.PRIMITIVE {PLL} CONFIG.CLKIN1_JITTER_PS {80.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {8} CONFIG.MMCM_CLKIN1_PERIOD {8.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4} CONFIG.PLL_CLKIN_PERIOD {8.000} CONFIG.CLKOUT1_JITTER {104.759} CONFIG.CLKOUT1_PHASE_ERROR {96.948}] [get_bd_cells clk_wiz_0]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {FIR5_Mult_0_M4 FIR5_Add_0_y signals_gen_0_wave }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets FIR5_Add_0_y] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets FIR5_Mult_0_M4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets signals_gen_0_wave] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+set_property location {4 861 -20} [get_bd_cells system_ila_0]
+delete_bd_objs [get_bd_nets clk_0_1]
+undo
+undo
+undo
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets FIR5_Add_0_y] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets FIR5_Mult_0_M4] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets signals_gen_0_wave] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+set_property location {4 896 -5} [get_bd_cells system_ila_0]
+disconnect_bd_net /clk_0_1 [get_bd_pins system_ila_0/clk]
+connect_bd_net [get_bd_pins system_ila_0/clk] [get_bd_pins clk_wiz_0/clk_out1]
+set_property location {1.5 300 -33} [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets reset_0_1]
+delete_bd_objs [get_bd_ports reset]
+set_property location {3 470 18} [get_bd_cells clk_wiz_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {2 206 -16} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins signals_gen_0/reset] [get_bd_pins xlconstant_0/dout]
+set_property location {0.5 -29 -45} [get_bd_cells xlconstant_0]
+set_property location {0.5 -78 -147} [get_bd_cells xlconstant_0]
+startgroup
+set_property -dict [list CONFIG.C_PROBE0_TYPE {1}] [get_bd_cells system_ila_0]
+endgroup
+save_bd_design
+make_wrapper -files [get_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse c:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5.vhd
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd
-file delete -force D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/tst_FIR5.vhd
-add_files -norecurse D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timing/FIR5_Mult.vhd
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timings_ILA/archive_project_summary.txt] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/imports/FIR5_Timings_ILA/archive_project_summary.txt
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/archive_project_summary.txt] -no_script -reset -force -quiet
-remove_files  D:/Projets_Vivado_Win/FIR5_Timings_ILA/archive_project_summary.txt
-generate_target all [get_files D:/Projets_Vivado_Win/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/ip/dsp_mult16/dsp_mult16.xci]
-synth_design -rtl -rtl_skip_mlo -name rtl_1
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top FIR5_Add [current_fileset]
+set_property top design_1_wrapper [current_fileset]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
-refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-close_design
-set_property generate_synth_checkpoint 0 [get_files dsp_mult16.xci]
-archive_project D:/Projets_Vivado_Win/FIR5_Timings_ILA.xpr.zip -temp_dir C:/Users/vincent/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3704-DESKTOP-VJKAB20 -force -exclude_run_results
+set_property name sw_wave [get_bd_ports wave_select]
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 28
+wait_on_run impl_1
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+open_run synth_1 -name synth_1
+current_design impl_1
+current_design synth_1
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
+current_design impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_FPGA/TP2/FIR5_Timings_ILA/FIR5_Timings_ILA/FIR5_Timings_ILA.srcs/sources_1/bd/design_1/design_1.bd}
+close_project

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="sdx.custom.platform.repository.locations" value="C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR\Projet_Vitis\PS_Alone_NoFPU;C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR;C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR\Projet_Vitis\PS_Only_ZyboZ7\export\PS_Only_ZyboZ7;C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR\Projet_Vitis\XADC_SingleCh14\export\XADC_SingleCh14;C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR\Projet_Vitis;C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR\Projet_Vitis\PS_ET_BRAM\export\PS_ET_BRAM;C:\Users\Thomas\Desktop\TP_MISTRE\TP_PROCESSEUR\Projet_Vitis\Zynq_Timer48_wrapper\export\Zynq_Timer48_wrapper"/>
+</section>
