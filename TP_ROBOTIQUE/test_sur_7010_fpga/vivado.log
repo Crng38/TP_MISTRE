@@ -1,0 +1,799 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Aug 23 03:40:22 2026
+# Process ID: 3980
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1900 C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 1085.766 ; gain = 0.000
+update_compile_order -fileset sources_1
+excreate_bd_design "test_driver_pwm"
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+create_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1080.898 ; gain = 0.000
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference driver_moteur driver_moteur_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_driver_in' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+startgroup
+make_bd_pins_external  [get_bd_pins driver_moteur_0/dir_driver_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins driver_moteur_0/pwm_driver_out]
+endgroup
+set_property name driver_out [get_bd_ports dir_driver_out_0]
+set_property name pwm_out [get_bd_ports pwm_driver_out_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {0.5 -18 -204} [get_bd_cells xlconstant_0]
+set_property location {0.5 -64 -193} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins driver_moteur_0/reset_driver_in]
+expected number but got ""
+ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
+expected number but got ""
+ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
+expected number but got ""
+ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+endgroup
+set_property location {1 -39 -42} [get_bd_cells xlconstant_0]
+set_property location {1 -42 -148} [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property location {1 -67 -242} [get_bd_cells util_vector_logic_0]
+set_property location {1.5 35 -233} [get_bd_cells util_vector_logic_0]
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells util_vector_logic_0]
+connect_bd_net [get_bd_pins util_vector_logic_0/Op1] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins driver_moteur_0/enable_driver_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property location {1 -147 72} [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_pins driver_moteur_0/clk_pwm_driver_in] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.PLL_CLKIN_PERIOD {20.000} CONFIG.CLKOUT1_JITTER {238.699} CONFIG.CLKOUT1_PHASE_ERROR {254.101}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_in1]
+endgroup
+set_property name clk_50 [get_bd_ports clk_in1_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {1 -158 -163} [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.IN6_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN0_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN2_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN4_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN5_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN1_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN3_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {32}] [get_bd_cells xlconcat_0]
+set_property location {1 -210 -316} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins xlconstant_0/dout]
+delete_bd_objs [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property -dict [list CONFIG.IN2_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3} CONFIG.IN0_WIDTH {30}] [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {1 -222 -348} [get_bd_cells xlconstant_1]
+expected number but got ""
+ERROR: [IP_Flow 19-3317] Tcl Error found in 'validate_PARAM_VALUE.CONST_VAL' method. expected number but got ""
+set_property -dict [list CONFIG.CONST_WIDTH {30} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins xlconstant_1/dout]
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_0/In1]
+endgroup
+set_property location {-334 -284} [get_bd_ports In1_0]
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_0/In2]
+endgroup
+set_property location {-341 -331} [get_bd_ports In1_0]
+set_property name bit31_in [get_bd_ports In2_0]
+set_property name bit30_in [get_bd_ports In1_0]
+connect_bd_net [get_bd_pins driver_moteur_0/value_driver_in] [get_bd_pins xlconcat_0/dout]
+set_property location {2 -16 -82} [get_bd_cells xlconcat_0]
+set_property location {2 -23 -15} [get_bd_cells xlconcat_0]
+set_property location {-361 5} [get_bd_ports bit31_in]
+set_property location {-356 8} [get_bd_ports bit31_in]
+set_property location {-351 -25} [get_bd_ports bit30_in]
+set_property location {-346 -2} [get_bd_ports bit30_in]
+set_property location {-351 -29} [get_bd_ports bit30_in]
+set_property location {1 -203 -114} [get_bd_cells xlconstant_1]
+set_property location {-351 -47} [get_bd_ports bit30_in]
+set_property location {-358 0} [get_bd_ports bit31_in]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+make_wrapper -files [get_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd] -top
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 1349.594 ; gain = 151.078
+add_files -norecurse c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 8
+INFO: [BD 41-1662] The design 'test_driver_pwm.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_moteur_0 .
+WARNING: [IP_Flow 19-5160] IP 'test_driver_pwm_xlconstant_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'test_driver_pwm_xlconstant_0_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-5160] IP 'test_driver_pwm_xlconstant_1_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'test_driver_pwm_xlconstant_1_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP test_driver_pwm_clk_wiz_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP test_driver_pwm_util_vector_logic_0_0
+[Sun Aug 23 09:59:27 2026] Launched test_driver_pwm_driver_moteur_0_0_synth_1, test_driver_pwm_clk_wiz_0_0_synth_1, test_driver_pwm_util_vector_logic_0_0_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_driver_moteur_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1/runme.log
+test_driver_pwm_clk_wiz_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1/runme.log
+test_driver_pwm_util_vector_logic_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_util_vector_logic_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 09:59:27 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1352.656 ; gain = 3.062
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+[Sun Aug 23 10:08:26 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 10:08:26 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1481.660 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2091.812 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2091.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2091.812 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:33 ; elapsed = 00:00:23 . Memory (MB): peak = 2203.090 ; gain = 766.637
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 2242.855 ; gain = 15.918
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+open_hw_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 3764.879 ; gain = 1522.023
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 10:13:04 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A08870
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+delete_bd_objs [get_bd_nets xlconstant_1_dout] [get_bd_cells xlconstant_1]
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0
+endgroup
+set_property location {2 4 -217} [get_bd_cells mult_gen_0]
+set_property -dict [list CONFIG.PortAWidth.VALUE_SRC USER CONFIG.PortAType.VALUE_SRC USER] [get_bd_cells mult_gen_0]
+set_property -dict [list CONFIG.MultType {Constant_Coefficient_Multiplier} CONFIG.PortAType {Unsigned} CONFIG.PortAWidth {2} CONFIG.ConstValue {1552} CONFIG.Use_Custom_Output_Width {true} CONFIG.OutputWidthHigh {31} CONFIG.ClockEnable {false}] [get_bd_cells mult_gen_0]
+startgroup
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {2}] [get_bd_cells xlconcat_0]
+WARNING: [BD 41-1684] Pin /xlconcat_0/In2 is now disabled. All connections to this pin have been removed. 
+delete_bd_objs [get_bd_nets In2_0_1]
+endgroup
+set_property location {-352 -18} [get_bd_ports bit31_in]
+set_property location {-356 -70} [get_bd_ports bit31_in]
+connect_bd_net [get_bd_ports bit31_in] [get_bd_pins xlconcat_0/In0]
+set_property location {0.5 -241 -224} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins mult_gen_0/A]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins mult_gen_0/CLK]
+connect_bd_net [get_bd_pins driver_moteur_0/value_driver_in] [get_bd_pins mult_gen_0/P]
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mult_gen_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 10:22:13 2026] Launched test_driver_pwm_mult_gen_0_0_synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_mult_gen_0_0_synth_1/runme.log
+[Sun Aug 23 10:22:13 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 10:24:23 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 10:24:23 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 10:27:07 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A08870
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.ConstValue {2083}] [get_bd_cells mult_gen_0]
+endgroup
+reset_run test_driver_pwm_mult_gen_0_0_synth_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mult_gen_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 10:35:35 2026] Launched test_driver_pwm_mult_gen_0_0_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_mult_gen_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_mult_gen_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 10:35:35 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A08870
+set_property location {1 -248 -127} [get_bd_cells xlconcat_0]
+set_property location {1 -242 -36} [get_bd_cells xlconcat_0]
+set_property location {-395 -119} [get_bd_ports bit30_in]
+delete_bd_objs [get_bd_nets In1_0_1]
+delete_bd_objs [get_bd_nets bit31_in_1]
+set_property location {-382 -4} [get_bd_ports bit31_in]
+set_property location {-377 -64} [get_bd_ports bit30_in]
+connect_bd_net [get_bd_ports bit30_in] [get_bd_pins xlconcat_0/In0]
+set_property location {-355 -12} [get_bd_ports bit31_in]
+connect_bd_net [get_bd_ports bit31_in] [get_bd_pins xlconcat_0/In1]
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+set_property location {3 229 -231} [get_bd_cells mult_gen_0]
+delete_bd_objs [get_bd_nets clk_in1_0_1]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins mult_gen_0/CLK]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins clk_wiz_0/clk_in1]
+copy_bd_objs /  [get_bd_cells {util_vector_logic_0}]
+set_property location {1.5 117 -38} [get_bd_cells util_vector_logic_1]
+set_property -dict [list CONFIG.C_SIZE {32}] [get_bd_cells util_vector_logic_1]
+delete_bd_objs [get_bd_cells util_vector_logic_1]
+set_property location {1.5 -93 -34} [get_bd_cells xlconcat_0]
+copy_bd_objs /  [get_bd_cells {util_vector_logic_0}]
+set_property location {0.5 -197 -169} [get_bd_cells util_vector_logic_1]
+delete_bd_objs [get_bd_nets bit31_in_1]
+delete_bd_objs [get_bd_nets bit30_in_1]
+set_property -dict [list CONFIG.C_SIZE {2}] [get_bd_cells util_vector_logic_1]
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {1} CONFIG.IN0_WIDTH {2}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins mult_gen_0/A]
+set_property location {2 23 -177} [get_bd_cells xlconcat_0]
+set_property location {2 41 -167} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins util_vector_logic_1/Res] [get_bd_pins xlconcat_0/In0]
+set_property location {-383 -210} [get_bd_ports bit30_in]
+set_property location {-386 -126} [get_bd_ports bit31_in]
+set_property location {1 -293 -277} [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+delete_bd_objs [get_bd_nets util_vector_logic_1_Res]
+set_property location {1.5 39 -166} [get_bd_cells util_vector_logic_1]
+set_property location {1 -186 -172} [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {2} CONFIG.IN0_WIDTH {1}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_ports bit30_in] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_ports bit31_in] [get_bd_pins xlconcat_0/In1]
+set_property location {1 -244 -162} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins util_vector_logic_1/Op1]
+connect_bd_net [get_bd_pins mult_gen_0/A] [get_bd_pins util_vector_logic_1/Res]
+copy_bd_objs /  [get_bd_cells {util_vector_logic_1}]
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {and} CONFIG.LOGO_FILE {data/sym_andgate.png}] [get_bd_cells util_vector_logic_2]
+set_property location {4 564 168} [get_bd_cells util_vector_logic_2]
+set_property location {3.5 572 170} [get_bd_cells util_vector_logic_2]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins util_vector_logic_2/Op1]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins util_vector_logic_2/Op2]
+startgroup
+make_bd_pins_external  [get_bd_pins util_vector_logic_2/Res]
+endgroup
+set_property name clk50_out [get_bd_ports Res_0]
+set_property name clk_50_out [get_bd_ports clk50_out]
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A08870
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+ERROR: [xilinx.com:ip:util_vector_logic:2.0-10] /util_vector_logic_2 IP cannot do propagation when Input pin Op1 type is "clk" and Input pin Op2 type is "clk".
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd 
+INFO: [IP_Flow 19-7066] Running IP cache check for IP test_driver_pwm_util_vector_logic_0_2
+INFO: [IP_Flow 19-7066] Running IP cache check for IP test_driver_pwm_util_vector_logic_1_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+ERROR: [xilinx.com:ip:util_vector_logic:2.0-10] /util_vector_logic_2 IP cannot do propagation when Input pin Op1 type is "clk" and Input pin Op2 type is "clk".
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd 
+INFO: [IP_Flow 19-7066] Running IP cache check for IP test_driver_pwm_util_vector_logic_0_2
+INFO: [IP_Flow 19-7066] Running IP cache check for IP test_driver_pwm_util_vector_logic_1_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+delete_bd_objs [get_bd_nets util_vector_logic_2_Res] [get_bd_cells util_vector_logic_2]
+connect_bd_net [get_bd_ports clk_50_out] [get_bd_ports clk_50]
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 14:19:27 2026] Launched test_driver_pwm_util_vector_logic_0_2_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_util_vector_logic_0_2_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_util_vector_logic_0_2_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 14:19:27 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3979.262 ; gain = 0.000
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {MMCM} CONFIG.USE_FREQ_SYNTH {false} CONFIG.USE_PHASE_ALIGNMENT {false} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT7_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.USE_LOCKED {true} CONFIG.USE_RESET {true} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {20.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER {192.113} CONFIG.CLKOUT1_PHASE_ERROR {164.985}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Sun Aug 23 14:23:02 2026] Launched test_driver_pwm_clk_wiz_0_0_synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1/runme.log
+[Sun Aug 23 14:23:02 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.USE_PHASE_ALIGNMENT {false} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {238.699} CONFIG.CLKOUT1_PHASE_ERROR {254.101}] [get_bd_cells clk_wiz_0]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT1_REQUESTED_OUT_FREQ' from '50' to '125' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_DIVCLK_DIVIDE' from '1' to '2' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '17' to '35' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '17' to '7' has been ignored for IP 'clk_wiz_0'
+endgroup
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+reset_run test_driver_pwm_clk_wiz_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 14:26:26 2026] Launched test_driver_pwm_clk_wiz_0_0_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_clk_wiz_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 14:26:26 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 4082.707 ; gain = 0.891
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 14:30:13 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+update_module_reference test_driver_pwm_driver_moteur_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_driver_in' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded test_driver_pwm_driver_moteur_0_0 from driver_moteur_v1_0 1.0 to driver_moteur_v1_0 1.0
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_moteur_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 14:36:19 2026] Launched test_driver_pwm_driver_moteur_0_0_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_driver_moteur_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 14:36:19 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 4096.906 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 14:39:41 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+delete_bd_objs [get_bd_nets Net]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets Net]'
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+disconnect_bd_net /Net [get_bd_ports clk_50_out]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /Net [get_bd_ports clk_50_out]'
+disconnect_bd_net /Net [get_bd_ports clk_50_out]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+connect_bd_net [get_bd_ports clk_50_out] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer}] [get_bd_cells clk_wiz_0]
+endgroup
+reset_run test_driver_pwm_clk_wiz_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+update_module_reference test_driver_pwm_driver_moteur_0_0
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd'.
+ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'driver_moteur'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "if". [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd:72]
+update_module_reference test_driver_pwm_driver_moteur_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_driver_in' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded test_driver_pwm_driver_moteur_0_0 from driver_moteur_v1_0 1.0 to driver_moteur_v1_0 1.0
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_moteur_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 14:45:19 2026] Launched test_driver_pwm_clk_wiz_0_0_synth_1, test_driver_pwm_driver_moteur_0_0_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_clk_wiz_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1/runme.log
+test_driver_pwm_driver_moteur_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 14:45:20 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 4124.789 ; gain = 0.258
+set_property name clk_125_out [get_bd_ports clk_50_out]
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 14:49:06 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+launch_runs impl_1 -jobs 8
+[Sun Aug 23 14:52:31 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 14:52:32 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 14:54:50 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7}] [get_bd_cells clk_wiz_0]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT1_REQUESTED_OUT_FREQ' from '50' to '125' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_DIVCLK_DIVIDE' from '1' to '2' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '17' to '35' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '17' to '7' has been ignored for IP 'clk_wiz_0'
+endgroup
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+[Sun Aug 23 14:57:36 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 14:58:53 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7}] [get_bd_cells clk_wiz_0]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'CLKOUT1_REQUESTED_OUT_FREQ' from '50' to '125' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_DIVCLK_DIVIDE' from '1' to '2' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '17' to '35' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '17' to '7' has been ignored for IP 'clk_wiz_0'
+endgroup
+startgroup
+set_property -dict [list CONFIG.USE_FREQ_SYNTH {true} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin}] [get_bd_cells clk_wiz_0]
+endgroup
+reset_run test_driver_pwm_clk_wiz_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+
+save_bd_design
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+update_module_reference test_driver_pwm_driver_moteur_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_driver_in' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded test_driver_pwm_driver_moteur_0_0 from driver_moteur_v1_0 1.0 to driver_moteur_v1_0 1.0
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+Wrote  : <C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/ui/bd_3010d61c.ui> 
+launch_runs impl_1 -jobs 8
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAWidth has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:mult_gen:12.0-913] /mult_gen_0 PortAType has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_driver_pwm\test_driver_pwm.bd> 
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/sim/test_driver_pwm.vhd
+VHDL Output written to : C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block driver_moteur_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+Exporting to file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm.hwh
+Generated Block Design Tcl file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hw_handoff/test_driver_pwm_bd.tcl
+Generated Hardware Definition File C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.hwdef
+[Sun Aug 23 15:05:14 2026] Launched test_driver_pwm_clk_wiz_0_0_synth_1, test_driver_pwm_driver_moteur_0_0_synth_1, synth_1...
+Run output will be captured here:
+test_driver_pwm_clk_wiz_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_clk_wiz_0_0_synth_1/runme.log
+test_driver_pwm_driver_moteur_0_0_synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/test_driver_pwm_driver_moteur_0_0_synth_1/runme.log
+synth_1: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/runme.log
+[Sun Aug 23 15:05:14 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4270.602 ; gain = 0.020
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Aug 23 15:08:42 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+import_files -norecurse C:/Users/Thomas/OneDrive/Cours/M1/Robotique/X1-Asservissement-numerique-sur-FPGA/X1-Asservissement-numerique-sur-FPGA/transmissionDonnee.vhd
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\pi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\driver_moteur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\decodeur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\pi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\driver_moteur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\decodeur.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+set_property  ip_repo_paths  {{C:/Users/Thomas/Desktop/TP_MISTRE/Source IP Vivado}} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Thomas/Desktop/TP_MISTRE/Source IP Vivado'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\pi.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\driver_moteur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\new\decodeur.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.gen\sources_1\bd\test_driver_pwm\synth\test_driver_pwm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [c:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.gen\sources_1\bd\test_driver_pwm\hdl\test_driver_pwm_wrapper.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+create_bd_design "test_mesure_vitesse"
+Wrote  : <C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.srcs\sources_1\bd\test_mesure_vitesse\test_mesure_vitesse.bd> 
+update_compile_order -fileset sources_1
+close [ open C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/DecodBin_ASCII.vhd w ]
+add_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/DecodBin_ASCII.vhd
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 23 15:58:21 2026...

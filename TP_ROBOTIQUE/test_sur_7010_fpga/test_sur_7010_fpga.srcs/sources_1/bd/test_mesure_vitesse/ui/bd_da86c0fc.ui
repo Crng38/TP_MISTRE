@@ -1,0 +1,45 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.364591",
+   "Default View_TopLeft":"-66,-261",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port clk_50 -pg 1 -lvl 0 -x -760 -y -110 -defaultsOSRD
+preplace port uart_txd_0 -pg 1 -lvl 9 -x 2250 -y -20 -defaultsOSRD
+preplace port K2 -pg 1 -lvl 0 -x -760 -y 10 -defaultsOSRD
+preplace port encodeur_in -pg 1 -lvl 9 -x 2250 -y 310 -defaultsOSRD
+preplace port uart_rxd_0 -pg 1 -lvl 0 -x -760 -y -50 -defaultsOSRD
+preplace port K3 -pg 1 -lvl 0 -x -760 -y 160 -defaultsOSRD
+preplace inst module_RS232_0 -pg 1 -lvl 8 -x 2120 -y -10 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 6 -x 1550 -y -120 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x -60 -y -240 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 390 -y -250 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 1 -x -580 -y -10 -defaultsOSRD
+preplace inst transmissionDonnee_0 -pg 1 -lvl 7 -x 1860 -y 20 -defaultsOSRD
+preplace inst signal_gene_0 -pg 1 -lvl 3 -x 390 -y 70 -defaultsOSRD
+preplace inst DecodBin_ASCII_0 -pg 1 -lvl 6 -x 1550 -y 170 -defaultsOSRD
+preplace inst decodeur_0 -pg 1 -lvl 5 -x 1110 -y 170 -defaultsOSRD
+preplace inst signal_gene_1 -pg 1 -lvl 4 -x 740 -y 300 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 2 6 20 0 N 0 N 0 N 0 1700 110 2010
+preplace netloc xlconstant_0_dout 1 2 6 20 -190 N -190 N -190 N -190 N -190 2010
+preplace netloc util_vector_logic_0_Res 1 2 4 20 140 540J -120 850 -130 N
+preplace netloc module_RS232_0_uart_txd 1 8 1 N -20
+preplace netloc K2_1 1 0 1 -740 -10n
+preplace netloc pulse_generator_0_pulse 1 3 6 530 200 830 260 N 260 1710 310 N 310 N
+preplace netloc transmissionDonnee_0_TX 1 7 1 N 10
+preplace netloc transmissionDonnee_0_validTx 1 7 1 2000 -10n
+preplace netloc clk_in1_0_1 1 0 6 NJ -110 NJ -110 N -110 NJ -110 N -110 N
+preplace netloc uart_rxd_0_1 1 0 8 -740J -70 NJ -70 NJ -70 NJ -70 N -70 1250 -50 1690J -70 2000
+preplace netloc util_vector_logic_1_Res 1 1 6 NJ -10 NJ -10 NJ -10 N -10 N -10 1690
+preplace netloc DecodBin_ASCII_0_DataOut 1 6 1 1720 50n
+preplace netloc decodeur_0_vitesse 1 5 1 N 170
+preplace netloc encodeur_in_b_0_1 1 0 5 NJ 160 NJ 160 NJ 160 NJ 160 N
+preplace netloc signal_gene_1_clk_out 1 4 1 840 140n
+levelinfo -pg 1 -760 -580 -60 390 740 1110 1550 1860 2120 2250
+pagesize -pg 1 -db -bbox -sgen -880 -570 2380 570
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

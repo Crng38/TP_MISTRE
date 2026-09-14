@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.sim/sim_1/impl/func/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.sim/sim_1/impl/func/xsim/sim_pi_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_clk_wiz_1_test_mesure_vitesse_clk_wiz_1_clk_wiz'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_module_RS232_0_0_mod_m_cnter'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_module_RS232_0_0_pulse'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_module_RS232_0_0_uart_tx'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_signal_gene_0_0_signal_gene'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_transmissionDonnee_0_1_transmissionDonnee'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_util_vector_logic_0_0'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_util_vector_logic_0_1'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_clk_wiz_1'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_module_RS232_0_0_module_RS232'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_signal_gene_0_0'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_transmissionDonnee_0_1'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_module_RS232_0_0'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse'
+INFO: [VRFC 10-3107] analyzing entity 'test_mesure_vitesse_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sim_1/new/sim_pi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sim_pi'

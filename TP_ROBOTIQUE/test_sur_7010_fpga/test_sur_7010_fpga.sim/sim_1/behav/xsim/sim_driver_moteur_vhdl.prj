@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../test_sur_7010_fpga.srcs/sources_1/new/driver_moteur.vhd" \
+"../../../../test_sur_7010_fpga.srcs/sim_1/new/sim_driver_moteur.vhd" \
+
+# Do not sort compile order
+nosort

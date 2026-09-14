@@ -1,0 +1,354 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Aug 23 03:40:22 2026
+# Process ID: 3980
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1900 C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\test_sur_7010_fpga\test_sur_7010_fpga.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.xpr
+update_compile_order -fileset sources_1
+1
+create_bd_design "test_driver_pwm"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference driver_moteur driver_moteur_0
+startgroup
+make_bd_pins_external  [get_bd_pins driver_moteur_0/dir_driver_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins driver_moteur_0/pwm_driver_out]
+endgroup
+set_property name driver_out [get_bd_ports dir_driver_out_0]
+set_property name pwm_out [get_bd_ports pwm_driver_out_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {0.5 -18 -204} [get_bd_cells xlconstant_0]
+set_property location {0.5 -64 -193} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins driver_moteur_0/reset_driver_in]
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+endgroup
+set_property location {1 -39 -42} [get_bd_cells xlconstant_0]
+set_property location {1 -42 -148} [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property location {1 -67 -242} [get_bd_cells util_vector_logic_0]
+set_property location {1.5 35 -233} [get_bd_cells util_vector_logic_0]
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {not} CONFIG.LOGO_FILE {data/sym_notgate.png}] [get_bd_cells util_vector_logic_0]
+connect_bd_net [get_bd_pins util_vector_logic_0/Op1] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins driver_moteur_0/enable_driver_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property location {1 -147 72} [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_pins driver_moteur_0/clk_pwm_driver_in] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_0]
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.PLL_CLKIN_PERIOD {20.000} CONFIG.CLKOUT1_JITTER {238.699} CONFIG.CLKOUT1_PHASE_ERROR {254.101}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_in1]
+endgroup
+set_property name clk_50 [get_bd_ports clk_in1_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {1 -158 -163} [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.IN6_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN0_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN2_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN4_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN5_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN1_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN3_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {32}] [get_bd_cells xlconcat_0]
+set_property location {1 -210 -316} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins xlconstant_0/dout]
+delete_bd_objs [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property -dict [list CONFIG.IN2_WIDTH.VALUE_SRC PROPAGATED CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {3} CONFIG.IN0_WIDTH {30}] [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {1 -222 -348} [get_bd_cells xlconstant_1]
+set_property -dict [list CONFIG.CONST_WIDTH {30} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins xlconstant_1/dout]
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_0/In1]
+endgroup
+set_property location {-334 -284} [get_bd_ports In1_0]
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_0/In2]
+endgroup
+set_property location {-341 -331} [get_bd_ports In1_0]
+set_property name bit31_in [get_bd_ports In2_0]
+set_property name bit30_in [get_bd_ports In1_0]
+connect_bd_net [get_bd_pins driver_moteur_0/value_driver_in] [get_bd_pins xlconcat_0/dout]
+set_property location {2 -16 -82} [get_bd_cells xlconcat_0]
+set_property location {2 -23 -15} [get_bd_cells xlconcat_0]
+set_property location {-361 5} [get_bd_ports bit31_in]
+set_property location {-356 8} [get_bd_ports bit31_in]
+set_property location {-351 -25} [get_bd_ports bit30_in]
+set_property location {-346 -2} [get_bd_ports bit30_in]
+set_property location {-351 -29} [get_bd_ports bit30_in]
+set_property location {1 -203 -114} [get_bd_cells xlconstant_1]
+set_property location {-351 -47} [get_bd_ports bit30_in]
+set_property location {-358 0} [get_bd_ports bit31_in]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+make_wrapper -files [get_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd] -top
+add_files -norecurse c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+delete_bd_objs [get_bd_nets xlconstant_1_dout] [get_bd_cells xlconstant_1]
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0
+endgroup
+set_property location {2 4 -217} [get_bd_cells mult_gen_0]
+set_property -dict [list CONFIG.PortAWidth.VALUE_SRC USER CONFIG.PortAType.VALUE_SRC USER] [get_bd_cells mult_gen_0]
+set_property -dict [list CONFIG.MultType {Constant_Coefficient_Multiplier} CONFIG.PortAType {Unsigned} CONFIG.PortAWidth {2} CONFIG.ConstValue {1552} CONFIG.Use_Custom_Output_Width {true} CONFIG.OutputWidthHigh {31} CONFIG.ClockEnable {false}] [get_bd_cells mult_gen_0]
+startgroup
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC PROPAGATED] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {2}] [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_nets In2_0_1]
+endgroup
+set_property location {-352 -18} [get_bd_ports bit31_in]
+set_property location {-356 -70} [get_bd_ports bit31_in]
+connect_bd_net [get_bd_ports bit31_in] [get_bd_pins xlconcat_0/In0]
+set_property location {0.5 -241 -224} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins mult_gen_0/A]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins mult_gen_0/CLK]
+connect_bd_net [get_bd_pins driver_moteur_0/value_driver_in] [get_bd_pins mult_gen_0/P]
+save_bd_design
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.ConstValue {2083}] [get_bd_cells mult_gen_0]
+endgroup
+reset_run test_driver_pwm_mult_gen_0_0_synth_1
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+set_property location {1 -248 -127} [get_bd_cells xlconcat_0]
+set_property location {1 -242 -36} [get_bd_cells xlconcat_0]
+set_property location {-395 -119} [get_bd_ports bit30_in]
+delete_bd_objs [get_bd_nets In1_0_1]
+delete_bd_objs [get_bd_nets bit31_in_1]
+set_property location {-382 -4} [get_bd_ports bit31_in]
+set_property location {-377 -64} [get_bd_ports bit30_in]
+connect_bd_net [get_bd_ports bit30_in] [get_bd_pins xlconcat_0/In0]
+set_property location {-355 -12} [get_bd_ports bit31_in]
+connect_bd_net [get_bd_ports bit31_in] [get_bd_pins xlconcat_0/In1]
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+set_property location {3 229 -231} [get_bd_cells mult_gen_0]
+delete_bd_objs [get_bd_nets clk_in1_0_1]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins mult_gen_0/CLK]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins clk_wiz_0/clk_in1]
+copy_bd_objs /  [get_bd_cells {util_vector_logic_0}]
+set_property location {1.5 117 -38} [get_bd_cells util_vector_logic_1]
+set_property -dict [list CONFIG.C_SIZE {32}] [get_bd_cells util_vector_logic_1]
+delete_bd_objs [get_bd_cells util_vector_logic_1]
+set_property location {1.5 -93 -34} [get_bd_cells xlconcat_0]
+copy_bd_objs /  [get_bd_cells {util_vector_logic_0}]
+set_property location {0.5 -197 -169} [get_bd_cells util_vector_logic_1]
+delete_bd_objs [get_bd_nets bit31_in_1]
+delete_bd_objs [get_bd_nets bit30_in_1]
+set_property -dict [list CONFIG.C_SIZE {2}] [get_bd_cells util_vector_logic_1]
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {1} CONFIG.IN0_WIDTH {2}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins mult_gen_0/A]
+set_property location {2 23 -177} [get_bd_cells xlconcat_0]
+set_property location {2 41 -167} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins util_vector_logic_1/Res] [get_bd_pins xlconcat_0/In0]
+set_property location {-383 -210} [get_bd_ports bit30_in]
+set_property location {-386 -126} [get_bd_ports bit31_in]
+set_property location {1 -293 -277} [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_nets xlconcat_0_dout]
+delete_bd_objs [get_bd_nets util_vector_logic_1_Res]
+set_property location {1.5 39 -166} [get_bd_cells util_vector_logic_1]
+set_property location {1 -186 -172} [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_0]
+set_property -dict [list CONFIG.NUM_PORTS {2} CONFIG.IN0_WIDTH {1}] [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_ports bit30_in] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_ports bit31_in] [get_bd_pins xlconcat_0/In1]
+set_property location {1 -244 -162} [get_bd_cells xlconcat_0]
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins util_vector_logic_1/Op1]
+connect_bd_net [get_bd_pins mult_gen_0/A] [get_bd_pins util_vector_logic_1/Res]
+copy_bd_objs /  [get_bd_cells {util_vector_logic_1}]
+set_property -dict [list CONFIG.C_SIZE {1} CONFIG.C_OPERATION {and} CONFIG.LOGO_FILE {data/sym_andgate.png}] [get_bd_cells util_vector_logic_2]
+set_property location {4 564 168} [get_bd_cells util_vector_logic_2]
+set_property location {3.5 572 170} [get_bd_cells util_vector_logic_2]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins util_vector_logic_2/Op1]
+connect_bd_net [get_bd_ports clk_50] [get_bd_pins util_vector_logic_2/Op2]
+startgroup
+make_bd_pins_external  [get_bd_pins util_vector_logic_2/Res]
+endgroup
+set_property name clk50_out [get_bd_ports Res_0]
+set_property name clk_50_out [get_bd_ports clk50_out]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+save_bd_design
+launch_runs impl_1 -jobs 8
+delete_bd_objs [get_bd_nets util_vector_logic_2_Res] [get_bd_cells util_vector_logic_2]
+connect_bd_net [get_bd_ports clk_50_out] [get_bd_ports clk_50]
+save_bd_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {MMCM} CONFIG.USE_FREQ_SYNTH {false} CONFIG.USE_PHASE_ALIGNMENT {false} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT7_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} CONFIG.USE_LOCKED {true} CONFIG.USE_RESET {true} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {20.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER {192.113} CONFIG.CLKOUT1_PHASE_ERROR {164.985}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.USE_PHASE_ALIGNMENT {false} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {238.699} CONFIG.CLKOUT1_PHASE_ERROR {254.101}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+reset_run test_driver_pwm_clk_wiz_0_0_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+reset_run synth_1
+update_module_reference test_driver_pwm_driver_moteur_0_0
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+delete_bd_objs [get_bd_nets Net]
+undo
+disconnect_bd_net /Net [get_bd_ports clk_50_out]
+undo
+disconnect_bd_net /Net [get_bd_ports clk_50_out]
+connect_bd_net [get_bd_ports clk_50_out] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer}] [get_bd_cells clk_wiz_0]
+endgroup
+reset_run test_driver_pwm_clk_wiz_0_0_synth_1
+reset_run synth_1
+save_bd_design
+update_module_reference test_driver_pwm_driver_moteur_0_0
+update_module_reference test_driver_pwm_driver_moteur_0_0
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+set_property name clk_125_out [get_bd_ports clk_50_out]
+save_bd_design
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.USE_FREQ_SYNTH {true} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin}] [get_bd_cells clk_wiz_0]
+endgroup
+reset_run test_driver_pwm_clk_wiz_0_0_synth_1
+reset_run synth_1
+save_bd_design
+update_module_reference test_driver_pwm_driver_moteur_0_0
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/impl_1/test_driver_pwm_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+import_files -norecurse C:/Users/Thomas/OneDrive/Cours/M1/Robotique/X1-Asservissement-numerique-sur-FPGA/X1-Asservissement-numerique-sur-FPGA/transmissionDonnee.vhd
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_driver_pwm/test_driver_pwm.bd}
+set_property  ip_repo_paths  {{C:/Users/Thomas/Desktop/TP_MISTRE/Source IP Vivado}} [current_project]
+update_ip_catalog
+create_bd_design "test_mesure_vitesse"
+update_compile_order -fileset sources_1
+close [ open C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/DecodBin_ASCII.vhd w ]
+add_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/DecodBin_ASCII.vhd
+update_compile_order -fileset sources_1
