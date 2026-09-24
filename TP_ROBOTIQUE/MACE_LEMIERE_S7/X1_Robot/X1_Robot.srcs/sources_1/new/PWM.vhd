@@ -60,6 +60,6 @@ begin
 end process;
 
 DIR <= DIRECTION; -- On impose la direction au moteur
-PWM_D <= '1' when to_integer(unsigned(Cyclique)) >= compteur else '0'; -- Tant que le compteur est inférieur à la valeur voulue 
+PWM_D <= '1' when to_integer(unsigned(Cyclique)) >= compteur  and reset = '0' else '0'; -- Tant que le compteur est inférieur à la valeur voulue 
    
 end Behavioral;

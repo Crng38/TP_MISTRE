@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Sep 17 17:08:40 2026
+| Date         : Thu Sep 24 17:01:04 2026
 | Host         : Ordi-Matt running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    6 |     0 |       125 |  4.80 |
+| Bonded IOB                  |   16 |     0 |       125 | 12.80 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,20 +146,27 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    4 |                  IO |
-| IBUF     |    2 |                  IO |
+| IBUF     |   11 |                  IO |
+| OBUF     |    5 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+------------------+------+
-|     Ref Name     | Used |
-+------------------+------+
-| design_1_PWM_D_0 |    1 |
-| design_1_PWM_0_0 |    1 |
-+------------------+------+
++---------------------------------+------+
+|             Ref Name            | Used |
++---------------------------------+------+
+| design_1_util_vector_logic_0_0  |    1 |
+| design_1_transmissionDonnee_0_0 |    1 |
+| design_1_mult_gen_0_0           |    1 |
+| design_1_module_RS232_0_0       |    1 |
+| design_1_decodeur_1_0           |    1 |
+| design_1_PWM_D_0                |    1 |
+| design_1_PWM_0_0                |    1 |
+| design_1_Diviseur_0_0           |    1 |
+| design_1_DecodBin_ASCII_0_0     |    1 |
++---------------------------------+------+
 
 
 9. Instantiated Netlists

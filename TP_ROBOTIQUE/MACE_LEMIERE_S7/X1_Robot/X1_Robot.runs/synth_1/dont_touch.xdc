@@ -9,19 +9,31 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 ||
 # IP: bd/design_1/ip/design_1_PWM_0_0/design_1_PWM_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_PWM_0_0 || ORIG_REF_NAME==design_1_PWM_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconstant_0_0/design_1_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_0 || ORIG_REF_NAME==design_1_xlconstant_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_PWM_D_0/design_1_PWM_D_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_PWM_D_0 || ORIG_REF_NAME==design_1_PWM_D_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconstant_0_1/design_1_xlconstant_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_0_1 || ORIG_REF_NAME==design_1_xlconstant_0_1} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_decodeur_1_0/design_1_decodeur_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_decodeur_1_0 || ORIG_REF_NAME==design_1_decodeur_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconstant_2_0/design_1_xlconstant_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_2_0 || ORIG_REF_NAME==design_1_xlconstant_2_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_Diviseur_0_0/design_1_Diviseur_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_Diviseur_0_0 || ORIG_REF_NAME==design_1_Diviseur_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconstant_2_1/design_1_xlconstant_2_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_2_1 || ORIG_REF_NAME==design_1_xlconstant_2_1} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_module_RS232_0_0/design_1_module_RS232_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_module_RS232_0_0 || ORIG_REF_NAME==design_1_module_RS232_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_transmissionDonnee_0_0/design_1_transmissionDonnee_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_transmissionDonnee_0_0 || ORIG_REF_NAME==design_1_transmissionDonnee_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xlconstant_4_0/design_1_xlconstant_4_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xlconstant_4_0 || ORIG_REF_NAME==design_1_xlconstant_4_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_DecodBin_ASCII_0_0/design_1_DecodBin_ASCII_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_DecodBin_ASCII_0_0 || ORIG_REF_NAME==design_1_DecodBin_ASCII_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_mult_gen_0_0/design_1_mult_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_mult_gen_0_0 || ORIG_REF_NAME==design_1_mult_gen_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_util_vector_logic_0_0 || ORIG_REF_NAME==design_1_util_vector_logic_0_0} -quiet] -quiet
 
 # XDC: c:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/design_1/design_1_ooc.xdc

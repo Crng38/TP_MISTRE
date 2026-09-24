@@ -1,21 +1,26 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD9103C3CC376F292",
+      "boundary_crc": "0x715982E1FB4699E4",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../X1_Robot.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2"
+      "tool_version": "2020.2",
+      "validated": "true"
     },
     "design_tree": {
-      "xlconstant_0": "",
-      "xlconstant_1": "",
-      "xlconstant_2": "",
-      "xlconstant_3": "",
+      "module_RS232_0": "",
+      "transmissionDonnee_0": "",
+      "RAZ": "",
+      "DecodBin_ASCII_0": "",
+      "mult_gen_0": "",
       "PWM_D": "",
-      "PWM_G": ""
+      "PWM_G": "",
+      "util_vector_logic_0": "",
+      "Diviseur_0": "",
+      "decodeur_1": ""
     },
     "ports": {
       "H2": {
@@ -23,7 +28,17 @@
       },
       "RESET2": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "DIR2": {
         "direction": "O"
@@ -36,53 +51,158 @@
       },
       "PWM3": {
         "direction": "O"
+      },
+      "A1": {
+        "direction": "I"
+      },
+      "B1": {
+        "direction": "I"
+      },
+      "UART_Zynq_TX": {
+        "direction": "O"
+      },
+      "uart_zynq_RXD": {
+        "direction": "I"
+      },
+      "sw": {
+        "type": "data",
+        "direction": "I",
+        "left": "3",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "btn": {
+        "direction": "I"
+      },
+      "btn2": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_0_0",
-        "xci_path": "ip\\design_1_xlconstant_0_0\\design_1_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
+      "module_RS232_0": {
+        "vlnv": "u-ga.fr:user:module_RS232:1.0",
+        "xci_name": "design_1_module_RS232_0_0",
+        "xci_path": "ip\\design_1_module_RS232_0_0\\design_1_module_RS232_0_0.xci",
+        "inst_hier_path": "module_RS232_0"
+      },
+      "transmissionDonnee_0": {
+        "vlnv": "xilinx.com:module_ref:transmissionDonnee:1.0",
+        "xci_name": "design_1_transmissionDonnee_0_0",
+        "xci_path": "ip\\design_1_transmissionDonnee_0_0\\design_1_transmissionDonnee_0_0.xci",
+        "inst_hier_path": "transmissionDonnee_0",
         "parameters": {
-          "CONST_VAL": {
-            "value": "5000"
+          "NData": {
+            "value": "1"
           },
-          "CONST_WIDTH": {
-            "value": "16"
-          }
-        }
-      },
-      "xlconstant_1": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_0_1",
-        "xci_path": "ip\\design_1_xlconstant_0_1\\design_1_xlconstant_0_1.xci",
-        "inst_hier_path": "xlconstant_1",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "5000"
+          "dataSize": {
+            "value": "5"
           },
-          "CONST_WIDTH": {
-            "value": "16"
+          "period": {
+            "value": "8000"
+          },
+          "periodOctet": {
+            "value": "1000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "transmissionDonnee",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "H": {
+            "direction": "I"
+          },
+          "T1us": {
+            "direction": "I"
+          },
+          "debutTransmission": {
+            "direction": "I"
+          },
+          "data": {
+            "direction": "I",
+            "left": "39",
+            "right": "0"
+          },
+          "TX": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "validTx": {
+            "direction": "O"
           }
         }
       },
-      "xlconstant_2": {
+      "RAZ": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_2_0",
-        "xci_path": "ip\\design_1_xlconstant_2_0\\design_1_xlconstant_2_0.xci",
-        "inst_hier_path": "xlconstant_2",
+        "xci_name": "design_1_xlconstant_4_0",
+        "xci_path": "ip\\design_1_xlconstant_4_0\\design_1_xlconstant_4_0.xci",
+        "inst_hier_path": "RAZ"
+      },
+      "DecodBin_ASCII_0": {
+        "vlnv": "xilinx.com:module_ref:DecodBin_ASCII:1.0",
+        "xci_name": "design_1_DecodBin_ASCII_0_0",
+        "xci_path": "ip\\design_1_DecodBin_ASCII_0_0\\design_1_DecodBin_ASCII_0_0.xci",
+        "inst_hier_path": "DecodBin_ASCII_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DecodBin_ASCII",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "DataIn": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "DataOut": {
+            "direction": "O",
+            "left": "39",
+            "right": "0"
+          }
+        }
+      },
+      "mult_gen_0": {
+        "vlnv": "xilinx.com:ip:mult_gen:12.0",
+        "xci_name": "design_1_mult_gen_0_0",
+        "xci_path": "ip\\design_1_mult_gen_0_0\\design_1_mult_gen_0_0.xci",
+        "inst_hier_path": "mult_gen_0",
         "parameters": {
-          "CONST_VAL": {
-            "value": "0"
+          "ConstValue": {
+            "value": "416"
+          },
+          "MultType": {
+            "value": "Constant_Coefficient_Multiplier"
+          },
+          "OutputWidthHigh": {
+            "value": "15"
+          },
+          "PortAType": {
+            "value": "Unsigned"
+          },
+          "PortAWidth": {
+            "value": "4"
+          },
+          "Use_Custom_Output_Width": {
+            "value": "true"
           }
         }
-      },
-      "xlconstant_3": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_2_1",
-        "xci_path": "ip\\design_1_xlconstant_2_1\\design_1_xlconstant_2_1.xci",
-        "inst_hier_path": "xlconstant_3"
       },
       "PWM_D": {
         "vlnv": "xilinx.com:module_ref:PWM:1.0",
@@ -103,12 +223,28 @@
             "direction": "I"
           },
           "DIRECTION": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "Cyclique": {
             "direction": "I",
             "left": "15",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "DIR": {
             "direction": "O"
@@ -137,12 +273,28 @@
             "direction": "I"
           },
           "DIRECTION": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "Cyclique": {
             "direction": "I",
             "left": "15",
-            "right": "0"
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "DIR": {
             "direction": "O"
@@ -151,14 +303,85 @@
             "direction": "O"
           }
         }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "Diviseur_0": {
+        "vlnv": "xilinx.com:module_ref:Diviseur:1.0",
+        "xci_name": "design_1_Diviseur_0_0",
+        "xci_path": "ip\\design_1_Diviseur_0_0\\design_1_Diviseur_0_0.xci",
+        "inst_hier_path": "Diviseur_0",
+        "parameters": {
+          "nb_pulse_haut": {
+            "value": "0"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Diviseur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clk_us": {
+            "direction": "O"
+          }
+        }
+      },
+      "decodeur_1": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "design_1_decodeur_1_0",
+        "xci_path": "ip\\design_1_decodeur_1_0\\design_1_decodeur_1_0.xci",
+        "inst_hier_path": "decodeur_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          }
+        }
       }
     },
     "nets": {
       "H_1": {
         "ports": [
           "H2",
+          "transmissionDonnee_0/H",
+          "module_RS232_0/CLOCK",
+          "mult_gen_0/CLK",
           "PWM_D/H",
-          "PWM_G/H"
+          "PWM_G/H",
+          "Diviseur_0/clk"
         ]
       },
       "RESET_0_1": {
@@ -192,28 +415,97 @@
           "PWM3"
         ]
       },
-      "xlconstant_0_dout": {
+      "A1_1": {
         "ports": [
-          "xlconstant_0/dout",
-          "PWM_D/Cyclique"
+          "A1",
+          "decodeur_1/A"
         ]
       },
-      "xlconstant_1_dout": {
+      "B1_1": {
         "ports": [
-          "xlconstant_1/dout",
+          "B1",
+          "decodeur_1/B"
+        ]
+      },
+      "Diviseur_0_clk_us": {
+        "ports": [
+          "Diviseur_0/clk_us",
+          "transmissionDonnee_0/T1us",
+          "decodeur_1/clk"
+        ]
+      },
+      "xlconstant_4_dout": {
+        "ports": [
+          "RAZ/dout",
+          "module_RS232_0/RAZ"
+        ]
+      },
+      "transmissionDonnee_0_TX": {
+        "ports": [
+          "transmissionDonnee_0/TX",
+          "module_RS232_0/DataTX"
+        ]
+      },
+      "transmissionDonnee_0_validTx": {
+        "ports": [
+          "transmissionDonnee_0/validTx",
+          "module_RS232_0/EN"
+        ]
+      },
+      "decodeur_1_vitesse": {
+        "ports": [
+          "decodeur_1/vitesse",
+          "DecodBin_ASCII_0/DataIn"
+        ]
+      },
+      "module_RS232_0_uart_txd": {
+        "ports": [
+          "module_RS232_0/uart_txd",
+          "UART_Zynq_TX"
+        ]
+      },
+      "uart_zynq_RXD_1": {
+        "ports": [
+          "uart_zynq_RXD",
+          "module_RS232_0/uart_rxd"
+        ]
+      },
+      "A_0_1": {
+        "ports": [
+          "sw",
+          "mult_gen_0/A"
+        ]
+      },
+      "mult_gen_0_P": {
+        "ports": [
+          "mult_gen_0/P",
+          "PWM_D/Cyclique",
           "PWM_G/Cyclique"
         ]
       },
-      "xlconstant_2_dout": {
+      "debutTransmission_0_1": {
         "ports": [
-          "xlconstant_2/dout",
-          "PWM_G/DIRECTION"
+          "btn",
+          "transmissionDonnee_0/debutTransmission"
         ]
       },
-      "xlconstant_3_dout": {
+      "DIRECTION_0_1": {
         "ports": [
-          "xlconstant_3/dout",
+          "btn2",
+          "PWM_G/DIRECTION",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
           "PWM_D/DIRECTION"
+        ]
+      },
+      "DecodBin_ASCII_0_DataOut": {
+        "ports": [
+          "DecodBin_ASCII_0/DataOut",
+          "transmissionDonnee_0/data"
         ]
       }
     }
