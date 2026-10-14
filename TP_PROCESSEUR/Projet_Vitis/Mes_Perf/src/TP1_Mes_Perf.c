@@ -45,10 +45,10 @@ int main ()
    volatile u32 CntValue1 = 0;
 
 // Cache memory enable (or not)
-   Xil_ICacheEnable();
-   Xil_DCacheEnable();
-//   Xil_DCacheDisable();
-//   Xil_ICacheDisable();
+//   Xil_ICacheEnable();
+//   Xil_DCacheEnable();
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
 
 // Global variables inits :
    nbLoop=0;
@@ -80,9 +80,9 @@ int main ()
 
 	//operation to be measured should be inserted here
 		c = a*b; //Test multiplication entiers 32 bits
-		f = d*e; //Test multiplication entiers 64 bits
-		i = g*h; //Test multiplication flottant 32 bits
-		l = j*k; //Test multiplication flottant 64 bits
+		//f = d*e; //Test multiplication entiers 64 bits
+		//i = g*h; //Test multiplication flottant 32 bits
+		//l = j*k; //Test multiplication flottant 64 bits
  		//stop timer
  		io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=0; //Timer disable (bit 0 of Control reg=0)
 		//XScuTimer_Stop(TimerInstancePtr);		 //Stop timer with BSP call (slower)
@@ -95,7 +95,7 @@ int main ()
 		//Wait ~1 second
 		for(iWait=0;iWait<100000000;iWait++);
 		nbLoop++;
-		xil_printf("\r\n---boucle %d---\r",nbLoop);
+		xil_printf("\r\n---boucle %d---\r\n",nbLoop);
  	}//while(1)
 
  // Never reached because of while(1) :

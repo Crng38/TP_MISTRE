@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log test_mesure_vitesse_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source test_mesure_vitesse_wrapper.tcl -notrace
+EAStep vivado -log test_driver_pwm_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source test_driver_pwm_wrapper.tcl -notrace
 
 

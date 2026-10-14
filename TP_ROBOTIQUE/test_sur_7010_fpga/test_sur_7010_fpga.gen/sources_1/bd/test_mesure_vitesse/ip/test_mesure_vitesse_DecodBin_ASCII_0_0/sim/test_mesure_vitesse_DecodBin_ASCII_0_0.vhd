@@ -55,7 +55,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY test_mesure_vitesse_DecodBin_ASCII_0_0 IS
   PORT (
-    DataIn : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    DataIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     DataOut : OUT STD_LOGIC_VECTOR(39 DOWNTO 0)
   );
 END test_mesure_vitesse_DecodBin_ASCII_0_0;
@@ -65,7 +65,7 @@ ARCHITECTURE test_mesure_vitesse_DecodBin_ASCII_0_0_arch OF test_mesure_vitesse_
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF test_mesure_vitesse_DecodBin_ASCII_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT DecodBin_ASCII IS
     PORT (
-      DataIn : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      DataIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       DataOut : OUT STD_LOGIC_VECTOR(39 DOWNTO 0)
     );
   END COMPONENT DecodBin_ASCII;

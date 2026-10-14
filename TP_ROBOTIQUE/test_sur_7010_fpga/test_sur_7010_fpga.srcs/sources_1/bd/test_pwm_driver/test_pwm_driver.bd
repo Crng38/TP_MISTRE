@@ -1,0 +1,123 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x624312124885792A",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../test_sur_7010_fpga.gen/sources_1/bd/test_pwm_driver",
+      "name": "test_pwm_driver",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "driver_moteur_0": "",
+      "vio_0": ""
+    },
+    "ports": {
+      "clk_125": {
+        "direction": "I"
+      },
+      "BP2": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "PWM": {
+        "direction": "O"
+      },
+      "DIR": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "test_pwm_driver_driver_moteur_0_0",
+        "xci_path": "ip\\test_pwm_driver_driver_moteur_0_0\\test_pwm_driver_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "test_pwm_driver_vio_0_0",
+        "xci_path": "ip\\test_pwm_driver_vio_0_0\\test_pwm_driver_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          }
+        }
+      }
+    },
+    "nets": {
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "driver_moteur_0/duty"
+        ]
+      },
+      "clk_125_0_1": {
+        "ports": [
+          "clk_125",
+          "driver_moteur_0/clk_125",
+          "vio_0/clk"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "BP2",
+          "driver_moteur_0/reset"
+        ]
+      },
+      "driver_moteur_0_pwm": {
+        "ports": [
+          "driver_moteur_0/pwm",
+          "PWM"
+        ]
+      },
+      "driver_moteur_0_dir": {
+        "ports": [
+          "driver_moteur_0/dir",
+          "DIR"
+        ]
+      }
+    }
+  }
+}

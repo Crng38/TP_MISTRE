@@ -164,12 +164,12 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set K2 [ create_bd_port -dir I -from 0 -to 0 K2 ]
-  set K3 [ create_bd_port -dir I -from 0 -to 0 K3 ]
-  set clk_125_out [ create_bd_port -dir O -from 0 -to 0 clk_125_out ]
-  set clk_50 [ create_bd_port -dir I -type clk -freq_hz 50000000 clk_50 ]
-  set driver_out [ create_bd_port -dir O driver_out ]
-  set pwm_out [ create_bd_port -dir O pwm_out ]
+  set BP_K2 [ create_bd_port -dir I -type rst BP_K2 ]
+  set CLK_50M [ create_bd_port -dir I -type clk -freq_hz 50000000 CLK_50M ]
+  set GPIO_HEADER_P15 [ create_bd_port -dir O -type data GPIO_HEADER_P15 ]
+  set GPIO_HEADER_U15 [ create_bd_port -dir O -type data GPIO_HEADER_U15 ]
+  set LED_D1 [ create_bd_port -dir O LED_D1 ]
+  set LED_D2 [ create_bd_port -dir O LED_D2 ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
@@ -220,18 +220,9 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
-  # Create instance: mult_gen_0, and set properties
-  set mult_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0 ]
-  set_property -dict [ list \
-   CONFIG.ClockEnable {false} \
-   CONFIG.ConstValue {2083} \
-   CONFIG.MultType {Constant_Coefficient_Multiplier} \
-   CONFIG.OutputWidthHigh {31} \
-   CONFIG.PortAType {Unsigned} \
-   CONFIG.PortAWidth {2} \
-   CONFIG.Use_Custom_Output_Width {true} \
- ] $mult_gen_0
+    set_property -dict [ list \
+   CONFIG.pwm_frequency {20000} \
+ ] $driver_moteur_0
 
   # Create instance: util_vector_logic_0, and set properties
   set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
@@ -241,39 +232,23 @@ proc create_root_design { parentCell } {
    CONFIG.LOGO_FILE {data/sym_notgate.png} \
  ] $util_vector_logic_0
 
-  # Create instance: util_vector_logic_1, and set properties
-  set util_vector_logic_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_1 ]
+  # Create instance: vio_0, and set properties
+  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
   set_property -dict [ list \
-   CONFIG.C_OPERATION {not} \
-   CONFIG.C_SIZE {2} \
-   CONFIG.LOGO_FILE {data/sym_notgate.png} \
- ] $util_vector_logic_1
-
-  # Create instance: xlconcat_0, and set properties
-  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
-  set_property -dict [ list \
-   CONFIG.IN0_WIDTH {1} \
-   CONFIG.IN1_WIDTH {1} \
-   CONFIG.NUM_PORTS {2} \
- ] $xlconcat_0
-
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $xlconstant_0
+   CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
+   CONFIG.C_NUM_PROBE_IN {0} \
+   CONFIG.C_PROBE_OUT0_INIT_VAL {"0000110000110101"} \
+   CONFIG.C_PROBE_OUT0_WIDTH {16} \
+ ] $vio_0
 
   # Create port connections
-  connect_bd_net -net Net [get_bd_ports clk_50] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins mult_gen_0/CLK]
-  connect_bd_net -net bit30_in_1 [get_bd_ports K2] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net bit31_in_1 [get_bd_ports K3] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports clk_125_out] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins driver_moteur_0/clk_pwm_driver_in]
-  connect_bd_net -net driver_moteur_0_dir_driver_out [get_bd_ports driver_out] [get_bd_pins driver_moteur_0/dir_driver_out]
-  connect_bd_net -net driver_moteur_0_pwm_driver_out [get_bd_ports pwm_out] [get_bd_pins driver_moteur_0/pwm_driver_out]
-  connect_bd_net -net mult_gen_0_P [get_bd_pins driver_moteur_0/value_driver_in] [get_bd_pins mult_gen_0/P]
-  connect_bd_net -net util_vector_logic_1_Res [get_bd_pins mult_gen_0/A] [get_bd_pins util_vector_logic_1/Res]
-  connect_bd_net -net xlconcat_0_dout [get_bd_pins util_vector_logic_1/Op1] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins driver_moteur_0/reset_driver_in] [get_bd_pins util_vector_logic_0/Op1] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net BP_K2_1 [get_bd_ports BP_K2] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net CLK_50M_1 [get_bd_ports CLK_50M] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins driver_moteur_0/clk_125] [get_bd_pins vio_0/clk]
+  connect_bd_net -net driver_moteur_0_dir [get_bd_ports GPIO_HEADER_U15] [get_bd_ports LED_D2] [get_bd_pins driver_moteur_0/dir]
+  connect_bd_net -net driver_moteur_0_pwm [get_bd_ports GPIO_HEADER_P15] [get_bd_ports LED_D1] [get_bd_pins driver_moteur_0/pwm]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins driver_moteur_0/reset] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net vio_0_probe_out0 [get_bd_pins driver_moteur_0/duty] [get_bd_pins vio_0/probe_out0]
 
   # Create address segments
 

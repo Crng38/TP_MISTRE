@@ -41,7 +41,7 @@ end pulse_generator;
 
 architecture Behavioral of pulse_generator is
     signal int_sin_out: std_logic := '0';
-    signal counter: integer := 0;
+    signal counter: integer range 0 to nb_clk_pulse_high:= 0;
     type etat is (attente_impulsion_bp, attente_relache_bp, pulse_haut);
     signal etat_int: etat := attente_impulsion_bp;
 begin

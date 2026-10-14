@@ -1,0 +1,312 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../test_sur_7010_fpga.gen/sources_1/bd/mesure_statique_dyna",
+      "name": "mesure_statique_dyna",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "pi_0": "",
+      "driver_moteur_0": "",
+      "decodeur_0": "",
+      "vio_0": "",
+      "ila_0": "",
+      "signal_gene_0": ""
+    },
+    "ports": {
+      "clk_125_0": {
+        "direction": "I"
+      },
+      "reset_0": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "encodeur_in_a_0": {
+        "direction": "I"
+      },
+      "encodeur_in_b_0": {
+        "direction": "I"
+      },
+      "pwm_0": {
+        "direction": "O"
+      },
+      "dir_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "pi_0": {
+        "vlnv": "xilinx.com:module_ref:pi:1.0",
+        "xci_name": "mesure_statique_dyna_pi_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_pi_0_0\\mesure_statique_dyna_pi_0_0.xci",
+        "inst_hier_path": "pi_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pi",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "feedback": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "y_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "mesure_statique_dyna_driver_moteur_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_driver_moteur_0_0\\mesure_statique_dyna_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "mesure_statique_dyna_decodeur_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_decodeur_0_0\\mesure_statique_dyna_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "mesure_statique_dyna_vio_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_vio_0_0\\mesure_statique_dyna_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_OUT": {
+            "value": "1"
+          },
+          "C_PROBE_IN0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "mesure_statique_dyna_ila_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_ila_0_0\\mesure_statique_dyna_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "ALL_PROBE_SAME_MU_CNT": {
+            "value": "3"
+          },
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_DATA_DEPTH": {
+            "value": "8192"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE0_MU_CNT": {
+            "value": "3"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE1_MU_CNT": {
+            "value": "3"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE2_MU_CNT": {
+            "value": "3"
+          },
+          "C_PROBE3_MU_CNT": {
+            "value": "3"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          }
+        }
+      },
+      "signal_gene_0": {
+        "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
+        "xci_name": "mesure_statique_dyna_signal_gene_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_signal_gene_0_0\\mesure_statique_dyna_signal_gene_0_0.xci",
+        "inst_hier_path": "signal_gene_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signal_gene",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_125_0_1": {
+        "ports": [
+          "clk_125_0",
+          "driver_moteur_0/clk_125",
+          "decodeur_0/clk_125MHz",
+          "vio_0/clk",
+          "ila_0/clk",
+          "signal_gene_0/clk",
+          "pi_0/clk_125"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset_0",
+          "driver_moteur_0/reset",
+          "decodeur_0/reset",
+          "signal_gene_0/rst",
+          "pi_0/reset"
+        ]
+      },
+      "encodeur_in_a_0_1": {
+        "ports": [
+          "encodeur_in_a_0",
+          "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "encodeur_in_b_0_1": {
+        "ports": [
+          "encodeur_in_b_0",
+          "decodeur_0/encodeur_in_b"
+        ]
+      },
+      "driver_moteur_0_pwm": {
+        "ports": [
+          "driver_moteur_0/pwm",
+          "pwm_0"
+        ]
+      },
+      "driver_moteur_0_dir": {
+        "ports": [
+          "driver_moteur_0/dir",
+          "dir_0"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "pi_0/y_out",
+          "driver_moteur_0/duty",
+          "ila_0/probe1"
+        ]
+      },
+      "decodeur_0_vitesse": {
+        "ports": [
+          "decodeur_0/vitesse",
+          "vio_0/probe_in0",
+          "pi_0/feedback",
+          "ila_0/probe2"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out0",
+          "pi_0/target",
+          "ila_0/probe0"
+        ]
+      },
+      "signal_gene_0_clk_out": {
+        "ports": [
+          "signal_gene_0/clk_out",
+          "ila_0/probe3"
+        ]
+      }
+    }
+  }
+}

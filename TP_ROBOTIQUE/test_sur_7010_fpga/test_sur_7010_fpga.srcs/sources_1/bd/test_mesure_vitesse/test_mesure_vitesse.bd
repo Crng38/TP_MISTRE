@@ -1,95 +1,54 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x54446E1BD1CE5EA1",
+      "boundary_crc": "0xCE8455AD43D8A1E1",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../test_sur_7010_fpga.gen/sources_1/bd/test_mesure_vitesse",
       "name": "test_mesure_vitesse",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
       "module_RS232_0": "",
       "clk_wiz": "",
-      "xlconstant_0": "",
-      "util_vector_logic_0": "",
       "util_vector_logic_1": "",
       "transmissionDonnee_0": "",
       "signal_gene_0": "",
       "DecodBin_ASCII_0": "",
-      "decodeur_0": "",
-      "signal_gene_1": ""
+      "vio_0": "",
+      "xlconstant_0": "",
+      "util_vector_logic_0": "",
+      "generateur_frequence_0": "",
+      "decodeur_0": ""
     },
     "ports": {
-      "clk_50": {
+      "CLK_50M": {
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "test_mesure_vitesse_clk_50",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "50000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
           }
         }
       },
-      "uart_txd_0": {
+      "GPIO_HEADER_W15": {
         "direction": "O"
       },
-      "K2": {
-        "direction": "I",
-        "parameters": {
-          "PortType": {
-            "value": "undef",
-            "value_src": "ip_prop"
-          },
-          "PortType.PROP_SRC": {
-            "value": "false",
-            "value_src": "ip_prop"
-          }
-        }
-      },
-      "encodeur_in": {
-        "direction": "O",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "test_mesure_vitesse_clk_in1_0",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "50000000",
-            "value_src": "user_prop"
-          },
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default_prop"
-          }
-        }
+      "BP_K2": {
+        "direction": "I"
       },
       "uart_rxd_0": {
         "direction": "I"
       },
-      "K3": {
+      "BP_K3": {
         "direction": "I"
+      },
+      "GPIO_HEADER_P15": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_U15": {
+        "direction": "O"
       }
     },
     "components": {
@@ -173,26 +132,6 @@
           },
           "USE_RESET": {
             "value": "true"
-          }
-        }
-      },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "test_mesure_vitesse_xlconstant_0_0",
-        "xci_path": "ip\\test_mesure_vitesse_xlconstant_0_0\\test_mesure_vitesse_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0"
-      },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "test_mesure_vitesse_util_vector_logic_0_0",
-        "xci_path": "ip\\test_mesure_vitesse_util_vector_logic_0_0\\test_mesure_vitesse_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
           }
         }
       },
@@ -397,13 +336,104 @@
         "ports": {
           "DataIn": {
             "direction": "I",
-            "left": "31",
+            "left": "15",
             "right": "0"
           },
           "DataOut": {
             "direction": "O",
             "left": "39",
             "right": "0"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "test_mesure_vitesse_vio_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_vio_0_0\\test_mesure_vitesse_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_EN_PROBE_IN_ACTIVITY": {
+            "value": "0"
+          },
+          "C_NUM_PROBE_IN": {
+            "value": "1"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          },
+          "C_PROBE_OUT0_INIT_VAL": {
+            "value": "0x0000000A"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE_OUT1_INIT_VAL": {
+            "value": "0x0"
+          },
+          "C_PROBE_OUT1_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "test_mesure_vitesse_xlconstant_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_xlconstant_0_0\\test_mesure_vitesse_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "test_mesure_vitesse_util_vector_logic_0_2",
+        "xci_path": "ip\\test_mesure_vitesse_util_vector_logic_0_2\\test_mesure_vitesse_util_vector_logic_0_2.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "generateur_frequence_0": {
+        "vlnv": "xilinx.com:module_ref:generateur_frequence_carre:1.0",
+        "xci_name": "test_mesure_vitesse_generateur_frequence_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_generateur_frequence_0_0\\test_mesure_vitesse_generateur_frequence_0_0.xci",
+        "inst_hier_path": "generateur_frequence_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "generateur_frequence_carre",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "diviseur": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "test_mesure_vitesse_clk_in1_0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O"
           }
         }
       },
@@ -426,141 +456,37 @@
           },
           "reset": {
             "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
+            "direction": "I"
           },
           "vitesse": {
             "direction": "O",
-            "left": "31",
+            "left": "15",
             "right": "0"
           },
-          "clk_1MHz": {
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "test_mesure_vitesse_clk_in1_0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              },
-              "LAYERED_METADATA": {
-                "value": "undef",
-                "value_src": "default_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              }
-            }
-          }
-        }
-      },
-      "signal_gene_1": {
-        "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
-        "xci_name": "test_mesure_vitesse_signal_gene_1_0",
-        "xci_path": "ip\\test_mesure_vitesse_signal_gene_1_0\\test_mesure_vitesse_signal_gene_1_0.xci",
-        "inst_hier_path": "signal_gene_1",
-        "parameters": {
-          "division_horloge": {
-            "value": "20"
-          },
-          "nb_pulse_etat_haut": {
-            "value": "10"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "signal_gene",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "test_mesure_vitesse_clk_in1_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH"
-              }
-            }
-          },
-          "clk_out": {
-            "direction": "O"
+          "clk_125MHz": {
+            "direction": "I"
           }
         }
       }
     },
     "nets": {
-      "clk_wiz_clk_out1": {
-        "ports": [
-          "clk_wiz/clk_out1",
-          "module_RS232_0/CLOCK",
-          "transmissionDonnee_0/H",
-          "signal_gene_0/clk"
-        ]
-      },
-      "xlconstant_0_dout": {
-        "ports": [
-          "xlconstant_0/dout",
-          "util_vector_logic_0/Op1",
-          "module_RS232_0/RAZ"
-        ]
-      },
-      "util_vector_logic_0_Res": {
-        "ports": [
-          "util_vector_logic_0/Res",
-          "clk_wiz/reset",
-          "signal_gene_0/rst",
-          "decodeur_0/reset",
-          "signal_gene_1/rst"
-        ]
-      },
       "module_RS232_0_uart_txd": {
         "ports": [
           "module_RS232_0/uart_txd",
-          "uart_txd_0"
+          "GPIO_HEADER_W15"
         ]
       },
       "K2_1": {
         "ports": [
-          "K2",
+          "BP_K2",
           "util_vector_logic_1/Op1"
         ]
       },
       "pulse_generator_0_pulse": {
         "ports": [
           "signal_gene_0/clk_out",
-          "encodeur_in",
           "transmissionDonnee_0/T1us",
-          "decodeur_0/clk_1MHz",
-          "signal_gene_1/clk"
+          "generateur_frequence_0/clk_in"
         ]
       },
       "transmissionDonnee_0_TX": {
@@ -577,7 +503,7 @@
       },
       "clk_in1_0_1": {
         "ports": [
-          "clk_50",
+          "CLK_50M",
           "clk_wiz/clk_in1"
         ]
       },
@@ -585,12 +511,6 @@
         "ports": [
           "uart_rxd_0",
           "module_RS232_0/uart_rxd"
-        ]
-      },
-      "util_vector_logic_1_Res": {
-        "ports": [
-          "util_vector_logic_1/Res",
-          "transmissionDonnee_0/debutTransmission"
         ]
       },
       "DecodBin_ASCII_0_DataOut": {
@@ -602,19 +522,64 @@
       "decodeur_0_vitesse": {
         "ports": [
           "decodeur_0/vitesse",
-          "DecodBin_ASCII_0/DataIn"
+          "DecodBin_ASCII_0/DataIn",
+          "vio_0/probe_in0"
         ]
       },
       "encodeur_in_b_0_1": {
         "ports": [
-          "K3",
+          "BP_K3",
           "decodeur_0/encodeur_in_b"
         ]
       },
-      "signal_gene_1_clk_out": {
+      "clk_wiz_clk_out1": {
         "ports": [
-          "signal_gene_1/clk_out",
+          "clk_wiz/clk_out1",
+          "module_RS232_0/CLOCK",
+          "transmissionDonnee_0/H",
+          "signal_gene_0/clk",
+          "vio_0/clk",
+          "GPIO_HEADER_U15",
+          "decodeur_0/clk_125MHz"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "transmissionDonnee_0/debutTransmission"
+        ]
+      },
+      "generateur_frequence_0_clk_out": {
+        "ports": [
+          "generateur_frequence_0/clk_out",
+          "GPIO_HEADER_P15",
           "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "module_RS232_0/RAZ",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "util_vector_logic_0_Res1": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "clk_wiz/reset",
+          "signal_gene_0/rst"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "generateur_frequence_0/diviseur"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "decodeur_0/reset"
         ]
       }
     }

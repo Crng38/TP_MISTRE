@@ -39,18 +39,16 @@ architecture Behavioral of sim_decodeur is
     --Liste des signaux de test
     signal encodeur_in_a_signal : STD_LOGIC := '0'; --Signal d'activation
     signal encodeur_in_b_signal : STD_LOGIC := '0'; --Signal de reset
-    signal encodeur_enable_signal : STD_LOGIC := '0'; --Signal d'activation de sortie driver, à connecter à PWM
     signal encodeur_reset_signal : STD_LOGIC := '1'; --Signal d'activation de sortie driver, à connecter à PWM
-    signal encodeur_vitesse_signal : STD_LOGIC_VECTOR (31 downto 0) := (others => '0'); --Bus d'entrée
-    signal encodeur_clk_1MHz_signal : STD_LOGIC := '0'; --Clock pour le decodeur
+    signal encodeur_vitesse_signal : STD_LOGIC_VECTOR (15 downto 0) := (others => '0'); --Bus d'entrée
+    signal encodeur_clk_125MHz_signal : STD_LOGIC := '0'; --Clock pour le decodeur
     --Déclaration composant test
     component decodeur is
     Port ( encodeur_in_a : in STD_LOGIC; --Signal de la voie a
            encodeur_in_b : in STD_LOGIC; --Signal de la voie b
-           enable : in STD_LOGIC; --Entrée d'enable compteur
            reset : in STD_LOGIC; --Entrée de reset de la structure
-           vitesse : out STD_LOGIC_VECTOR (31 downto 0); --Vecteur de sortie sur 32 bits pour gérer de 0 à 200000
-           clk_1MHz : in STD_LOGIC); --Signal d'horloge
+           vitesse : out STD_LOGIC_VECTOR (15 downto 0); --Vecteur de sortie sur 32 bits pour gérer de 0 à 200000
+           clk_125MHz : in STD_LOGIC); --Signal d'horloge
     end component;
 begin
     --Déclaration DUT
@@ -58,29 +56,22 @@ begin
     port map(
         encodeur_in_a => encodeur_in_a_signal,
         encodeur_in_b => encodeur_in_b_signal,
-        enable => encodeur_enable_signal,
         reset => encodeur_reset_signal,
         vitesse => encodeur_vitesse_signal,
-        clk_1MHz => encodeur_clk_1MHz_signal);
+        clk_125MHz => encodeur_clk_125MHz_signal);
     
     clock_1mhz: process --Process de simulation de l'horloge à 125 MHz
     begin
-        encodeur_clk_1MHz_signal <= '1'; --Set high
-        wait for 500 ns; --Attente 500 ns
-        encodeur_clk_1MHz_signal <= '0'; --Set high
-        wait for 500 ns; --Attente 500 ns
+        encodeur_clk_125MHz_signal <= '1'; --Set high
+        wait for 4 ns; --Attente 500 ns
+        encodeur_clk_125MHz_signal <= '0'; --Set high
+        wait for 4 ns; --Attente 500 ns
     end process;
     
     stimulus: process --Process avec la liste de stimulus
     begin
         wait for 1 ms; 
-        encodeur_enable_signal <= '1'; --Test dans le cas enable & reset en même temps
-        wait for 1 ms;
-        --Test rien actif
-        encodeur_enable_signal <= '0'; 
-        encodeur_reset_signal <= '0'; 
-        wait for 1 ms; 
-        encodeur_enable_signal <= '1'; 
+        encodeur_reset_signal <= '0'; --Enleve reset
         wait for 30 ms; --Attente dans le cas débordement
         
         --Test T = 10 ms A avant B
@@ -99,6 +90,11 @@ begin
             wait for 2.5 ms;
         end loop;
         
+        encodeur_reset_signal <= '1'; --test rest
+        wait for 10 ms; --Attente
+        encodeur_reset_signal <= '0'; --test rest
+        wait for 10 ms; --Attente
+        
         --Test T = 1 ms B avant A
         loop_1ms: for k in 0 to 50 loop
             encodeur_in_a_signal <= '0'; 
@@ -115,7 +111,7 @@ begin
             wait for 250 us;
         end loop;
         
-        --Test T = 500 ns ms A avant B
+        --Test T = 500 ns A avant B
         loop_500ns: for k in 0 to 10000 loop
             encodeur_in_a_signal <= '1'; 
             encodeur_in_b_signal <= '0'; 

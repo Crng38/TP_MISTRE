@@ -34,50 +34,63 @@ entity decodeur is
     Port ( encodeur_in_a : in STD_LOGIC; --Signal de la voie a
            encodeur_in_b : in STD_LOGIC; --Signal de la voie b
            reset : in STD_LOGIC; --Entrée de reset de la structure
-           vitesse : out STD_LOGIC_VECTOR (31 downto 0); --Vecteur de sortie sur 32 bits pour gérer de 0 à 200000
-           clk_1MHz : in STD_LOGIC); --Signal d'horloge
+           vitesse : out STD_LOGIC_VECTOR (15 downto 0); --Vecteur de sortie sur 32 bits pour gérer de 0 à 200000
+           clk_125MHz : in STD_LOGIC); --Signal d'horloge
 end decodeur;
 
 architecture Behavioral of decodeur is
-    --Liste des signaux
-    signal compteur: integer range 0 to 20000 := 0; --COmpteur interne variant de 0 à 199999 commençant à 0
-    signal overflow: std_logic := '0'; --Signal binaire utilisé pour la détection d'un overflow de compteur
-    signal vitesse_interne: std_logic_vector(31 downto 0) := (others => '0'); --Signal interne pour le calcul de vitesse 
-    signal coeff_directeur_interne: integer range -1 to 1:= 0; --Integer pour le coefficient multiplicateur pour déterminer le sens de rotation
-begin
-    update_vitesse:process(clk_1MHz, encodeur_in_a) --Process sensible au signal d'horloge & à la voie A
-    begin 
-        if(rising_edge(clk_1MHz)) then --Si edge clock
-            if reset = '1' then --Si reset actif
-                compteur <= 0; --Comtpeur est bloqué à 0
-            else --Si reset pas actif
-                compteur <= compteur + 1; --Incrémentation compteur
-                if(compteur = 20000) then --Si on a attend la valeur maximale
-                    compteur <= 0; --Remise  à 0 du compteur
-                    overflow <= '1'; --Set overflow à 1
-                    vitesse_interne <= (others => '0'); --Vitesse de sortie bloquée à 0
+    signal compteur_event_1us: integer range 0 to 124 := 0; --Signal pour générer une horloge de 125 MHz synchrone
+    signal encodeur_a_int: std_logic := '0'; --Signal interne miroir de A précédent, recopier pour obtenir le signal synchrone
+    signal encodeur_a_int_old: std_logic := '0'; --Signal interne miroir de A précédent, décalé de 1 tick de 125 MHz
+    signal compteur_period: integer range 0 to 20000 := 0; --Signal pour compter les pulses entre deux fronts
+    signal signe: integer range -1 to 1 := 0; --Entier indiquant le signe de rotation
+    signal vitesse_abs: integer range 0 to 200000 := 0; --Vitesse absolue
+    signal reset_compteur: std_logic := '0'; --Bool pour indiquer qu'il faut RAZ le compteur
+    signal overflow : std_logic := '0'; --Bool pour indiquer quand le compteur fait un overflow
+    signal compteur_buffer: integer range 0 to 20000 := 0; --Buffer
+begin   
+    --Process
+    clk_125:process(clk_125MHz) --Process sensible horloge 125 MHz
+    begin
+        if(rising_edge(clk_125MHz)) then --Si front sur horloge
+            if(reset = '1') then --Si reset
+                compteur_period <= 0; --RAZ compteur period
+                reset_compteur <= '0'; --RAZ demande de reset compteur
+                signe <= 0; --RAZ signe
+                reset_compteur <= '0'; --RAZ flag
+                overflow <= '1'; --RAZ flag
+                compteur_buffer <= 0; --RAZ
+            else
+                if(compteur_event_1us < 124) then --Si compteur pas à valeur max
+                    compteur_event_1us <= compteur_event_1us + 1; --Incrémentation valeur interne
+                else --Sinon
+                    compteur_event_1us <= 0; --RAZ
+                end if;
+                encodeur_a_int_old <= encodeur_a_int; --Sauvegarde état d'avant
+                encodeur_a_int <= encodeur_in_a; --A chaque front de clk, on recopie la valeur de encodeur_in_a
+                if(encodeur_a_int_old = '0' and encodeur_a_int = '1') then --Si valeur recopié de A à 1, et valeur précédente à 0, donc que front à eu lie
+                    compteur_buffer <= compteur_period; --Sauvegarde valeur compteur lors du front
+                    if(encodeur_in_b = '0') then --Si voie à l'état bas
+                        signe <= 1; --Signe positif, vitesse positive
+                    else --Sinon
+                        signe <= -1; --Signe négatif
+                    end if;
+                    compteur_period <= 0; --RAZ compteur
+                    overflow <= '0'; --RAZ flag pour indiquer que le compteur à overflow, s'il avait overflow
+                end if;
+                --else --Sinon, horloge
+                    if(compteur_event_1us = 0) then --Si compteur = 0 sur le front, équivalent premier puls
+                        if(compteur_period < 20000) then --Si compteur pas encore au max
+                            compteur_period <= compteur_period + 1; --Incrémentation
+                        elsif(compteur_period = 20000) then --Si le compteur a atteint la valeur maximale
+                            overflow <= '1'; --Indication de l'overflow
+                        end if;
+                    end if;
                 end if;
             end if;
-        end if;
-        if rising_edge(encodeur_in_a) then --Si front montange
-          if(overflow <= '0') then --Si pas d'overflow
-              if (encodeur_in_b = '1') then --Si dans le même temps on a la voie B à 1
-                  coeff_directeur_interne <= -1; --Coeff multiplciateur à -1, pour signe de rotation négatif
-              else --Sinon
-                  coeff_directeur_interne <= 1; --Coeff multiplciateur à 1, pour signe de rotation positif
-              end if;
-              if (compteur = 0) then --Si déclenchement avant même que l'on ai une impulsion
-                  vitesse_interne <= std_logic_vector(to_signed(200000*coeff_directeur_interne, 32)); --Calcul de la vitesse interne
-              else --Sinon c'est que des impulsions ont eu lieu
-                  vitesse_interne <= std_logic_vector(to_signed(200000/compteur*coeff_directeur_interne, 32)); --Calcul de la vitesse
-              end if;
-          end if;
-          overflow <= '0'; --RAZ flag overflow 
-          compteur <= 0; --RAZ compteur interne
-        end if;
-    end process; 
-      
+        --end if; 
+    end process;
     --Combinatoire de sortie
-    vitesse <= vitesse_interne when (reset = '0') else std_logic_vector(to_signed(0, 32)); --Si reset est actif, vitesse de sortie nulle
-    
+    vitesse_abs <= 0 when ((overflow = '1') or  (compteur_buffer = 20000)) else 32767 when ((compteur_buffer = 0) or (200000/compteur_buffer > 32767)) else 200000/compteur_buffer; --Calcul vitesse absolu, avec cas débordement géré
+    vitesse <= std_logic_vector(to_signed(vitesse_abs*signe, 16)); --Calcul vitesse réelle
 end Behavioral;

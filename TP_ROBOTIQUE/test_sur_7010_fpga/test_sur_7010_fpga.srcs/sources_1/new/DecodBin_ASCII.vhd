@@ -33,14 +33,14 @@ use IEEE.NUMERIC_STD.all; --Opération sur les entiers
 --use UNISIM.VComponents.all;
 
 entity DecodBin_ASCII is
-    Port ( DataIn : in STD_LOGIC_VECTOR (31 downto 0);
+    Port ( DataIn : in STD_LOGIC_VECTOR (15 downto 0);
            DataOut : out STD_LOGIC_VECTOR (39 downto 0));
 end DecodBin_ASCII;
 
 architecture Behavioral of DecodBin_ASCII is
-    signal val_in: integer range -(2**31) to (2**31-1) := 0; --Signal interne tenant la valeur convertit du vecteur en entrée 
+    signal val_in: integer range -(2**14) to (2**14-1) := 0; --Signal interne tenant la valeur convertit du vecteur en entrée 
 begin
-    DataOut(7 downto 0) <= std_logic_vector(to_unsigned(16#2D#,8)) when DataIn(31) = '1' else std_logic_vector(to_unsigned(16#2B#,8)); --Si bit de poids fort à 1, nb négatif, premier charac -
+    DataOut(7 downto 0) <= std_logic_vector(to_unsigned(16#2D#,8)) when DataIn(15) = '1' else std_logic_vector(to_unsigned(16#2B#,8)); --Si bit de poids fort à 1, nb négatif, premier charac -
     val_in <= abs(to_integer(signed(DataIn))) when abs(to_integer(signed(DataIn))) <= 999 else 999; --Récupération valeur absolue de la valeur passée
     DataOut(15 downto 8) <= std_logic_vector(to_unsigned(16#30# + val_in / 100, 8)); --récupération valeur des centaine, conversion en code ASCII stockage dans octet 2
     DataOut(23 downto 16) <= std_logic_vector(to_unsigned(16#30# + ((val_in / 10) mod 10), 8)); --récupération valeur des dizaines, conversion en code ASCII stockage dans octet 3

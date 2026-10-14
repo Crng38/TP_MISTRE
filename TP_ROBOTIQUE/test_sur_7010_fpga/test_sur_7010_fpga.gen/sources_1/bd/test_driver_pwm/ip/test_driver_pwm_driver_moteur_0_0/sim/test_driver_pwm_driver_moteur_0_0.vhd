@@ -55,11 +55,11 @@ USE ieee.numeric_std.ALL;
 
 ENTITY test_driver_pwm_driver_moteur_0_0 IS
   PORT (
-    reset_driver_in : IN STD_LOGIC;
-    dir_driver_out : OUT STD_LOGIC;
-    pwm_driver_out : OUT STD_LOGIC;
-    value_driver_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    clk_pwm_driver_in : IN STD_LOGIC
+    reset : IN STD_LOGIC;
+    clk_125 : IN STD_LOGIC;
+    pwm : OUT STD_LOGIC;
+    dir : OUT STD_LOGIC;
+    duty : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END test_driver_pwm_driver_moteur_0_0;
 
@@ -67,27 +67,33 @@ ARCHITECTURE test_driver_pwm_driver_moteur_0_0_arch OF test_driver_pwm_driver_mo
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF test_driver_pwm_driver_moteur_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT driver_moteur IS
+    GENERIC (
+      pwm_frequency : INTEGER
+    );
     PORT (
-      reset_driver_in : IN STD_LOGIC;
-      dir_driver_out : OUT STD_LOGIC;
-      pwm_driver_out : OUT STD_LOGIC;
-      value_driver_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      clk_pwm_driver_in : IN STD_LOGIC
+      reset : IN STD_LOGIC;
+      clk_125 : IN STD_LOGIC;
+      pwm : OUT STD_LOGIC;
+      dir : OUT STD_LOGIC;
+      duty : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
   END COMPONENT driver_moteur;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF test_driver_pwm_driver_moteur_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF reset_driver_in: SIGNAL IS "XIL_INTERFACENAME reset_driver_in, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF reset_driver_in: SIGNAL IS "xilinx.com:signal:reset:1.0 reset_driver_in RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
 BEGIN
   U0 : driver_moteur
+    GENERIC MAP (
+      pwm_frequency => 20000
+    )
     PORT MAP (
-      reset_driver_in => reset_driver_in,
-      dir_driver_out => dir_driver_out,
-      pwm_driver_out => pwm_driver_out,
-      value_driver_in => value_driver_in,
-      clk_pwm_driver_in => clk_pwm_driver_in
+      reset => reset,
+      clk_125 => clk_125,
+      pwm => pwm,
+      dir => dir,
+      duty => duty
     );
 END test_driver_pwm_driver_moteur_0_0_arch;

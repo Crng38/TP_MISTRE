@@ -82,7 +82,7 @@ int main()
     {
     	/* Code question printf */
     	sleep(1); //Attente 1s
-    	printf("Valeur de seconds: %u", (unsigned int) (secondes)); //Affichage variable seconde, cast pour éviter les warnings
+    	printf("Valeur de seconds: %u\n", (unsigned int) (secondes)); //Affichage variable seconde, cast pour éviter les warnings
     	secondes++; //Incrémentation seconde
 
     	/* Code question GPIO */

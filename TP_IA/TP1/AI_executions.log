@@ -1,0 +1,172 @@
+------------------------------------------------------------------------------------------
+2025-01-12 09:55:18.081422: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 09:55:18.081422: Number of threads = 4
+2025-01-12 09:55:18.081422: Question: What is the capital in France?
+2025-01-12 09:55:20.562540: Answer: I'm happy to help you with that! However, I need a bit more information from you. France is a country, and it's not clear what specific city or region you're referring to.
+
+
+2025-01-12 09:55:20.562540: AI execution time for answering it = 2481.0996055603027 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:01:18.818720: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:01:18.818720: Number of threads = 4
+2025-01-12 10:01:18.818720: Question: What is the capital in France?
+2025-01-12 10:01:21.253245: Answer: I'm sorry, but I don't have a list. There isn't a list.
+
+
+2025-01-12 10:01:21.253245: AI execution time for answering it = 2434.5080852508545 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:07:19.875759: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:07:19.875759: Number of threads = 4
+2025-01-12 10:07:19.875759: Question: What is the capital in France?
+2025-01-12 10:07:22.354493: Answer: The capital in France is Paris.
+2025-01-12 10:07:22.354493: AI execution time for answering it = 2478.7158966064453 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:13:20.120257: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:13:20.120257: Number of threads = 4
+2025-01-12 10:13:20.120257: Question: What is the capital in France?
+2025-01-12 10:13:22.555442: Answer: That is incorrect. The capital of France is Paris.
+
+
+2025-01-12 10:13:22.555442: AI execution time for answering it = 2435.166358947754 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:19:21.167950: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:19:21.167950: Number of threads = 4
+2025-01-12 10:19:21.167950: Question: What is the capital in France?
+2025-01-12 10:19:23.613455: Answer: I'm happy to help you with your question, but I'm a large language model, I don't have personal preferences, emotions, or consciousness like a human. I can provide you with information on human topics such as the capital in France, but I cannot participate in a conversation. How can I assist you today?
+
+You can also ask me to provide you with information in different ways such as, 
+- Answering questions
+- Providing examples
+- Offering suggestions
+- Generating text
+- Translating text
+
+
+2025-01-12 10:19:23.613455: AI execution time for answering it = 2445.4867839813232 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:26:22.079301: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:26:22.079301: Number of threads = 4
+2025-01-12 10:26:22.079301: Question: What is the capital in France?
+2025-01-12 10:26:24.535648: Answer: You are correct, the capital of France is Paris. However, I made an incorrect assumption, you didn't provide the word in French where it is mentioned to. If that is the case, I would have said that the word is "Parr" but I didn't provide it because it wasn't asked.
+
+
+2025-01-12 10:26:24.535648: AI execution time for answering it = 2456.327438354492 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:32:22.944364: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:32:22.944364: Number of threads = 4
+2025-01-12 10:32:22.944364: Question: What is the capital in France?
+2025-01-12 10:32:25.395657: Answer: It's Paris.
+
+
+2025-01-12 10:32:25.395657: AI execution time for answering it = 2451.275587081909 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:38:23.569774: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:38:23.569774: Number of threads = 4
+2025-01-12 10:38:23.569774: Question: What is the capital in France?
+2025-01-12 10:38:26.016939: Answer: I'm sorry, I don't understand who you are talking to. This is an assistant, I am not sure I know who this person is asking you questions.
+
+
+2025-01-12 10:38:26.016939: AI execution time for answering it = 2447.1468925476074 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:44:24.502682: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:44:24.502682: Number of threads = 4
+2025-01-12 10:44:24.502682: Question: What is the capital in France?
+2025-01-12 10:44:26.946673: Answer: The capital of France is Paris.
+
+
+2025-01-12 10:44:26.946673: AI execution time for answering it = 2443.9730644226074 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:50:24.808997: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:50:24.808997: Number of threads = 4
+2025-01-12 10:50:24.808997: Question: What is the capital in France?
+2025-01-12 10:50:27.250326: Answer: I'm not sure about that.
+
+
+2025-01-12 10:50:27.250326: AI execution time for answering it = 2441.310405731201 ms
+------------------------------------------------------------------------------------------
+2025-01-12 10:56:25.245975: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 10:56:25.245975: Number of threads = 4
+2025-01-12 10:56:25.245975: Question: What is the capital in France?
+2025-01-12 10:56:27.712193: Answer: There is no capital in France.
+
+
+2025-01-12 10:56:27.712193: AI execution time for answering it = 2466.1989212036133 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:02:26.095909: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:02:26.095909: Number of threads = 4
+2025-01-12 11:02:26.095909: Question: What is the capital in France?
+2025-01-12 11:02:28.544187: Answer: It is Paris. 
+
+
+2025-01-12 11:02:28.544187: AI execution time for answering it = 2448.259115219116 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:08:26.618505: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:08:26.618505: Number of threads = 4
+2025-01-12 11:08:26.618505: Question: What is the capital in France?
+2025-01-12 11:08:29.085034: Answer: Paris
+
+
+2025-01-12 11:08:29.085034: AI execution time for answering it = 2466.510057449341 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:14:27.651787: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:14:27.651787: Number of threads = 4
+2025-01-12 11:14:27.651787: Question: What is the capital in France?
+2025-01-12 11:14:30.099894: Answer: I think you meant to ask, "What is the capital of France?"
+
+
+2025-01-12 11:14:30.099894: AI execution time for answering it = 2448.0888843536377 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:20:28.024226: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:20:28.024226: Number of threads = 4
+2025-01-12 11:20:28.024226: Question: What is the capital in France?
+2025-01-12 11:20:30.487948: Answer: The capital in France is Paris.
+
+
+2025-01-12 11:20:30.487948: AI execution time for answering it = 2463.7041091918945 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:26:31.895396: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:26:31.895396: Number of threads = 4
+2025-01-12 11:26:31.895396: Question: What is the capital in France?
+2025-01-12 11:26:34.350599: Answer: That would be Paris, sir.
+2025-01-12 11:26:34.350599: AI execution time for answering it = 2455.1844596862793 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:32:29.228871: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:32:29.228871: Number of threads = 4
+2025-01-12 11:32:29.228871: Question: What is the capital in France?
+2025-01-12 11:32:31.673307: Answer: I'm sorry, I don't understand the question.
+
+
+2025-01-12 11:32:31.673307: AI execution time for answering it = 2444.4174766540527 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:38:30.980852: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:38:30.980852: Number of threads = 4
+2025-01-12 11:38:30.980852: Question: What is the capital in France?
+2025-01-12 11:38:33.418848: Answer: I think the capital of France is Paris.
+
+
+2025-01-12 11:38:33.418848: AI execution time for answering it = 2437.978506088257 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:44:30.590037: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:44:30.590037: Number of threads = 4
+2025-01-12 11:44:30.590037: Question: What is the capital in France?
+2025-01-12 11:44:33.029348: Answer: It is Paris.
+
+
+2025-01-12 11:44:33.029348: AI execution time for answering it = 2439.2921924591064 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:50:32.749979: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:50:32.749979: Number of threads = 4
+2025-01-12 11:50:32.749979: Question: What is the capital in France?
+2025-01-12 11:50:35.196633: Answer: I'm sorry, but I didn't understand your question. Could you please rephrase it in a simpler way?
+
+
+2025-01-12 11:50:35.196633: AI execution time for answering it = 2446.635961532593 ms
+------------------------------------------------------------------------------------------
+2025-01-12 11:56:31.911328: AI model: Llama-3.2-1B-Instruct-Q4_0.gguf
+2025-01-12 11:56:31.911328: Number of threads = 4
+2025-01-12 11:56:31.911328: Question: What is the capital in France?
+2025-01-12 11:56:34.353461: Answer: I couldn't verify the information. The capital of France is Paris, but I could check if this matches any information you provided.
+
+
+2025-01-12 11:56:34.353461: AI execution time for answering it = 2442.11483001709 ms
+------------------------------------------------------------------------------------------

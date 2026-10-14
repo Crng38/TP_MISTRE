@@ -3,37 +3,19 @@
 
 # XDC: new/contrainte_7010.xdc
 
-# Block Designs: bd/test_mesure_vitesse/test_mesure_vitesse.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse || ORIG_REF_NAME==test_mesure_vitesse} -quiet] -quiet
+# Block Designs: bd/test_driver_pwm/test_driver_pwm.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm || ORIG_REF_NAME==test_driver_pwm} -quiet] -quiet
 
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_module_RS232_0_0/test_mesure_vitesse_module_RS232_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_module_RS232_0_0 || ORIG_REF_NAME==test_mesure_vitesse_module_RS232_0_0} -quiet] -quiet
+# IP: bd/test_driver_pwm/ip/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_clk_wiz_0_0 || ORIG_REF_NAME==test_driver_pwm_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_clk_wiz_1/test_mesure_vitesse_clk_wiz_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_clk_wiz_1 || ORIG_REF_NAME==test_mesure_vitesse_clk_wiz_1} -quiet] -quiet
+# IP: bd/test_driver_pwm/ip/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_driver_moteur_0_0 || ORIG_REF_NAME==test_driver_pwm_driver_moteur_0_0} -quiet] -quiet
 
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_xlconstant_0_0/test_mesure_vitesse_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_xlconstant_0_0 || ORIG_REF_NAME==test_mesure_vitesse_xlconstant_0_0} -quiet] -quiet
+# IP: bd/test_driver_pwm/ip/test_driver_pwm_vio_0_0/test_driver_pwm_vio_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_vio_0_0 || ORIG_REF_NAME==test_driver_pwm_vio_0_0} -quiet] -quiet
 
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_util_vector_logic_0_0/test_mesure_vitesse_util_vector_logic_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_util_vector_logic_0_0 || ORIG_REF_NAME==test_mesure_vitesse_util_vector_logic_0_0} -quiet] -quiet
+# IP: bd/test_driver_pwm/ip/test_driver_pwm_util_vector_logic_0_0/test_driver_pwm_util_vector_logic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_util_vector_logic_0_0 || ORIG_REF_NAME==test_driver_pwm_util_vector_logic_0_0} -quiet] -quiet
 
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_util_vector_logic_0_1/test_mesure_vitesse_util_vector_logic_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_util_vector_logic_0_1 || ORIG_REF_NAME==test_mesure_vitesse_util_vector_logic_0_1} -quiet] -quiet
-
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_transmissionDonnee_0_1/test_mesure_vitesse_transmissionDonnee_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_transmissionDonnee_0_1 || ORIG_REF_NAME==test_mesure_vitesse_transmissionDonnee_0_1} -quiet] -quiet
-
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_signal_gene_0_0/test_mesure_vitesse_signal_gene_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_signal_gene_0_0 || ORIG_REF_NAME==test_mesure_vitesse_signal_gene_0_0} -quiet] -quiet
-
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_DecodBin_ASCII_0_0/test_mesure_vitesse_DecodBin_ASCII_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_DecodBin_ASCII_0_0 || ORIG_REF_NAME==test_mesure_vitesse_DecodBin_ASCII_0_0} -quiet] -quiet
-
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_decodeur_0_0/test_mesure_vitesse_decodeur_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_decodeur_0_0 || ORIG_REF_NAME==test_mesure_vitesse_decodeur_0_0} -quiet] -quiet
-
-# IP: bd/test_mesure_vitesse/ip/test_mesure_vitesse_signal_gene_1_0/test_mesure_vitesse_signal_gene_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_mesure_vitesse_signal_gene_1_0 || ORIG_REF_NAME==test_mesure_vitesse_signal_gene_1_0} -quiet] -quiet
-
-# XDC: c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_mesure_vitesse/test_mesure_vitesse_ooc.xdc
+# XDC: c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/test_driver_pwm_ooc.xdc

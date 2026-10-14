@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Sep  8 16:38:21 2026
+// Date        : Mon Oct  5 14:46:59 2026
 // Host        : PC_de_Thomas running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0_stub.v
@@ -14,12 +14,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "driver_moteur,Vivado 2020.2" *)
-module test_driver_pwm_driver_moteur_0_0(reset_driver_in, dir_driver_out, 
-  pwm_driver_out, value_driver_in, clk_pwm_driver_in)
-/* synthesis syn_black_box black_box_pad_pin="reset_driver_in,dir_driver_out,pwm_driver_out,value_driver_in[31:0],clk_pwm_driver_in" */;
-  input reset_driver_in;
-  output dir_driver_out;
-  output pwm_driver_out;
-  input [31:0]value_driver_in;
-  input clk_pwm_driver_in;
+module test_driver_pwm_driver_moteur_0_0(reset, clk_125, pwm, dir, duty)
+/* synthesis syn_black_box black_box_pad_pin="reset,clk_125,pwm,dir,duty[15:0]" */;
+  input reset;
+  input clk_125;
+  output pwm;
+  output dir;
+  input [15:0]duty;
 endmodule

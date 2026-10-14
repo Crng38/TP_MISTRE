@@ -34,47 +34,49 @@ use IEEE.NUMERIC_STD.ALL; --Pour opéeration integer
 
 entity pi is
     generic (
-        k_coeff: integer range -2**15 to 2**15-1 := 1; --Coefficient K dans l'équation de récurrence
-        coeff_decalage: integer range 0 to 15 := 0; --Coefficient de décalage post opération
-        clipping_low: integer range -2**15 to 2**15-1 := -6249; --Valeur minimale de sortie
-        clipping_high: integer range -2**15 to 2**15-1 := 6249); --Valeur maximale de sortie
+        a: integer := 10; --Coefficient a de l'équation aux différences
+        b: integer := 1; --Coefficient b de l'équation aux différences
+        Fe: integer := 5000; --Valeur de la fréquence d'échzntillonage
+        coeff_decalage: integer := 0; --Coefficient de pre/post shifting
+        clipping_low: integer := -6249; --Clipping bas
+        clipping_high: integer := 6249); --Clipping haut
     Port ( reset : in STD_LOGIC; --Signal de reset du système
-           clk : in STD_LOGIC; --Horloge de cadencage
+           clk_125 : in STD_LOGIC; --Horloge de cadencage du système
            target : in STD_LOGIC_VECTOR (15 downto 0); --Signal d'entrée de référence
            feedback: in STD_LOGIC_VECTOR(15 downto 0); --Signal d'entrée de feedback
            y_out : out STD_LOGIC_VECTOR (15 downto 0)); -- Vecteur de sortie
 end pi;
 
 architecture Behavioral of pi is
-    signal epsilon: std_logic_vector(15 downto 0) :=  (others => '0'); --Correspondant à espilon
-    signal sortie_sommateur: std_logic_vector(31 downto 0) := (others => '0'); --Signal de sortie du multiplicateur DSP
-    signal y_k_1: std_logic_vector(31 downto 0) := (others => '0'); --Sortie de mémorisation
-    signal y_k: std_logic_vector(31 downto 0) := (others => '0'); --Sortie à shifter
-    component dsp_macro_0 is --Composant basé sur la cellule DSP
-    PORT (
-        A : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --Espilon
-        B : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --k_coeff
-        P : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) --out
-  );
-  end component;
+    signal compteur : integer := 0; --Compteur pour la synchronissité
+    signal y_k: integer := 0; --Représentation interne en integer signal de sortie
+    signal epsilon_k_1: integer range -32768 to 32767 := 0; --Signal représentant la valeur d'entrée précédente 
+    signal epsilon: integer := 0; --Différence calculée en interne sous forme de integer
+    signal y_out_sign: signed(32 downto 0) := (others => '0'); --Valeur de sortie sous forme de signé à shifter
 begin
     -- Composant
-    epsilon <= std_logic_vector(to_signed(to_integer(signed(target)) - to_integer(signed(feedback)), 16)); --A tout instant, espilon vaut différence entre feedback et consigne
-    sommateur_pi: dsp_macro_0
-    port map(A => epsilon, B => std_logic_vector(to_signed(k_coeff, 16)), P => sortie_sommateur); --Mapping
-    horloge: process(clk) --Process horloge
+    horloge: process(clk_125) --Process horloge
     begin
-        if(rising_edge(clk)) then --Si front montant horloge
-            if reset = '1' then --Si reset actif
-                y_k_1 <= (others => '0'); --RAZ signal y_k_1
-                y_k <= (others => '0'); --RAZ signal y_k 
+        if(rising_edge(clk_125)) then --Si front montant horloge
+            if (reset = '1') then --Si reset actif
+                compteur <= 0; --RAZ compteur
+                y_k <= 0; --RAZ signal interne
+            else
+                if(compteur = 125000000/Fe -1) then --Si le compteur est à la valeur maximale
+                    compteur <= 0; --RAZ compteur
+                    y_k <= y_k + a*(epsilon - epsilon_k_1) + b*(epsilon + epsilon_k_1); --Calcul valeur sortie actuelle sous forme d'équation
+                    epsilon_k_1 <= epsilon; --Sauvegarde de la valeur précédente de espilon
                 else --Sinon
-                y_k <= std_logic_vector(to_signed(to_integer(shift_right(signed(sortie_sommateur), coeff_decalage)) + to_integer(signed(y_k_1)), 32)); --Accumulation
-                y_k_1 <= y_k; --Mémorisation
+                    compteur <= compteur + 1; --Incrémentation compteur
+                end if;
             end if;
         end if;
     end process;
-    y_out <= y_k(15 downto 0) when ((to_integer(signed(y_k)) <= clipping_high) and (to_integer(signed(y_k)) >= clipping_low)) 
-        else std_logic_vector(to_signed(clipping_high, 16)) when (to_integer(signed(y_k)) > clipping_high) 
-        else std_logic_vector(to_signed(clipping_low, 16)); --Assignation sortie et calcul de clipping       
+    
+    --Combinatoire de sortie
+    epsilon <= 0 when (reset = '1')  else (to_integer(signed(target)) - to_integer(signed(feedback))); --Calcul epsilon à tout instant
+    y_out_sign <= (others => '0') when (reset = '1') else shift_right(to_signed(y_k, 33), coeff_decalage); --hift de la sortie
+    y_out <= std_logic_vector(y_out_sign(15 downto 0)) when ((to_integer(y_out_sign) >= clipping_low) and (to_integer(y_out_sign) <= clipping_high)) --Assignation sortie
+        else std_logic_vector(to_signed(clipping_low, 16)) when (to_integer(y_out_sign) < clipping_low) --Clipping low
+        else std_logic_vector(to_signed(clipping_high, 16)); --Clipping high
 end Behavioral;

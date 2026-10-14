@@ -1,0 +1,14 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"2.12132",
+   "Default View_TopLeft":"-239,-103",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace inst driver_moteur_0 -pg 1 -lvl 2 -x 370 -y 40 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -x 30 -y 130 -defaultsOSRD
+levelinfo -pg 1 -80 30 370 490
+pagesize -pg 1 -db -bbox -sgen -80 -190 490 240
+"
+}
+

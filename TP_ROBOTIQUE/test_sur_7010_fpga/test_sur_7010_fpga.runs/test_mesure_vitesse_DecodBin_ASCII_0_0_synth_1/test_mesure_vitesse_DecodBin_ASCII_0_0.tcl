@@ -71,10 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "test_mesure_vitesse_DecodBin_ASCII_0_0_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/Thomas/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12264-PC_de_Thomas/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
@@ -95,7 +92,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/new/DecodBin_ASCII.vhd
-read_ip -quiet c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_mesure_vitesse/ip/test_mesure_vitesse_DecodBin_ASCII_0_0/test_mesure_vitesse_DecodBin_ASCII_0_0.xci
+read_ip -quiet C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/test_mesure_vitesse/ip/test_mesure_vitesse_DecodBin_ASCII_0_0/test_mesure_vitesse_DecodBin_ASCII_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

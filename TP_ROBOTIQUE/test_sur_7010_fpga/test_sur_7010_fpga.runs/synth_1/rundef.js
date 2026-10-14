@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log test_mesure_vitesse_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_mesure_vitesse_wrapper.tcl" );
+         "-log test_driver_pwm_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_driver_pwm_wrapper.tcl" );
 
 
 

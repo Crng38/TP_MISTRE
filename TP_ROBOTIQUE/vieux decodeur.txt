@@ -1,0 +1,94 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 03.08.2026 17:21:49
+-- Design Name: 
+-- Module Name: decodeur - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL; --Pour opération sur les entiers
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity decodeur is
+    Port ( encodeur_in_a : in STD_LOGIC; --Signal de la voie a
+           encodeur_in_b : in STD_LOGIC; --Signal de la voie b
+           reset : in STD_LOGIC; --Entrée de reset de la structure
+           vitesse : out STD_LOGIC_VECTOR (15 downto 0); --Vecteur de sortie sur 32 bits pour gérer de 0 à 200000
+           clk_1MHz : in STD_LOGIC); --Signal d'horloge
+end decodeur;
+
+architecture Behavioral of decodeur is
+    --Liste des signaux
+    signal compteur: integer range 0 to 20000 := 0; --Signal permettant de compter le temps toutes les us
+    signal compteur_actuel : integer range 0 to 20000 := 0; --Signal permettant de récupérer la valeur actuelle du compteur
+    signal compteur_buffer: integer range 0 to 20000 := 0; --Signal permettant de mémoriser le compteur précédent
+    signal coeff_sign: integer range -1 to 1:= 0; --Coefficient pour le signe de rotation
+    signal vitesse_val_absolue: integer range -200000 to 200000:= 0; --Signa pour compter la vitesse en abs
+    signal nb_debordement: integer range 0 to 1 := 0; --Nombre débordement ayant été réalisé
+begin   
+    --Process
+    cpt_capture: process(clk_1MHz, reset, encodeur_in_a) --Process sensible reset & clk pour le compteur
+    begin
+        if (reset = '1') then --Si changement état reset vers état haut
+            compteur <= 0; --RAZ compteur
+            coeff_sign <= 0; --RAZ coeff signe
+            vitesse_val_absolue <= 0; --RAZ vitesse
+            compteur_buffer <= 0; --RAZ compteur buffer
+            compteur_actuel <= 0; --RAZ compteur actuel
+        elsif(rising_edge(clk_1MHz)) then --Si front montant horloge
+            if (compteur < 20000) then --Si compteur n'a pas encore atteint la valeur max
+                compteur <= compteur + 1; --Incrémentation compteur
+            else --Sinon
+                if(nb_debordement = 0) then --Si on a pas encore débordement max
+                    nb_debordement <= nb_debordement + 1; --On augmente le nombre de débordement ayant eu lieu depuis la dernière mesure
+                end if;
+                compteur <= 0; --RAZ compteur
+            end if;
+        end if;
+        if(rising_edge(encodeur_in_a) and reset = '0') then --Si front et pas de reset
+             compteur_buffer <= compteur_actuel; --Sauvegarde valeur précédente
+             compteur_actuel <= compteur; --Capture valeur compteur
+             if (compteur_actuel > compteur_buffer) then --Si on a la valeur compteur actuel + grande que compteur_buffer
+                if (nb_debordement = 1) then --Si on a eu débordement en plus
+                    vitesse_val_absolue <= 0; --Valeur de vitesse nulle
+                else --S'il n'y a pas eu de débordement
+                    vitesse_val_absolue <= 200000/(compteur_actuel - compteur_buffer); --Calcul classique
+                end if;
+             else --Sinon
+                if (nb_debordement = 1) then --Si on a eu débordement
+                    vitesse_val_absolue <= 200000/(20000 - compteur_buffer - compteur_actuel); --Calcul vitesse en opposé
+                end if;
+             end if;
+             if(encodeur_in_b = '1') then --Si encodeur voie b étaut haut
+                coeff_sign <= 1; --Pas d'inversion de signe
+             else --Sinon
+                coeff_sign <= -1; --Inversion de signe
+             end if;
+             nb_debordement <= 0; --RAZ nb_debordement
+        end if;
+    end process; 
+    --Combinatoire de sortie
+    vitesse <= std_logic_vector(to_signed(coeff_sign*vitesse_val_absolue, 16)); --A tout instant, la sortie vaut vitesse interne / 32
+    
+end Behavioral;

@@ -1,0 +1,305 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct  5 14:47:02 2026
+# Process ID: 41484
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1
+# Command line: vivado.exe -log test_driver_pwm_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_driver_pwm_wrapper.tcl
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/test_driver_pwm_wrapper.vds
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source test_driver_pwm_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Thomas/Desktop/TP_MISTRE/Source IP Vivado'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.cache/ip 
+Command: synth_design -top test_driver_pwm_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 41140
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1108.484 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'test_driver_pwm_wrapper' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd:25]
+INFO: [Synth 8-3491] module 'test_driver_pwm' declared at 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:14' bound to instance 'test_driver_pwm_i' of component 'test_driver_pwm' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'test_driver_pwm' [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:29]
+INFO: [Synth 8-3491] module 'test_driver_pwm_clk_wiz_0_0' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'test_driver_pwm_clk_wiz_0_0' [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'test_driver_pwm_clk_wiz_0_0' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_clk_wiz_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'test_driver_pwm_driver_moteur_0_0' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_driver_moteur_0_0_stub.vhdl:5' bound to instance 'driver_moteur_0' of component 'test_driver_pwm_driver_moteur_0_0' [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'test_driver_pwm_driver_moteur_0_0' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_driver_moteur_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'test_driver_pwm_util_vector_logic_0_0' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_util_vector_logic_0_0_stub.vhdl:5' bound to instance 'util_vector_logic_0' of component 'test_driver_pwm_util_vector_logic_0_0' [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'test_driver_pwm_util_vector_logic_0_0' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_util_vector_logic_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'test_driver_pwm_vio_0_0' declared at 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_vio_0_0_stub.vhdl:5' bound to instance 'vio_0' of component 'test_driver_pwm_vio_0_0' [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'test_driver_pwm_vio_0_0' [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/.Xil/Vivado-41484-PC_de_Thomas/realtime/test_driver_pwm_vio_0_0_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'test_driver_pwm' (1#1) [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/synth/test_driver_pwm.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'test_driver_pwm_wrapper' (2#1) [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1108.484 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1108.484 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1108.484 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.484 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0_in_context.xdc] for cell 'test_driver_pwm_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0_in_context.xdc] for cell 'test_driver_pwm_i/clk_wiz_0'
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0_in_context.xdc] for cell 'test_driver_pwm_i/driver_moteur_0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0_in_context.xdc] for cell 'test_driver_pwm_i/driver_moteur_0'
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_vio_0_0/test_driver_pwm_vio_0_0/test_driver_pwm_vio_0_0_in_context.xdc] for cell 'test_driver_pwm_i/vio_0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_vio_0_0/test_driver_pwm_vio_0_0/test_driver_pwm_vio_0_0_in_context.xdc] for cell 'test_driver_pwm_i/vio_0'
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_util_vector_logic_0_0/test_driver_pwm_util_vector_logic_0_0/test_driver_pwm_util_vector_logic_0_0_in_context.xdc] for cell 'test_driver_pwm_i/util_vector_logic_0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_util_vector_logic_0_0/test_driver_pwm_util_vector_logic_0_0/test_driver_pwm_util_vector_logic_0_0_in_context.xdc] for cell 'test_driver_pwm_i/util_vector_logic_0'
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc]
+WARNING: [Vivado 12-584] No ports matched 'BP_K3'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'LED_D3'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'LED_D4'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'I2C_SCL'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'I2C_SDA'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_RX_D0'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_RX_D1'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_RX_D2'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_RX_D3'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_RX_CLK'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_RX_CTL'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_TX_D0'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_TX_D1'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_TX_D2'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_TX_D3'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_TX_CLK'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_TX_CTL'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_NRESET'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_MDC'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'ETHERNET_PHY_MDIO'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'OLED_D0'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'OLED_D1'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'OLED_DC'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'OLED_RST'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_P'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_N'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DATA_0_P'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DATA_0_N'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DATA_1_P'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DATA_1_N'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DATA_2_P'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_DATA_2_N'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_OUT_EN'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_U14'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_W14'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_Y14'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_V15'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_W15'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_P16'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_R16'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_T16'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_V16'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_W16'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_N17'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_R17'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_T17'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_U17'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_V17'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_N18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_P18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_R18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_U18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_V18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_W18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_Y18'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_P19'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_U19'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_W19'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_Y19'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_N20'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_P20'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_T20'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_U20'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_V20'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'GPIO_HEADER_W20'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc:101]
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/test_driver_pwm_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/constrs_1/new/contrainte_7010.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_driver_pwm_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_driver_pwm_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1115.879 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1115.879 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1115.879 ; gain = 7.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1115.879 ; gain = 7.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK_50M. (constraint file  c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_50M. (constraint file  c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ip/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for test_driver_pwm_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for test_driver_pwm_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for test_driver_pwm_i/driver_moteur_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for test_driver_pwm_i/vio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for test_driver_pwm_i/util_vector_logic_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1115.879 ; gain = 7.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1115.879 ; gain = 7.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1115.879 ; gain = 7.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1162.828 ; gain = 54.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1162.828 ; gain = 54.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1181.949 ; gain = 73.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------+----------+
+|      |BlackBox name                         |Instances |
++------+--------------------------------------+----------+
+|1     |test_driver_pwm_clk_wiz_0_0           |         1|
+|2     |test_driver_pwm_driver_moteur_0_0     |         1|
+|3     |test_driver_pwm_util_vector_logic_0_0 |         1|
+|4     |test_driver_pwm_vio_0_0               |         1|
++------+--------------------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------------------------+------+
+|      |Cell                                       |Count |
++------+-------------------------------------------+------+
+|1     |test_driver_pwm_clk_wiz_0_0_bbox           |     1|
+|2     |test_driver_pwm_driver_moteur_0_0_bbox     |     1|
+|3     |test_driver_pwm_util_vector_logic_0_0_bbox |     1|
+|4     |test_driver_pwm_vio_0_0_bbox               |     1|
+|5     |IBUF                                       |     1|
+|6     |OBUF                                       |     4|
++------+-------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1188.691 ; gain = 72.812
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.691 ; gain = 80.207
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1190.254 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1200.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1200.578 ; gain = 92.094
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.runs/synth_1/test_driver_pwm_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file test_driver_pwm_wrapper_utilization_synth.rpt -pb test_driver_pwm_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  5 14:47:53 2026...

@@ -1,0 +1,322 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../test_sur_7010_fpga.gen/sources_1/bd/test_mesure_vitesse_2",
+      "name": "test_mesure_vitesse_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "decodeur_0": "",
+      "vio_0": "",
+      "module_RS232_0": "",
+      "transmissionDonnee_0": "",
+      "signal_gene_0": "",
+      "generateur_frequence_0": "",
+      "DecodBin_ASCII_0": "",
+      "xlconstant_0": ""
+    },
+    "ports": {
+      "debutTransmission_0": {
+        "direction": "I"
+      },
+      "uart_rxd_0": {
+        "direction": "I"
+      },
+      "uart_txd_0": {
+        "direction": "O"
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "encodeur_in_b_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "test_mesure_vitesse_2_decodeur_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_decodeur_0_0\\test_mesure_vitesse_2_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "test_mesure_vitesse_2_vio_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_vio_0_0\\test_mesure_vitesse_2_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_PROBE_IN0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "module_RS232_0": {
+        "vlnv": "u-ga.fr:user:module_RS232:1.0",
+        "xci_name": "test_mesure_vitesse_2_module_RS232_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_module_RS232_0_0\\test_mesure_vitesse_2_module_RS232_0_0.xci",
+        "inst_hier_path": "module_RS232_0"
+      },
+      "transmissionDonnee_0": {
+        "vlnv": "xilinx.com:module_ref:transmissionDonnee:1.0",
+        "xci_name": "test_mesure_vitesse_2_transmissionDonnee_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_transmissionDonnee_0_0\\test_mesure_vitesse_2_transmissionDonnee_0_0.xci",
+        "inst_hier_path": "transmissionDonnee_0",
+        "parameters": {
+          "NData": {
+            "value": "1"
+          },
+          "dataSize": {
+            "value": "5"
+          },
+          "period": {
+            "value": "8000"
+          },
+          "periodOctet": {
+            "value": "1000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "transmissionDonnee",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "H": {
+            "direction": "I"
+          },
+          "T1us": {
+            "direction": "I"
+          },
+          "debutTransmission": {
+            "direction": "I"
+          },
+          "data": {
+            "direction": "I",
+            "left": "39",
+            "right": "0"
+          },
+          "TX": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "validTx": {
+            "direction": "O"
+          }
+        }
+      },
+      "signal_gene_0": {
+        "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
+        "xci_name": "test_mesure_vitesse_2_signal_gene_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_signal_gene_0_0\\test_mesure_vitesse_2_signal_gene_0_0.xci",
+        "inst_hier_path": "signal_gene_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signal_gene",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "generateur_frequence_0": {
+        "vlnv": "xilinx.com:module_ref:generateur_frequence_carre:1.0",
+        "xci_name": "test_mesure_vitesse_2_generateur_frequence_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_generateur_frequence_0_0\\test_mesure_vitesse_2_generateur_frequence_0_0.xci",
+        "inst_hier_path": "generateur_frequence_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "generateur_frequence_carre",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "diviseur": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk_in": {
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "DecodBin_ASCII_0": {
+        "vlnv": "xilinx.com:module_ref:DecodBin_ASCII:1.0",
+        "xci_name": "test_mesure_vitesse_2_DecodBin_ASCII_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_DecodBin_ASCII_0_0\\test_mesure_vitesse_2_DecodBin_ASCII_0_0.xci",
+        "inst_hier_path": "DecodBin_ASCII_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DecodBin_ASCII",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "DataIn": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "DataOut": {
+            "direction": "O",
+            "left": "39",
+            "right": "0"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "test_mesure_vitesse_2_xlconstant_0_0",
+        "xci_path": "ip\\test_mesure_vitesse_2_xlconstant_0_0\\test_mesure_vitesse_2_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      }
+    },
+    "nets": {
+      "DecodBin_ASCII_0_DataOut": {
+        "ports": [
+          "DecodBin_ASCII_0/DataOut",
+          "transmissionDonnee_0/data"
+        ]
+      },
+      "signal_gene_0_clk_out": {
+        "ports": [
+          "signal_gene_0/clk_out",
+          "transmissionDonnee_0/T1us"
+        ]
+      },
+      "debutTransmission_0_1": {
+        "ports": [
+          "debutTransmission_0",
+          "transmissionDonnee_0/debutTransmission"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "signal_gene_0/clk",
+          "transmissionDonnee_0/H",
+          "module_RS232_0/CLOCK"
+        ]
+      },
+      "transmissionDonnee_0_validTx": {
+        "ports": [
+          "transmissionDonnee_0/validTx",
+          "module_RS232_0/EN"
+        ]
+      },
+      "transmissionDonnee_0_TX": {
+        "ports": [
+          "transmissionDonnee_0/TX",
+          "module_RS232_0/DataTX"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "module_RS232_0/RAZ"
+        ]
+      },
+      "uart_rxd_0_1": {
+        "ports": [
+          "uart_rxd_0",
+          "module_RS232_0/uart_rxd"
+        ]
+      },
+      "module_RS232_0_uart_txd": {
+        "ports": [
+          "module_RS232_0/uart_txd",
+          "uart_txd_0"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "generateur_frequence_0/diviseur"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "generateur_frequence_0/clk_in",
+          "vio_0/clk",
+          "decodeur_0/clk_125MHz"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "signal_gene_0/rst",
+          "decodeur_0/reset"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "decodeur_0/vitesse",
+          "vio_0/probe_in0",
+          "DecodBin_ASCII_0/DataIn"
+        ]
+      },
+      "generateur_frequence_0_clk_out": {
+        "ports": [
+          "generateur_frequence_0/clk_out",
+          "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "encodeur_in_b_0_1": {
+        "ports": [
+          "encodeur_in_b_0",
+          "decodeur_0/encodeur_in_b"
+        ]
+      }
+    }
+  }
+}

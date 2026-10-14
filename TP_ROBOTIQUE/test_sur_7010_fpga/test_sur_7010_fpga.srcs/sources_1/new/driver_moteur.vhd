@@ -38,30 +38,29 @@ use IEEE.NUMERIC_STD.all; --Pour les opérations arithmétique
 
 --Entité
 entity driver_moteur is --Entité
+    Generic ( --Paramètres générique
+        pwm_frequency: integer range 125000000/32768 to 125000000 := 20000 --Paramètres permettant de définir la fréquence de sortie du module PWM
+    );
     Port ( --Port map
-        reset_driver_in : in STD_LOGIC; --Signal de reset
-        dir_driver_out : out STD_LOGIC; --Signal d'activation de sortie driver, à connecter à PWM
-        pwm_driver_out : out STD_LOGIC; --Signal PWM de sortie, à connecter à DIR
-        value_driver_in : in STD_LOGIC_VECTOR (31 downto 0); --Bus d'entrée
-        clk_pwm_driver_in : in STD_LOGIC); --Clock pour recopier les valeurs de sorties
+        reset : in STD_LOGIC; --Signal de reset
+        clk_125: in STD_LOGIC; --Signal d'horloge pour le cadencement
+        pwm: out STD_LOGIC; --Signal PWM de sortie
+        dir: out STD_LOGIC; --Signal à connecter au pin DIR
+        duty: in STD_LOGIC_VECTOR(15 downto 0) --Rapport cyclique entrée
+     ); 
 end driver_moteur; --Fin de déclaration
 
 architecture Behavioral of driver_moteur is --Architecture du driver
     --Liste des signaux internes
-    signal compteur: integer range 0 to 6249 := 3125; --Signal représentant le compteur interne pour la comparaison
-    signal value_in: integer range 0 to 6249 := 3125; --Signal représentant la valeur utilisée pour la comparaison interne
-    signal dir_out: std_logic := '0'; --Signal à connecter à la sortie DIR, par défaut à l'état bas
-    signal pwm_driver: std_logic := '0'; --Signal à connecter à la sortie PWM
+    signal compteur: integer range 0 to 125000000/pwm_frequency -1 := 20000; --Signal de compteur
 begin
-    compteur_increment: process(clk_pwm_driver_in) --Process sensible à l'horloge in pour le compteur
+    compteur_increment: process(clk_125) --Process sensible à l'horloge 125 MHz pour le compteur
     begin
-        if(rising_edge(clk_pwm_driver_in)) then --Si front montant
-            if (reset_driver_in = '1') then --Si le signal reset est actif 
+        if(rising_edge(clk_125)) then --Si front montant
+            if (reset = '1') then --Si le signal reset est actif 
                 compteur <= 0; --Remise compteur à 0
-                dir_out <= '0'; --DIR à 0, soit sortie driver court circuitée
             else --Sinon, dans le cas où on a reset à 0
-                dir_out <= '1'; --Sortie driver moteur active
-                if compteur = 6249 then --Si valeur max attente
+                if(compteur = 125000000/pwm_frequency -1) then --Si valeur max attente
                     compteur <= 0; --Reset
                 else --Sinon
                     compteur <= compteur + 1; --Incrémentation de compteur
@@ -71,8 +70,7 @@ begin
      end process; --Fin de process incrément compteur
 
      --Sortie
-     value_in <= to_integer(unsigned(value_driver_in)); --On recopie la valeur en entrée dans le signal correspondant
-     dir_driver_out <= dir_out; --Connexion signal sortie
-     pwm_driver_out <= '1' when (compteur < value_in) or (value_in = 6249) else '0'; --Connexion signal sortie
-     
+     pwm <= '1' when ((reset = '0') and ((compteur < abs(to_integer(signed((duty)))) or (abs(to_integer(signed((duty)))) = 125000000/pwm_frequency -1)))) --PWM à 1 tant qu'inférieur à compteur (strictement) ou si valeur max
+     else '0'; --Sinon 0, permet de générer duty de 0 & 100%
+     dir <= '0' when ((to_integer(signed(duty)) >= 0) or (reset = '1')) else '1'; --Changement état dir en fonction du signe de l'entrée
 end Behavioral;

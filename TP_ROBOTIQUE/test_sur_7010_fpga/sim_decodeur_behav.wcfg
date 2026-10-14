@@ -12,32 +12,59 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="2520000001fs"></ZoomEndTime>
-      <Cursor1Time time="1100000000fs"></Cursor1Time>
+      <ZoomEndTime time="105650000001fs"></ZoomEndTime>
+      <Cursor1Time time="23399996000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="236"></NameColumnWidth>
-      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
-   <wvobject fp_name="/sim_pi/clk_sig" type="logic">
-      <obj_property name="ElementShortName">clk_sig</obj_property>
-      <obj_property name="ObjectShortName">clk_sig</obj_property>
+   <wvobject fp_name="/sim_pi/reset_sig" type="logic">
+      <obj_property name="ElementShortName">reset_sig</obj_property>
+      <obj_property name="ObjectShortName">reset_sig</obj_property>
    </wvobject>
-   <wvobject fp_name="/sim_pi/out_sig" type="array">
-      <obj_property name="ElementShortName">out_sig[15:0]</obj_property>
-      <obj_property name="ObjectShortName">out_sig[15:0]</obj_property>
+   <wvobject fp_name="/sim_pi/clk_125_sig" type="logic">
+      <obj_property name="ElementShortName">clk_125_sig</obj_property>
+      <obj_property name="ObjectShortName">clk_125_sig</obj_property>
    </wvobject>
    <wvobject fp_name="/sim_pi/target_sig" type="array">
       <obj_property name="ElementShortName">target_sig[15:0]</obj_property>
       <obj_property name="ObjectShortName">target_sig[15:0]</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/sim_pi/feedback_sig" type="array">
       <obj_property name="ElementShortName">feedback_sig[15:0]</obj_property>
       <obj_property name="ObjectShortName">feedback_sig[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
    </wvobject>
-   <wvobject fp_name="/sim_pi/DUT/y_k_1" type="array">
-      <obj_property name="ElementShortName">y_k_1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">y_k_1[31:0]</obj_property>
+   <wvobject fp_name="/sim_pi/y_out_sig" type="array">
+      <obj_property name="ElementShortName">y_out_sig[15:0]</obj_property>
+      <obj_property name="ObjectShortName">y_out_sig[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
    </wvobject>
 </wave_config>

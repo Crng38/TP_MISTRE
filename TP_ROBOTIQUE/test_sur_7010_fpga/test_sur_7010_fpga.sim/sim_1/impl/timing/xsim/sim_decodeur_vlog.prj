@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../test_sur_7010_fpga.gen/sources_1/bd/test_mesure_vitesse/ipshared/d0f7" --include "../../../../../test_sur_7010_fpga.gen/sources_1/bd/test_pi/ipshared/d0f7" --include "../../../../../test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/ipshared/d0f7" \
+"sim_decodeur_time_impl.v" \
+
+# Do not sort compile order
+nosort

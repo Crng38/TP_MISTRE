@@ -1,0 +1,1 @@
+periodogramm_bartlett

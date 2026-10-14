@@ -1,4 +1,4 @@
-22:48:27 **** Incremental Build of configuration Debug for project Mes_Perf ****
+16:06:38 **** Incremental Build of configuration Debug for project Mes_Perf ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -17,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Mes_Perf.elf  |tee "Mes_Perf.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  26568	   1152	  22680	  50400	   c4e0	Mes_Perf.elf
+  26440	   1152	  22680	  50272	   c460	Mes_Perf.elf
 'Finished building: Mes_Perf.elf.size'
 ' '
 
-22:48:28 Build Finished (took 590ms)
+16:06:39 Build Finished (took 1s.142ms)
 

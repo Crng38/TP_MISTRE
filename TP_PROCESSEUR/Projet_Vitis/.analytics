@@ -123,3 +123,50 @@ timestamp=[2026-08-14 20:14:24], mode=BUILD, duration=0:00:00.291, duration_ms=2
 timestamp=[2026-08-14 20:14:31], mode=BUILD, duration=0:00:01.909, duration_ms=1909, data={name=test_timer48, configuration=Debug, clean_build=false}
 timestamp=[2026-08-14 20:15:39], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=test_timer48, configuration=Debug, clean_build=false}
 timestamp=[2026-08-14 20:15:45], mode=BUILD, duration=0:00:05.810, duration_ms=5810, data={name=test_timer48_system, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 13:42:30], mode=WORKBENCH_START, duration=0:00:16.758, duration_ms=16758, data={}
+timestamp=[2026-09-25 13:42:34], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.157, duration_ms=2157, data={}
+timestamp=[2026-09-25 13:42:37], mode=WORKBENCH_UI_INIT, duration=0:00:07.526, duration_ms=7526, data={editors_count=9, platform_editors_count=6, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-09-25 13:44:15], mode=WORKBENCH_START, duration=0:00:11.144, duration_ms=11144, data={}
+timestamp=[2026-09-25 13:44:17], mode=WORKBENCH_UI_INIT, duration=0:00:01.889, duration_ms=1889, data={editors_count=2, platform_editors_count=0, projects_count=22, platform_projects_count=0, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-09-25 13:44:17], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.164, duration_ms=1164, data={}
+timestamp=[2026-09-25 13:47:16], mode=WORKBENCH_START, duration=0:00:12.517, duration_ms=12517, data={}
+timestamp=[2026-09-25 13:47:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.934, duration_ms=934, data={}
+timestamp=[2026-09-25 13:47:18], mode=WORKBENCH_UI_INIT, duration=0:00:01.849, duration_ms=1849, data={editors_count=2, platform_editors_count=0, projects_count=22, platform_projects_count=0, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-09-25 13:49:38], mode=WORKBENCH_START, duration=0:00:17.221, duration_ms=17221, data={}
+timestamp=[2026-09-25 13:49:39], mode=WORKBENCH_UI_INIT, duration=0:00:01.573, duration_ms=1573, data={editors_count=0, platform_editors_count=0, projects_count=22, platform_projects_count=0, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-09-25 13:49:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.173, duration_ms=2173, data={}
+timestamp=[2026-09-25 13:51:24], mode=PLATFORM_GENERATION, duration=0:00:53.890, duration_ms=53890, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-09-25 13:51:37], mode=BUILD, duration=0:00:04.233, duration_ms=4233, data={name=Helloworld, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 13:57:14], mode=BUILD, duration=0:00:01.365, duration_ms=1365, data={name=Helloworld, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 14:12:14], mode=BUILD, duration=0:00:01.243, duration_ms=1243, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 14:22:23], mode=BUILD, duration=0:00:01.108, duration_ms=1108, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 14:24:17], mode=BUILD, duration=0:00:01.628, duration_ms=1628, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 14:43:23], mode=BUILD, duration=0:00:01.153, duration_ms=1153, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:25:38], mode=BUILD, duration=0:00:01.157, duration_ms=1157, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:25:57], mode=BUILD, duration=0:00:18.306, duration_ms=18306, data={name=Mes_Perf_system, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:26:31], mode=BUILD, duration=0:00:00.351, duration_ms=351, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:26:37], mode=BUILD, duration=0:00:06.393, duration_ms=6393, data={name=Mes_Perf_system, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:28:26], mode=BUILD, duration=0:00:00.416, duration_ms=416, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:29:08], mode=PLATFORM_GENERATION, duration=0:00:07.247, duration_ms=7247, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-09-25 15:29:08], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=Mes_Perf, configuration=Debug, clean_build=true}
+timestamp=[2026-09-25 15:30:05], mode=PLATFORM_GENERATION, duration=0:00:23.596, duration_ms=23596, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-09-25 15:30:08], mode=BUILD, duration=0:00:02.402, duration_ms=2402, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:34:52], mode=BUILD, duration=0:00:01.096, duration_ms=1096, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:38:44], mode=BUILD, duration=0:00:01.143, duration_ms=1143, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:38:50], mode=BUILD, duration=0:00:06.224, duration_ms=6224, data={name=Mes_Perf_system, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:39:36], mode=BUILD, duration=0:00:00.410, duration_ms=410, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:39:42], mode=BUILD, duration=0:00:06.273, duration_ms=6273, data={name=Mes_Perf_system, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:42:58], mode=BUILD, duration=0:00:01.139, duration_ms=1139, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:47:07], mode=BUILD, duration=0:00:00.335, duration_ms=335, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:49:04], mode=BUILD, duration=0:00:01.147, duration_ms=1147, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:49:33], mode=BUILD, duration=0:00:01.147, duration_ms=1147, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:50:35], mode=BUILD, duration=0:00:01.168, duration_ms=1168, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:52:29], mode=BUILD, duration=0:00:01.147, duration_ms=1147, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:54:10], mode=BUILD, duration=0:00:01.157, duration_ms=1157, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 15:54:58], mode=BUILD, duration=0:00:01.089, duration_ms=1089, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 16:02:19], mode=BUILD, duration=0:00:00.402, duration_ms=402, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 16:04:41], mode=BUILD, duration=0:00:01.083, duration_ms=1083, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 16:06:39], mode=BUILD, duration=0:00:01.157, duration_ms=1157, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-09-25 16:20:16], mode=WORKBENCH_START, duration=0:00:17.373, duration_ms=17373, data={}
+timestamp=[2026-09-25 16:20:18], mode=WORKBENCH_UI_INIT, duration=0:00:01.983, duration_ms=1983, data={editors_count=1, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-09-25 16:20:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.836, duration_ms=2836, data={}
