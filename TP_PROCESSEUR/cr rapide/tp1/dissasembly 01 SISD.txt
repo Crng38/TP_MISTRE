@@ -1,0 +1,39 @@
+......... ...
+0010068c:   mov     r2, #0
+00100690:   movt    r2, #63728      ; 0xf8f0
+00100694:   mov     r1, #0
+00100698:   str     r1, [r2, #1544] ; 0x608
+0010069c:   movw    r2, #49240      ; 0xc058
+001006a0:   movt    r2, #16
+001006a4:   ldr     r2, [r2]
+001006a8:   ldr     r2, [r2, #4]
+001006ac:   ldr     r2, [r2, #4]
+001006b0:   mvn     r2, r2
+001006b4:   str     r2, [r3, #4]
+001006b8:   ldr     r1, [r3, #4]
+001006bc:   lsl     r1, r1, #1
+001006c0:   movw    r0, #9688       ; 0x25d8
+001006c4:   movt    r0, #16
+001006c8:   bl      0x100884 <xil_printf>
+001006cc:   b       0x1006cc <main+264>
+001006d0:   andeq   r0, r0, r0
+001006d4:   addmi   r4, pc, r0
+          enable_caches:
+001006d8:   bx      lr
+          disable_caches:
+001006dc:   bx      lr
+          init_uart:
+001006e0:   bx      lr
+          init_platform:
+001006e4:   bx      lr
+          cleanup_platform:
+001006e8:   bx      lr
+          padding:
+001006ec:   ldr     r3, [r0, #4]
+001006f0:   push    {r4, r5, r6, lr}
+001006f4:   ldr     r4, [r0]
+001006f8:   cmp     r4, r3
+001006fc:   popge   {r4, r5, r6, pc}
+00100700:   mov     r5, r0
+00100704:   ldrb    r0, [r5, #12]
+......... ...

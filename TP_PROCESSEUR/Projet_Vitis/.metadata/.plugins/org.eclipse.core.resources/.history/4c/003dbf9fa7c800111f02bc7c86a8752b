@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Mes_perf_sansFPU" location="D:/Projet_Vitis/Mes_perf_sansFPU" platform="D:/Projet_Vitis/PS_Alone_NoFPU/export/PS_Alone_NoFPU/PS_Alone_NoFPU.xpfm" platformUID="xilinx:zybo-z7-20::0.0(custom)" systemProject="Mes_perf_sansFPU_system" sysConfig="PS_Alone_NoFPU" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="79beaebd00bb79660a5511f021f4b9c6">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1332499041">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.828455646" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

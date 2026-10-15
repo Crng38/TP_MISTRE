@@ -3,7 +3,7 @@
 	<name>Mes_perf_sansFPU</name>
 	<comment>Created by Vitis v2020.2</comment>
 	<projects>
-		<project>PS_Alone_NoFPU</project>
+		<project>PS_Only_ZyboZ7</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

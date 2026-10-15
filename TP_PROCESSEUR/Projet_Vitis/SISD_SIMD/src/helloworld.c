@@ -94,7 +94,7 @@ int main()
 
     //start timer
     io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=1; //Timer enable (bit 0 of Control reg=1)
-    XScuTimer_Start(TimerInstancePtr);	 //Start timer with BSP call (slower)
+    //XScuTimer_Start(TimerInstancePtr);	 //Start timer with BSP call (slower)
 
 	//operation to be measured should be inserted here
     for(int i = 0; i<1000; i++) //Boucle de longueur du tableau
@@ -102,20 +102,24 @@ int main()
     	v_sum += Vres[i]; //Ajout à la valeur de sommation les différentes valeurs du tableau
     }
     v_moy = v_sum/1000.0; //Calcul de la moyenne
+    io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=0; //Timer disable (bit 0 of Control reg=0)
+    CntValue1 = 0xFFFFFFFF - XScuTimer_GetCounterValue(TimerInstancePtr); //counter read
+    xil_printf("Duree on/off timer SISD= %lu core clk\r",2*CntValue1); //duration display
 
+    XScuTimer_LoadTimer(TimerInstancePtr, 0xFFFFFFFF);
+    io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=1; //Timer enable (bit 0 of Control reg=1)
     /* Boucle de test pour SIMD */
     for(int i = 0; i<1000; i += 8) //Boucle de longueur du tableau, incrément de 8 à la fois
     {
     	vst1q_u32(&v_sum_simd, vaddq_u32(v_sum_simd, vaddq_u32(vld1q_u32(&Vres[i]), vld1q_u32(&Vres[i+4])))); //Récupération des 8 valeurs suivantes du tableau, placement dans registre 128 bit, somme, sauvegarde
     }
 
-
     //stop timer
     io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=0; //Timer disable (bit 0 of Control reg=0)
 
     CntValue1 = 0xFFFFFFFF - XScuTimer_GetCounterValue(TimerInstancePtr); //counter read
 
-    xil_printf("Duree on/off timer = %lu core clk\r",2*CntValue1); //duration display
+    xil_printf("Duree on/off timer SIMD = %lu core clk\r",2*CntValue1); //duration display
 
     while(1)
     {

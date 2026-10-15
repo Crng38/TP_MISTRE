@@ -170,3 +170,43 @@ timestamp=[2026-09-25 16:06:39], mode=BUILD, duration=0:00:01.157, duration_ms=1
 timestamp=[2026-09-25 16:20:16], mode=WORKBENCH_START, duration=0:00:17.373, duration_ms=17373, data={}
 timestamp=[2026-09-25 16:20:18], mode=WORKBENCH_UI_INIT, duration=0:00:01.983, duration_ms=1983, data={editors_count=1, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
 timestamp=[2026-09-25 16:20:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.836, duration_ms=2836, data={}
+timestamp=[2026-10-15 16:25:48], mode=WORKBENCH_START, duration=0:00:17.247, duration_ms=17247, data={}
+timestamp=[2026-10-15 16:25:50], mode=WORKBENCH_UI_INIT, duration=0:00:01.711, duration_ms=1711, data={editors_count=2, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-15 16:25:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.496, duration_ms=1496, data={}
+timestamp=[2026-10-15 16:28:22], mode=PLATFORM_GENERATION, duration=0:00:17.834, duration_ms=17834, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-10-15 16:28:23], mode=BUILD, duration=0:00:00.339, duration_ms=339, data={name=Mes_perf_sansFPU, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 16:28:23], mode=BUILD, duration=0:00:00.202, duration_ms=202, data={name=Mes_perf_sansFPU_system, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 16:28:24], mode=BUILD, duration=0:00:00.231, duration_ms=231, data={name=Mes_perf_sansFPU, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 16:28:24], mode=BUILD, duration=0:00:00.244, duration_ms=244, data={name=Mes_perf_sansFPU_system, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 16:41:35], mode=BUILD, duration=0:00:02.257, duration_ms=2257, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:49:39], mode=BUILD, duration=0:00:00.891, duration_ms=891, data={name=Mes_perf_sansFPU, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:49:42], mode=BUILD, duration=0:00:02.658, duration_ms=2658, data={name=Mes_perf_sansFPU_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:50:41], mode=BUILD, duration=0:00:01.611, duration_ms=1611, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:51:45], mode=BUILD, duration=0:00:01.249, duration_ms=1249, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:52:48], mode=BUILD, duration=0:00:00.439, duration_ms=439, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:52:55], mode=BUILD, duration=0:00:07.230, duration_ms=7230, data={name=SISD_SIMD_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 16:55:02], mode=BUILD, duration=0:00:01.292, duration_ms=1292, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:04:28], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:04:30], mode=BUILD, duration=0:00:01.652, duration_ms=1652, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:06:40], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:06:42], mode=BUILD, duration=0:00:01.594, duration_ms=1594, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:08:01], mode=BUILD, duration=0:00:01.258, duration_ms=1258, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:08:19], mode=BUILD, duration=0:00:00.517, duration_ms=517, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:08:26], mode=BUILD, duration=0:00:06.283, duration_ms=6283, data={name=SISD_SIMD_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:09:46], mode=BUILD, duration=0:00:00.195, duration_ms=195, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:09:47], mode=BUILD, duration=0:00:01.521, duration_ms=1521, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:11:34], mode=BUILD, duration=0:00:00.274, duration_ms=274, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:11:35], mode=BUILD, duration=0:00:01.597, duration_ms=1597, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:13:44], mode=BUILD, duration=0:00:01.428, duration_ms=1428, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:16:05], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:16:07], mode=BUILD, duration=0:00:01.525, duration_ms=1525, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:16:45], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:16:47], mode=BUILD, duration=0:00:01.589, duration_ms=1589, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:18:30], mode=BUILD, duration=0:00:01.285, duration_ms=1285, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:19:02], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:19:03], mode=BUILD, duration=0:00:01.462, duration_ms=1462, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:19:52], mode=BUILD, duration=0:00:00.195, duration_ms=195, data={name=SISD_SIMD, configuration=Debug, clean_build=true}
+timestamp=[2026-10-15 17:19:53], mode=BUILD, duration=0:00:01.524, duration_ms=1524, data={name=SISD_SIMD, configuration=Debug, clean_build=false}
+timestamp=[2026-10-15 17:29:57], mode=WORKBENCH_START, duration=0:00:11.841, duration_ms=11841, data={}
+timestamp=[2026-10-15 17:29:58], mode=WORKBENCH_UI_INIT, duration=0:00:01.166, duration_ms=1166, data={editors_count=2, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-15 17:30:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.780, duration_ms=1780, data={}

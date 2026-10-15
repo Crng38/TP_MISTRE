@@ -30,12 +30,13 @@ void ScuTimerInit(void);
 #define io_32(addr) *(volatile unsigned long*)(addr) //a pointer macro to access periph registers
 
 //global variables for computation tests:
-long a,b,c; //Variables de test
-long long d,e,f; //Variable de test
-float g,h,i; //Variable de test
-double j,k,l; //Variable de test
+
+
+
+
 int main () 
 {
+
 // local variables:
 
    TimerInstancePtr = &Timer;		//init of the pointer on the ScuTimer structure
@@ -47,23 +48,14 @@ int main ()
 // Cache memory enable (or not)
    Xil_ICacheEnable();
    Xil_DCacheEnable();
-//   Xil_DCacheDisable();
-//   Xil_ICacheDisable();
+   //Xil_DCacheDisable();
+   //Xil_ICacheDisable();
 
 // Global variables inits :
    nbLoop=0;
-   a = 17851; //Instantiation variable
-   b = 2803; //Instantiation variable
 
-   d = 48871; //Instantiation
-   e = -49919; //Instantiation
 
-   g = 3.2; //Instantiation
-   h = 4.3; //Instantiation
-
-   j = -3.2; //Instantiation
-   k = 23.22222; //Instantiation
-   print("\n\r---modele mesure duree exec---\n\r");
+   print("\n\r---modele mesure duree exec SANS FPU---\n\r");
 
    ScuTimerInit();
 
@@ -72,23 +64,16 @@ int main ()
 
 		// Reload the timer counter register
 		XScuTimer_LoadTimer(TimerInstancePtr, 0xFFFFFFFF);
-
 		//start timer
 		io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=1; //Timer enable (bit 0 of Control reg=1)
- 		XScuTimer_Start(TimerInstancePtr);	 //Start timer with BSP call (slower)
 
 
 	//operation to be measured should be inserted here
-		c = a*b; //Test multiplication entiers 32 bits
-		f = d*e; //Test multiplication entiers 64 bits
-		i = g*h; //Test multiplication flottant 32 bits
-		l = j*k; //Test multiplication flottant 64 bits
+
+
  		//stop timer
  		io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=0; //Timer disable (bit 0 of Control reg=0)
-		//XScuTimer_Stop(TimerInstancePtr);		 //Stop timer with BSP call (slower)
-
 		CntValue1 = 0xFFFFFFFF - XScuTimer_GetCounterValue(TimerInstancePtr); //counter read
-
 		xil_printf("Duree on/off timer = %lu core clk\r",2*CntValue1); //duration display
 
 

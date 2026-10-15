@@ -1,24 +1,61 @@
 Nothing to build in platform 'PS_Only_ZyboZ7'
 
-16:06:38 **** Incremental Build of configuration Debug for project Mes_Perf ****
+17:19:51 **** Clean-only build of configuration Debug for project SISD_SIMD ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  SISD_SIMD.elf.size  SISD_SIMD.elf
+' '
+17:19:52 **** Incremental Build of configuration Debug for project SISD_SIMD ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/TP1_Mes_Perf.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/TP1_Mes_Perf.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/TP1_Mes_Perf.d" -MT"src/TP1_Mes_Perf.o" -o "src/TP1_Mes_Perf.o" "../src/TP1_Mes_Perf.c"
-'Finished building: ../src/TP1_Mes_Perf.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -IC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:114:71: warning: pointer targets in passing argument 1 of 'vld1q_u32' differ in signedness [-Wpointer-sign]
+  114 |      vst1q_u32(&v_sum_simd, vaddq_u32(v_sum_simd, vaddq_u32(vld1q_u32(&Vres[i]), vld1q_u32(&Vres[i+4])))); //Récupération des 8 valeurs suivantes du tableau, placement dans registre 128 bit, somme, sauvegarde
+      |                                                                       ^~~~~~~~
+      |                                                                       |
+      |                                                                       long int *
+In file included from ../src/helloworld.c:58:
+c:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\x86_64-oesdk-mingw32\usr\lib\arm-xilinx-eabi\gcc\arm-xilinx-eabi\9.2.0\include\arm_neon.h:10413:29: note: expected 'const uint32_t *' {aka 'const long unsigned int *'} but argument is of type 'long int *'
+10413 | vld1q_u32 (const uint32_t * __a)
+      |            ~~~~~~~~~~~~~~~~~^~~
+../src/helloworld.c:114:92: warning: pointer targets in passing argument 1 of 'vld1q_u32' differ in signedness [-Wpointer-sign]
+  114 |      vst1q_u32(&v_sum_simd, vaddq_u32(v_sum_simd, vaddq_u32(vld1q_u32(&Vres[i]), vld1q_u32(&Vres[i+4])))); //Récupération des 8 valeurs suivantes du tableau, placement dans registre 128 bit, somme, sauvegarde
+      |                                                                                            ^~~~~~~~~~
+      |                                                                                            |
+      |                                                                                            long int *
+In file included from ../src/helloworld.c:58:
+c:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\x86_64-oesdk-mingw32\usr\lib\arm-xilinx-eabi\gcc\arm-xilinx-eabi\9.2.0\include\arm_neon.h:10413:29: note: expected 'const uint32_t *' {aka 'const long unsigned int *'} but argument is of type 'long int *'
+10413 | vld1q_u32 (const uint32_t * __a)
+      |            ~~~~~~~~~~~~~~~~~^~~
+../src/helloworld.c:114:16: warning: passing argument 1 of 'vst1q_u32' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |      vst1q_u32(&v_sum_simd, vaddq_u32(v_sum_simd, vaddq_u32(vld1q_u32(&Vres[i]), vld1q_u32(&Vres[i+4])))); //Récupération des 8 valeurs suivantes du tableau, placement dans registre 128 bit, somme, sauvegarde
+      |                ^~~~~~~~~~~
+      |                |
+      |                __vector(4) unsigned int *
+In file included from ../src/helloworld.c:58:
+c:\xilinx\vitis\2020.2\gnu\aarch32\nt\gcc-arm-none-eabi\x86_64-oesdk-mingw32\usr\lib\arm-xilinx-eabi\gcc\arm-xilinx-eabi\9.2.0\include\arm_neon.h:10991:23: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type '__vector(4) unsigned int *'
+10991 | vst1q_u32 (uint32_t * __a, uint32x4_t __b)
+      |            ~~~~~~~~~~~^~~
+'Finished building: ../src/helloworld.c'
 ' '
-'Building target: Mes_Perf.elf'
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -IC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: SISD_SIMD.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bsplib/lib -o "Mes_Perf.elf"  ./src/TP1_Mes_Perf.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Mes_Perf.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bsplib/lib -o "SISD_SIMD.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SISD_SIMD.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Mes_Perf.elf  |tee "Mes_Perf.elf.size"
+arm-none-eabi-size SISD_SIMD.elf  |tee "SISD_SIMD.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  26440	   1152	  22680	  50272	   c460	Mes_Perf.elf
-'Finished building: Mes_Perf.elf.size'
+  26892	  17152	  22632	  66676	  10474	SISD_SIMD.elf
+'Finished building: SISD_SIMD.elf.size'
 ' '

@@ -1,0 +1,63 @@
+......... ...
+00100670:   movw    r3, #49200      ; 0xc030
+00100674:   movt    r3, #16
+00100678:   vld1.64 {d18-d19}, [r3 :64]
+0010067c:   ldr     r3, [r11, #-8]
+00100680:   lsl     r2, r3, #2
+00100684:   movw    r3, #10148      ; 0x27a4
+00100688:   movt    r3, #16
+0010068c:   add     r3, r2, r3
+00100690:   str     r3, [r11, #-100]        ; 0xffffff9c
+00100694:   ldr     r3, [r11, #-100]        ; 0xffffff9c
+00100698:   vld1.32 {d16-d17}, [r3]
+0010069c:   vorr    q10, q8, q8
+001006a0:   ldr     r3, [r11, #-8]
+001006a4:   add     r3, r3, #4
+001006a8:   lsl     r2, r3, #2
+001006ac:   movw    r3, #10148      ; 0x27a4
+001006b0:   movt    r3, #16
+001006b4:   add     r3, r2, r3
+001006b8:   str     r3, [r11, #-96] ; 0xffffffa0
+001006bc:   ldr     r3, [r11, #-96] ; 0xffffffa0
+001006c0:   vld1.32 {d16-d17}, [r3]
+001006c4:   vstr    d20, [r11, #-76]        ; 0xffffffb4
+001006c8:   vstr    d21, [r11, #-68]        ; 0xffffffbc
+001006cc:   vstr    d16, [r11, #-92]        ; 0xffffffa4
+001006d0:   vstr    d17, [r11, #-84]        ; 0xffffffac
+001006d4:   vldr    d20, [r11, #-76]        ; 0xffffffb4
+001006d8:   vldr    d21, [r11, #-68]        ; 0xffffffbc
+001006dc:   vldr    d16, [r11, #-92]        ; 0xffffffa4
+001006e0:   vldr    d17, [r11, #-84]        ; 0xffffffac
+001006e4:   vadd.i32        q8, q10, q8
+001006e8:   vstr    d18, [r11, #-44]        ; 0xffffffd4
+001006ec:   vstr    d19, [r11, #-36]        ; 0xffffffdc
+001006f0:   vstr    d16, [r11, #-60]        ; 0xffffffc4
+001006f4:   vstr    d17, [r11, #-52]        ; 0xffffffcc
+001006f8:   vldr    d18, [r11, #-44]        ; 0xffffffd4
+001006fc:   vldr    d19, [r11, #-36]        ; 0xffffffdc
+00100700:   vldr    d16, [r11, #-60]        ; 0xffffffc4
+00100704:   vldr    d17, [r11, #-52]        ; 0xffffffcc
+00100708:   vadd.i32        q8, q9, q8
+0010070c:   movw    r3, #49200      ; 0xc030
+00100710:   movt    r3, #16
+00100714:   str     r3, [r11, #-12]
+00100718:   vstr    d16, [r11, #-28]        ; 0xffffffe4
+0010071c:   vstr    d17, [r11, #-20]        ; 0xffffffec
+00100720:   vldr    d16, [r11, #-28]        ; 0xffffffe4
+00100724:   vldr    d17, [r11, #-20]        ; 0xffffffec
+00100728:   ldr     r3, [r11, #-12]
+0010072c:   vst1.32 {d16-d17}, [r3]
+00100730:   nop     {0}
+00100734:   ldr     r3, [r11, #-8]
+00100738:   add     r3, r3, #8
+0010073c:   str     r3, [r11, #-8]
+00100740:   ldr     r3, [r11, #-8]
+00100744:   cmp     r3, #1000       ; 0x3e8
+00100748:   blt     0x100670 <main+140>
+0010074c:   movw    r3, #1544       ; 0x608
+00100750:   movt    r3, #63728      ; 0xf8f0
+00100754:   mov     r2, #0
+00100758:   str     r2, [r3]
+0010075c:   movw    r3, #49244      ; 0xc05c
+00100760:   movt    r3, #16
+......... ...

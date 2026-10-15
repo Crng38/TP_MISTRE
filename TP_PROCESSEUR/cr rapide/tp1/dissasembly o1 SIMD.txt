@@ -1,0 +1,82 @@
+......... ...
+001005d0:   bl      0x100d14 <print>
+001005d4:   movw    r0, #9552       ; 0x2550
+001005d8:   movt    r0, #16
+001005dc:   bl      0x100d14 <print>
+001005e0:   movw    r0, #9596       ; 0x257c
+001005e4:   movt    r0, #16
+001005e8:   bl      0x100d14 <print>
+001005ec:   movw    r4, #49240      ; 0xc058
+001005f0:   movt    r4, #16
+001005f4:   movw    r3, #49224      ; 0xc048
+001005f8:   movt    r3, #16
+001005fc:   str     r3, [r4]
+00100600:   bl      0x1015f8 <Xil_ICacheEnable>
+00100604:   bl      0x1015d4 <Xil_DCacheEnable>
+00100608:   bl      0x100584 <ScuTimerInit>
+0010060c:   ldr     r3, [r4]
+00100610:   ldr     r3, [r3, #4]
+00100614:   mvn     r2, #0
+00100618:   str     r2, [r3]
+0010061c:   mov     r3, #0
+00100620:   movt    r3, #63728      ; 0xf8f0
+00100624:   mov     r2, #1
+00100628:   str     r2, [r3, #1544] ; 0x608
+0010062c:   movw    r3, #9700       ; 0x25e4
+00100630:   movt    r3, #16
+00100634:   add     r0, r3, #4000   ; 0xfa0
+00100638:   movw    r1, #49192      ; 0xc028
+0010063c:   movt    r1, #16
+00100640:   vld1.64 {d18-d19}, [r1 :64]
+00100644:   mov     r2, r3
+00100648:   vld1.32 {d20-d21}, [r2]!
+0010064c:   vld1.32 {d16-d17}, [r2]
+00100650:   vadd.i32        q8, q8, q10
+00100654:   vadd.i32        q8, q8, q9
+00100658:   vst1.32 {d16-d17}, [r1 :64]
+0010065c:   add     r3, r3, #32
+00100660:   cmp     r3, r0
+00100664:   bne     0x100640 <main+128>
+00100668:   mov     r3, #0
+0010066c:   movt    r3, #63728      ; 0xf8f0
+00100670:   mov     r2, #0
+00100674:   str     r2, [r3, #1544] ; 0x608
+00100678:   movw    r3, #49240      ; 0xc058
+0010067c:   movt    r3, #16
+00100680:   ldr     r3, [r3]
+00100684:   ldr     r3, [r3, #4]
+00100688:   ldr     r2, [r3, #4]
+0010068c:   mvn     r2, r2
+00100690:   movw    r3, #49192      ; 0xc028
+00100694:   movt    r3, #16
+00100698:   str     r2, [r3, #16]
+0010069c:   ldr     r1, [r3, #16]
+001006a0:   lsl     r1, r1, #1
+001006a4:   movw    r0, #9624       ; 0x2598
+001006a8:   movt    r0, #16
+001006ac:   bl      0x100860 <xil_printf>
+001006b0:   b       0x1006b0 <main+240>
+          enable_caches:
+001006b4:   bx      lr
+          disable_caches:
+001006b8:   bx      lr
+          init_uart:
+001006bc:   bx      lr
+          init_platform:
+001006c0:   bx      lr
+          cleanup_platform:
+001006c4:   bx      lr
+          padding:
+001006c8:   ldr     r3, [r0, #4]
+001006cc:   push    {r4, r5, r6, lr}
+001006d0:   ldr     r4, [r0]
+001006d4:   cmp     r4, r3
+001006d8:   popge   {r4, r5, r6, pc}
+001006dc:   mov     r5, r0
+001006e0:   ldrb    r0, [r5, #12]
+001006e4:   add     r4, r4, #1
+001006e8:   bl      0x100d58 <outbyte>
+001006ec:   ldr     r3, [r5, #4]
+001006f0:   cmp     r4, r3
+001006f4:   blt     0x1006e0 <padding+24>
+......... ...

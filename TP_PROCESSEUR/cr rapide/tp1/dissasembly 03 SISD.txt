@@ -1,0 +1,42 @@
+......... ...
+001023e8:   str     r5, [r4, #1544] ; 0x608
+001023ec:   ldr     r3, [lr, #4]
+001023f0:   ldr     r3, [r3, #4]
+001023f4:   mvn     r3, r3
+001023f8:   str     r3, [r2, #4]
+001023fc:   ldr     r1, [r2, #4]
+00102400:   lsl     r1, r1, #1
+00102404:   bl      0x10076c <xil_printf>
+00102408:   b       0x102408 <main+256>
+0010240c:   nop     {0}
+00102410:   andeq   r0, r0, r0
+00102414:   addmi   r4, pc, r0
+          _init:
+00102418:   push    {r3, r4, r5, r6, r7, lr}
+0010241a:   nop     
+0010241c:   pop     {r3, r4, r5, r6, r7}
+0010241e:   pop     {r3}
+00102420:   mov     lr, r3
+00102422:   bx      lr
+          _fini:
+00102424:   push    {r3, r4, r5, r6, r7, lr}
+00102426:   nop     
+00102428:   pop     {r3, r4, r5, r6, r7}
+0010242a:   pop     {r3}
+0010242c:   mov     lr, r3
+0010242e:   bx      lr
+          _ctype_:
+00102430:   eorcs   r2, r0, r0
+00102434:   eorcs   r2, r0, r0, lsr #32
+00102438:   stmdacs r8!, {r5, sp}
+0010243c:   eorcs   r2, r8, r8, lsr #16
+00102440:   eorcs   r2, r0, r0, lsr #32
+00102444:   eorcs   r2, r0, r0, lsr #32
+00102448:   eorcs   r2, r0, r0, lsr #32
+0010244c:   eorcs   r2, r0, r0, lsr #32
+00102450:   andsne  r8, r0, r0, lsr #16
+00102454:   andsne  r1, r0, r0, lsl r0
+00102458:   andsne  r1, r0, r0, lsl r0
+0010245c:   andsne  r1, r0, r0, lsl r0
+00102460:   streq   r0, [r4], #-1040        ; 0xfffffbf0
+......... ...
