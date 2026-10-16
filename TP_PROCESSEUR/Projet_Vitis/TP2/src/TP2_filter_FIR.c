@@ -33,12 +33,11 @@ void sendInput(float* signalOut, unsigned long nbElements);
 //global variables for filters output signal:
 float FIRoutput[256];
 
-
 // FIR Filter function
 /*****To be written here*****/
 void FIR1(void)
 {
-	for(uint8_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
+	for(uint16_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
 	{
 		FIRoutput[k] = 0; //Initialisation
 		// Calcul de y[k]
@@ -54,7 +53,7 @@ void FIR1(void)
 
 void FIR2(void) //Optimisation n°1
 {
-	for(uint8_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
+	for(uint16_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
 	{
 		FIRoutput[k] = 0; //Initialisation
 		// Calcul de y[k]
@@ -67,7 +66,7 @@ void FIR2(void) //Optimisation n°1
 
 void FIR3(void) //Optimisation n°3
 {
-	for(uint8_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
+	for(uint16_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
 	{
 		FIRoutput[k] = c[0]*Sinus2_ext[4+k];
 		FIRoutput[k] += c[1]*Sinus2_ext[3+k];
@@ -80,7 +79,7 @@ void FIR3(void) //Optimisation n°3
 void FIR4(void) //Optimisation n°4
 {
 	float yk; //Pour stockage dans registre
-	for(uint8_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
+	for(uint16_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
 	{
 		//Calcule yk
 		yk = c[0]*Sinus2_ext[4+k];
@@ -94,7 +93,7 @@ void FIR4(void) //Optimisation n°4
 
 }
 
-void FIR5(void) //Optimisation n°4
+void FIR5(float *x, float *y) //Optimisation n°4
 {
 	register float yk; //Pour stockage dans registre
 	register float c0 = c[0]; //Pour stockage dans registre
@@ -102,16 +101,16 @@ void FIR5(void) //Optimisation n°4
 	register float c2 = c[2]; //Pour stockage dans registre
 	register float c3 = c[3]; //Pour stockage dans registre
 	register float c4 = c[4]; //Pour stockage dans registre
-	for(uint8_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
+	for(uint16_t k = 0; k < 256; k++) //Boucle pour la construction du tableau de sortie, de même longueur que le vecteur d'entrée
 	{
 		//Calcule yk
-		yk = c0*Sinus2_ext[4+k];
-		yk += c1*Sinus2_ext[3+k];
-		yk += c2*Sinus2_ext[2+k];
-		yk += c3*Sinus2_ext[1+k];
-		yk += c4*Sinus2_ext[k];
+		yk = c0*(*(x+4+k));
+		yk += c1*(*(x+3+k));
+		yk += c2*(*(x+2+k));
+		yk += c3*(*(x+1+k));
+		yk += c4*(*(x+k));
 		//Copie vers mémoire
-		FIRoutput[k] = yk;
+		*(y+k) = yk;
 	}
 }
 
@@ -152,7 +151,11 @@ int main ()
  				io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=1; //Timer enable (bit 0 of Control reg=1)
 
  		/***** FIR function to be called here *****/
- 				FIR1(); //Fonction de calcul
+ 				//FIR1();
+ 				//FIR2();
+ 				//FIR3();
+ 				//FIR4();
+ 				FIR5(Sinus2_ext, FIRoutput); //Fonction de calcul
  				//stop timer
  		 		io_32(XPAR_PS7_SCUTIMER_0_BASEADDR+8)=0; //Timer disable (bit 0 of Control reg=0)
  		 		//read counter
@@ -162,9 +165,9 @@ int main ()
  		// otherwise the matlab data acquisition script WILL CRASH
 
 		// Display FIR filter result on UART, (for use with Matlab DisplayUART.m)
-		sprintf(printBuffer,"sending input:%d samples\r\n",sizeof(Sinus2)/sizeof(float));
+		sprintf(printBuffer,"sending input:%d samples\r\n",sizeof(Sinus2_ext)/sizeof(float));
 		print(printBuffer);
-		sendInput(Sinus2, sizeof(Sinus2)/sizeof(float));
+		sendInput(Sinus2_ext, sizeof(Sinus2_ext)/sizeof(float));
 
 		sprintf(printBuffer,"sending output:%d samples\r\n",sizeof(FIRoutput)/sizeof(float));
 		print(printBuffer);

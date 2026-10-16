@@ -25,3 +25,5 @@ platform generate -domains standalone_ps7_cortexa9_0,zynq_fsbl
 platform clean
 platform generate
 platform generate
+platform generate
+platform generate

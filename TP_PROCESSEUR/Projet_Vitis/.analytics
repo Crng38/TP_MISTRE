@@ -210,3 +210,68 @@ timestamp=[2026-10-15 17:19:53], mode=BUILD, duration=0:00:01.524, duration_ms=1
 timestamp=[2026-10-15 17:29:57], mode=WORKBENCH_START, duration=0:00:11.841, duration_ms=11841, data={}
 timestamp=[2026-10-15 17:29:58], mode=WORKBENCH_UI_INIT, duration=0:00:01.166, duration_ms=1166, data={editors_count=2, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
 timestamp=[2026-10-15 17:30:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.780, duration_ms=1780, data={}
+timestamp=[2026-10-16 06:17:01], mode=WORKBENCH_START, duration=0:00:16.428, duration_ms=16428, data={}
+timestamp=[2026-10-16 06:17:02], mode=WORKBENCH_UI_INIT, duration=0:00:01.204, duration_ms=1204, data={editors_count=2, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-16 06:17:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.792, duration_ms=1792, data={}
+timestamp=[2026-10-16 06:27:04], mode=WORKBENCH_START, duration=0:00:07.966, duration_ms=7966, data={}
+timestamp=[2026-10-16 06:27:05], mode=WORKBENCH_UI_INIT, duration=0:00:01.115, duration_ms=1115, data={editors_count=0, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-16 06:27:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:05.559, duration_ms=5559, data={}
+timestamp=[2026-10-16 13:12:02], mode=WORKBENCH_START, duration=0:00:17.269, duration_ms=17269, data={}
+timestamp=[2026-10-16 13:12:04], mode=WORKBENCH_UI_INIT, duration=0:00:01.407, duration_ms=1407, data={editors_count=0, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-16 13:12:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:14.880, duration_ms=14880, data={}
+timestamp=[2026-10-16 13:13:19], mode=PLATFORM_GENERATION, duration=0:00:45.469, duration_ms=45469, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-10-16 13:13:31], mode=BUILD, duration=0:00:06.521, duration_ms=6521, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 13:13:50], mode=BUILD, duration=0:00:18.630, duration_ms=18630, data={name=TP2_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 13:52:38], mode=BUILD, duration=0:00:01.776, duration_ms=1776, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 13:53:21], mode=BUILD, duration=0:00:01.229, duration_ms=1229, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:36:12], mode=BUILD, duration=0:00:01.322, duration_ms=1322, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:40:55], mode=BUILD, duration=0:00:00.379, duration_ms=379, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:47:29], mode=BUILD, duration=0:00:01.208, duration_ms=1208, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:55:21], mode=BUILD, duration=0:00:01.212, duration_ms=1212, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:56:04], mode=BUILD, duration=0:00:01.240, duration_ms=1240, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:57:44], mode=BUILD, duration=0:00:01.163, duration_ms=1163, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 14:58:41], mode=BUILD, duration=0:00:01.137, duration_ms=1137, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:08:06], mode=BUILD, duration=0:00:01.269, duration_ms=1269, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:08:16], mode=BUILD, duration=0:00:01.131, duration_ms=1131, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:36:40], mode=BUILD, duration=0:00:01.262, duration_ms=1262, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:39:59], mode=BUILD, duration=0:00:01.513, duration_ms=1513, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:41:16], mode=BUILD, duration=0:00:00.375, duration_ms=375, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 15:41:18], mode=BUILD, duration=0:00:01.360, duration_ms=1360, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:45:40], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 15:45:41], mode=BUILD, duration=0:00:01.214, duration_ms=1214, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 15:51:13], mode=BUILD, duration=0:00:00.259, duration_ms=259, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 15:51:15], mode=BUILD, duration=0:00:01.513, duration_ms=1513, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:15:41], mode=BUILD, duration=0:00:01.507, duration_ms=1507, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:16:25], mode=BUILD, duration=0:00:00.257, duration_ms=257, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 16:16:26], mode=BUILD, duration=0:00:01.150, duration_ms=1150, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:21:36], mode=BUILD, duration=0:00:00.267, duration_ms=267, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 16:21:37], mode=BUILD, duration=0:00:01.380, duration_ms=1380, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:21:44], mode=BUILD, duration=0:00:06.723, duration_ms=6723, data={name=TP2_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:42:55], mode=BUILD, duration=0:00:00.263, duration_ms=263, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 16:42:57], mode=BUILD, duration=0:00:01.147, duration_ms=1147, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:52:12], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 16:52:12], mode=BUILD, duration=0:00:00.509, duration_ms=509, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:52:29], mode=BUILD, duration=0:00:00.576, duration_ms=576, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:52:57], mode=BUILD, duration=0:00:00.518, duration_ms=518, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:53:24], mode=BUILD, duration=0:00:01.153, duration_ms=1153, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 16:56:24], mode=BUILD, duration=0:00:01.339, duration_ms=1339, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:03:10], mode=BUILD, duration=0:00:01.215, duration_ms=1215, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:04:57], mode=BUILD, duration=0:00:01.176, duration_ms=1176, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:07:11], mode=BUILD, duration=0:00:00.202, duration_ms=202, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 17:07:13], mode=BUILD, duration=0:00:01.364, duration_ms=1364, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:09:19], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 17:09:20], mode=BUILD, duration=0:00:01.152, duration_ms=1152, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:13:27], mode=WORKBENCH_START, duration=0:00:12.565, duration_ms=12565, data={}
+timestamp=[2026-10-16 17:13:28], mode=WORKBENCH_UI_INIT, duration=0:00:01.304, duration_ms=1304, data={editors_count=4, platform_editors_count=2, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-16 17:13:30], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.815, duration_ms=1815, data={}
+timestamp=[2026-10-16 17:15:44], mode=PLATFORM_GENERATION, duration=0:00:16.482, duration_ms=16482, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-10-16 17:15:45], mode=BUILD, duration=0:00:01.300, duration_ms=1300, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:17:21], mode=BUILD, duration=0:00:00.407, duration_ms=407, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:19:31], mode=BUILD, duration=0:00:01.162, duration_ms=1162, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:20:40], mode=BUILD, duration=0:00:01.148, duration_ms=1148, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:22:02], mode=BUILD, duration=0:00:00.391, duration_ms=391, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:23:09], mode=BUILD, duration=0:00:01.150, duration_ms=1150, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:24:19], mode=BUILD, duration=0:00:01.157, duration_ms=1157, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:25:11], mode=BUILD, duration=0:00:01.103, duration_ms=1103, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-16 17:26:30], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=TP2, configuration=Debug, clean_build=true}
+timestamp=[2026-10-16 17:26:31], mode=BUILD, duration=0:00:01.471, duration_ms=1471, data={name=TP2, configuration=Debug, clean_build=false}
