@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 7
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
@@ -90,7 +90,7 @@ set_property ip_output_repo c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/simu_pi/hdl/simu_pi_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/simu_pi/hdl/simu_pi_wrapper.vhd
 add_files C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.srcs/sources_1/bd/simu_pi/simu_pi.bd
 set_property used_in_implementation false [get_files -all c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/simu_pi/ip/simu_pi_clk_wiz_0_0/simu_pi_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/simu_pi/ip/simu_pi_clk_wiz_0_0/simu_pi_clk_wiz_0_0.xdc]

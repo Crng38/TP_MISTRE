@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Oct 23 05:16:40 2026
-| Host         : PC_de_Thomas running 64-bit major release  (build 9200)
+| Date         : Fri Oct 23 07:30:23 2026
+| Host         : DESKTOP-9P149NQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file simu_pi_wrapper_utilization_synth.rpt -pb simu_pi_wrapper_utilization_synth.pb
 | Design       : simu_pi_wrapper
 | Device       : 7z010clg400-1
@@ -154,18 +154,16 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+---------------------------------+------+
-|             Ref Name            | Used |
-+---------------------------------+------+
-| simu_pi_vio_0_0                 |    1 |
-| simu_pi_util_vector_logic_0_0   |    1 |
-| simu_pi_pi_BF_0_0               |    1 |
-| simu_pi_modele_moteur_0_0       |    1 |
-| simu_pi_generateur_encodeur_0_0 |    1 |
-| simu_pi_driver_moteur_0_0       |    1 |
-| simu_pi_decodeur_0_0            |    1 |
-| simu_pi_clk_wiz_0_0             |    1 |
-+---------------------------------+------+
++-------------------------------+------+
+|            Ref Name           | Used |
++-------------------------------+------+
+| simu_pi_vio_0_0               |    1 |
+| simu_pi_util_vector_logic_0_0 |    1 |
+| simu_pi_pi_BF_0_0             |    1 |
+| simu_pi_filtre_moteur_0_0     |    1 |
+| simu_pi_driver_moteur_0_0     |    1 |
+| simu_pi_clk_wiz_0_0           |    1 |
++-------------------------------+------+
 
 
 9. Instantiated Netlists

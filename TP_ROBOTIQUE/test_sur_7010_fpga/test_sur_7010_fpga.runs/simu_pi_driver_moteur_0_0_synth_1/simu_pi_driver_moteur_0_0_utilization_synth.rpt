@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Oct 22 20:06:02 2026
-| Host         : PC_de_Thomas running 64-bit major release  (build 9200)
+| Date         : Fri Oct 23 06:24:57 2026
+| Host         : DESKTOP-9P149NQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file simu_pi_driver_moteur_0_0_utilization_synth.rpt -pb simu_pi_driver_moteur_0_0_utilization_synth.pb
 | Design       : simu_pi_driver_moteur_0_0
 | Device       : 7z010clg400-1

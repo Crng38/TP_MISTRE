@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1792725354">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1792733380">
   <File Type="PA-TCL" Name="simu_pi_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="simu_pi_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="simu_pi_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="simu_pi_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="simu_pi_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="simu_pi_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="simu_pi_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="simu_pi_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="simu_pi_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/pi_BF.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/modele_moteur.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/generateur_encodeur.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/driver_moteur.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/decodeur.vhd">
+    <File Path="$PSRCDIR/sources_1/new/pi_BF.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/filtre_moteur.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,6 +38,20 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/simu_pi/hdl/simu_pi_wrapper.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/generateur_encodeur.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decodeur.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -183,24 +188,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_clk_wiz_1"/>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_module_RS232_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_pi_signal_gene_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_clk_wiz_1"/>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_transmissionDonnee_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_signal_gene_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_DecodBin_ASCII_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="simu_pi_pi_BF_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_pi_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_pi_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_pi_mult_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_pi_pulse_generator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_pi_BF_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_pi_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_vio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_generateur_frequence_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_decodeur_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="simu_pi_generateur_encodeur_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="simu_pi_vio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="simu_pi_decodeur_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="simu_pi_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="simu_pi_driver_moteur_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="simu_pi_modele_moteur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_filtre_moteur_0_0"/>
 </GenRun>

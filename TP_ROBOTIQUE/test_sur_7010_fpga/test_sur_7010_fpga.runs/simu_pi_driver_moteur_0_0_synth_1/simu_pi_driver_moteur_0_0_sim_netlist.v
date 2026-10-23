@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Thu Oct 22 20:06:01 2026
-// Host        : PC_de_Thomas running 64-bit major release  (build 9200)
+// Date        : Fri Oct 23 06:24:57 2026
+// Host        : DESKTOP-9P149NQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ simu_pi_driver_moteur_0_0_sim_netlist.v
 // Design      : simu_pi_driver_moteur_0_0
@@ -803,7 +803,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     pwm,
     dir,
     duty);
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
   input clk_125;
   output pwm;
   output dir;

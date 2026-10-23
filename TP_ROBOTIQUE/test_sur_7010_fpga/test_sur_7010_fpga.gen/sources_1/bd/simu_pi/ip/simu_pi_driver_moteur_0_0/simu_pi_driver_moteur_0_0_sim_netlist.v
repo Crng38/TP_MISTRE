@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Thu Oct 22 20:06:02 2026
-// Host        : PC_de_Thomas running 64-bit major release  (build 9200)
+// Date        : Fri Oct 23 06:24:57 2026
+// Host        : DESKTOP-9P149NQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/simu_pi/ip/simu_pi_driver_moteur_0_0/simu_pi_driver_moteur_0_0_sim_netlist.v
 // Design      : simu_pi_driver_moteur_0_0
@@ -21,7 +21,7 @@ module simu_pi_driver_moteur_0_0
     pwm,
     dir,
     duty);
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
   input clk_125;
   output pwm;
   output dir;

@@ -33,7 +33,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9bfd0c40</spirit:value>
+            <spirit:value>d1284e2e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -46,7 +46,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9bfd0c40</spirit:value>
+            <spirit:value>d1284e2e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -155,11 +155,6 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Fe">5000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>coeff_decalage</spirit:name>
-        <spirit:displayName>Coeff Decalage</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.coeff_decalage">0</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>clipping_low</spirit:name>
         <spirit:displayName>Clipping Low</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.clipping_low">-6249</spirit:value>
@@ -177,7 +172,7 @@
       <spirit:file>
         <spirit:name>xgui/pi_BF_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_d2348a0b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_7ac74f4c</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -198,11 +193,6 @@
       <spirit:name>Fe</spirit:name>
       <spirit:displayName>Fe</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Fe">5000</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>coeff_decalage</spirit:name>
-      <spirit:displayName>Coeff Decalage</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.coeff_decalage">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clipping_low</spirit:name>
@@ -234,7 +224,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-10-23T03:42:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-10-23T04:53:54Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>

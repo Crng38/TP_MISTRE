@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Fri Oct 23 05:26:02 2026
-| Host             : PC_de_Thomas running 64-bit major release  (build 9200)
+| Date             : Fri Oct 23 07:31:20 2026
+| Host             : DESKTOP-9P149NQ running 64-bit major release  (build 9200)
 | Command          : report_power -file simu_pi_wrapper_power_routed.rpt -pb simu_pi_wrapper_power_summary_routed.pb -rpx simu_pi_wrapper_power_routed.rpx
 | Design           : simu_pi_wrapper
 | Device           : xc7z010clg400-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.373        |
+| Total On-Chip Power (W)  | 0.218        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.277        |
-| Device Static (W)        | 0.096        |
+| Dynamic (W)              | 0.124        |
+| Device Static (W)        | 0.094        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 80.7         |
-| Junction Temperature (C) | 29.3         |
+| Max Ambient (C)          | 82.5         |
+| Junction Temperature (C) | 27.5         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.012 |        9 |       --- |             --- |
-| Slice Logic              |     0.064 |    11910 |       --- |             --- |
-|   LUT as Logic           |     0.058 |     7061 |     17600 |           40.12 |
-|   CARRY4                 |     0.006 |     1375 |      4400 |           31.25 |
-|   Register               |    <0.001 |     1554 |     35200 |            4.41 |
+| Clocks                   |     0.007 |        9 |       --- |             --- |
+| Slice Logic              |     0.005 |     2858 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     1065 |     17600 |            6.05 |
+|   CARRY4                 |    <0.001 |      106 |      4400 |            2.41 |
+|   Register               |    <0.001 |     1341 |     35200 |            3.81 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
-|   Others                 |     0.000 |      124 |       --- |             --- |
-| Signals                  |     0.086 |     9994 |       --- |             --- |
+|   Others                 |     0.000 |      114 |       --- |             --- |
+| Signals                  |     0.005 |     2159 |       --- |             --- |
 | MMCM                     |     0.105 |        1 |         2 |           50.00 |
-| DSPs                     |     0.002 |        2 |        80 |            2.50 |
-| I/O                      |     0.007 |        4 |       100 |            4.00 |
-| Static Power             |     0.096 |          |           |                 |
-| Total                    |     0.373 |          |           |                 |
+| DSPs                     |     0.001 |        2 |        80 |            2.50 |
+| I/O                      |    <0.001 |        4 |       100 |            4.00 |
+| Static Power             |     0.094 |          |           |                 |
+| Total                    |     0.218 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.169 |       0.165 |      0.004 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.064 |       0.059 |      0.006 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.023 |       0.019 |      0.004 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.064 |       0.058 |      0.005 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -87,7 +87,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -153,28 +153,22 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------------+-----------+
-| Name                      | Power (W) |
-+---------------------------+-----------+
-| simu_pi_wrapper           |     0.277 |
-|   dbg_hub                 |     0.005 |
-|     inst                  |     0.005 |
-|       BSCANID.u_xsdbm_id  |     0.005 |
-|   simu_pi_i               |     0.264 |
-|     clk_wiz_0             |     0.106 |
-|       inst                |     0.106 |
-|     decodeur_0            |     0.008 |
-|       U0                  |     0.008 |
-|     driver_moteur_0       |     0.002 |
-|       U0                  |     0.002 |
-|     generateur_encodeur_0 |     0.011 |
-|       U0                  |     0.011 |
-|     modele_moteur_0       |     0.127 |
-|       U0                  |     0.124 |
-|     pi_BF_0               |     0.005 |
-|       U0                  |     0.005 |
-|     vio_0                 |     0.007 |
-|       inst                |     0.007 |
-+---------------------------+-----------+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| simu_pi_wrapper          |     0.124 |
+|   dbg_hub                |     0.004 |
+|     inst                 |     0.004 |
+|       BSCANID.u_xsdbm_id |     0.004 |
+|   simu_pi_i              |     0.120 |
+|     clk_wiz_0            |     0.106 |
+|       inst               |     0.106 |
+|     filtre_moteur_0      |     0.008 |
+|       U0                 |     0.008 |
+|     pi_BF_0              |     0.001 |
+|       U0                 |     0.001 |
+|     vio_0                |     0.005 |
+|       inst               |     0.005 |
++--------------------------+-----------+
 
 
