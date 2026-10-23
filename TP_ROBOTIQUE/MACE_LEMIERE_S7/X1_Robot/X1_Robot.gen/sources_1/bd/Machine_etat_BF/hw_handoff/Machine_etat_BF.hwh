@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct 22 11:55:39 2026" VIVADOVERSION="2020.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.0" DEVICE="7z020" NAME="Machine_etat_BF" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="DIR_D" SIGIS="undef" SIGNAME="driver_moteur_D_dir">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="driver_moteur_D" PORT="dir"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="DIR_G" SIGIS="undef" SIGNAME="driver_moteur_G_dir">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="driver_moteur_G" PORT="dir"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="PWM_D" SIGIS="undef" SIGNAME="driver_moteur_D_pwm">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="driver_moteur_D" PORT="pwm"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="PWM_G" SIGIS="undef" SIGNAME="driver_moteur_G_pwm">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="driver_moteur_G" PORT="pwm"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_start" SIGIS="undef" SIGNAME="External_Ports_btn_start">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Machine_etat_0" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk_125Mhz" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="driver_moteur_D" PORT="clk_125"/>
+        <CONNECTION INSTANCE="driver_moteur_G" PORT="clk_125"/>
+        <CONNECTION INSTANCE="Machine_etat_0" PORT="clk"/>
+        <CONNECTION INSTANCE="decodeur_0" PORT="clk_125MHz"/>
+        <CONNECTION INSTANCE="decodeur_1" PORT="clk_125MHz"/>
+        <CONNECTION INSTANCE="pi_BF_G" PORT="clk_125"/>
+        <CONNECTION INSTANCE="pi_BF_D" PORT="clk_125"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="undef" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="driver_moteur_G" PORT="reset"/>
+        <CONNECTION INSTANCE="driver_moteur_D" PORT="reset"/>
+        <CONNECTION INSTANCE="Machine_etat_0" PORT="reset"/>
+        <CONNECTION INSTANCE="decodeur_0" PORT="reset"/>
+        <CONNECTION INSTANCE="decodeur_1" PORT="reset"/>
+        <CONNECTION INSTANCE="pi_BF_G" PORT="reset"/>
+        <CONNECTION INSTANCE="pi_BF_D" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="A_gauche" SIGIS="undef" SIGNAME="External_Ports_A_gauche">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decodeur_1" PORT="encodeur_in_a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="B_gauche" SIGIS="undef" SIGNAME="External_Ports_B_gauche">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decodeur_1" PORT="encodeur_in_b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="A_droit" SIGIS="undef" SIGNAME="External_Ports_A_droit">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decodeur_0" PORT="encodeur_in_a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="B_droit" SIGIS="undef" SIGNAME="External_Ports_B_droit">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decodeur_0" PORT="encodeur_in_b"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Machine_etat_0" HWVERSION="1.0" INSTANCE="Machine_etat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Machine_etat" VLNV="xilinx.com:module_ref:Machine_etat:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="vitesse_trans_D" VALUE="-350"/>
+        <PARAMETER NAME="vitesse_trans_G" VALUE="350"/>
+        <PARAMETER NAME="vitesse_rota_D" VALUE="0"/>
+        <PARAMETER NAME="vitesse_rota_G" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_Machine_etat_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_btn_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="enable_PI" SIGIS="undef" SIGNAME="Machine_etat_0_enable_PI">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_G" PORT="enable"/>
+            <CONNECTION INSTANCE="pi_BF_D" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="commande_vitesse_G" RIGHT="0" SIGIS="undef" SIGNAME="Machine_etat_0_commande_vitesse_G">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_G" PORT="target"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="commande_vitesse_D" RIGHT="0" SIGIS="undef" SIGNAME="Machine_etat_0_commande_vitesse_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_D" PORT="target"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/decodeur_0" HWVERSION="1.0" INSTANCE="decodeur_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decodeur" VLNV="xilinx.com:module_ref:decodeur:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_decodeur_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="encodeur_in_a" SIGIS="undef" SIGNAME="External_Ports_A_droit">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A_droit"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="encodeur_in_b" SIGIS="undef" SIGNAME="External_Ports_B_droit">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B_droit"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="vitesse" RIGHT="0" SIGIS="undef" SIGNAME="decodeur_0_vitesse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_D" PORT="feedback"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_125MHz" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/decodeur_1" HWVERSION="1.0" INSTANCE="decodeur_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decodeur" VLNV="xilinx.com:module_ref:decodeur:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_decodeur_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="encodeur_in_a" SIGIS="undef" SIGNAME="External_Ports_A_gauche">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="A_gauche"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="encodeur_in_b" SIGIS="undef" SIGNAME="External_Ports_B_gauche">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="B_gauche"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="vitesse" RIGHT="0" SIGIS="undef" SIGNAME="decodeur_1_vitesse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_G" PORT="feedback"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_125MHz" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/driver_moteur_D" HWVERSION="1.0" INSTANCE="driver_moteur_D" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="driver_moteur" VLNV="xilinx.com:module_ref:driver_moteur:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="pwm_frequency" VALUE="20000"/>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_driver_moteur_D_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_125" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="driver_moteur_D_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PWM_D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir" SIGIS="undef" SIGNAME="driver_moteur_D_dir">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="DIR_D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="pi_BF_D_y_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_D" PORT="y_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/driver_moteur_G" HWVERSION="1.0" INSTANCE="driver_moteur_G" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="driver_moteur" VLNV="xilinx.com:module_ref:driver_moteur:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="pwm_frequency" VALUE="20000"/>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_driver_moteur_G_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_125" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="driver_moteur_G_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PWM_G"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir" SIGIS="undef" SIGNAME="driver_moteur_G_dir">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="DIR_G"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="pi_BF_G_y_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pi_BF_G" PORT="y_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pi_BF_D" HWVERSION="1.0" INSTANCE="pi_BF_D" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pi_BF" VLNV="xilinx.com:module_ref:pi_BF:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="a" VALUE="5"/>
+        <PARAMETER NAME="b" VALUE="1"/>
+        <PARAMETER NAME="Fe" VALUE="5000"/>
+        <PARAMETER NAME="coeff_decalage" VALUE="0"/>
+        <PARAMETER NAME="clipping_low" VALUE="-6249"/>
+        <PARAMETER NAME="clipping_high" VALUE="6249"/>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_pi_BF_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_125" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="Machine_etat_0_commande_vitesse_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Machine_etat_0" PORT="commande_vitesse_D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="Machine_etat_0_enable_PI">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Machine_etat_0" PORT="enable_PI"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="feedback" RIGHT="0" SIGIS="undef" SIGNAME="decodeur_0_vitesse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeur_0" PORT="vitesse"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="y_out" RIGHT="0" SIGIS="undef" SIGNAME="pi_BF_D_y_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="driver_moteur_D" PORT="duty"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pi_BF_G" HWVERSION="1.0" INSTANCE="pi_BF_G" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pi_BF" VLNV="xilinx.com:module_ref:pi_BF:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="a" VALUE="5"/>
+        <PARAMETER NAME="b" VALUE="1"/>
+        <PARAMETER NAME="Fe" VALUE="5000"/>
+        <PARAMETER NAME="coeff_decalage" VALUE="0"/>
+        <PARAMETER NAME="clipping_low" VALUE="-6249"/>
+        <PARAMETER NAME="clipping_high" VALUE="6249"/>
+        <PARAMETER NAME="Component_Name" VALUE="Machine_etat_BF_pi_BF_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="clk_125" SIGIS="undef" SIGNAME="External_Ports_clk_125Mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125Mhz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="target" RIGHT="0" SIGIS="undef" SIGNAME="Machine_etat_0_commande_vitesse_G">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Machine_etat_0" PORT="commande_vitesse_G"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="Machine_etat_0_enable_PI">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Machine_etat_0" PORT="enable_PI"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="feedback" RIGHT="0" SIGIS="undef" SIGNAME="decodeur_1_vitesse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodeur_1" PORT="vitesse"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="y_out" RIGHT="0" SIGIS="undef" SIGNAME="pi_BF_G_y_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="driver_moteur_G" PORT="duty"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

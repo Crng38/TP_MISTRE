@@ -3,19 +3,31 @@
 
 # XDC: new/contrainte_7010.xdc
 
-# Block Designs: bd/test_driver_pwm/test_driver_pwm.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm || ORIG_REF_NAME==test_driver_pwm} -quiet] -quiet
+# Block Designs: bd/simu_pi/simu_pi.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi || ORIG_REF_NAME==simu_pi} -quiet] -quiet
 
-# IP: bd/test_driver_pwm/ip/test_driver_pwm_clk_wiz_0_0/test_driver_pwm_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_clk_wiz_0_0 || ORIG_REF_NAME==test_driver_pwm_clk_wiz_0_0} -quiet] -quiet
+# IP: bd/simu_pi/ip/simu_pi_pi_BF_0_0/simu_pi_pi_BF_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_pi_BF_0_0 || ORIG_REF_NAME==simu_pi_pi_BF_0_0} -quiet] -quiet
 
-# IP: bd/test_driver_pwm/ip/test_driver_pwm_driver_moteur_0_0/test_driver_pwm_driver_moteur_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_driver_moteur_0_0 || ORIG_REF_NAME==test_driver_pwm_driver_moteur_0_0} -quiet] -quiet
+# IP: bd/simu_pi/ip/simu_pi_modele_moteur_0_0/simu_pi_modele_moteur_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_modele_moteur_0_0 || ORIG_REF_NAME==simu_pi_modele_moteur_0_0} -quiet] -quiet
 
-# IP: bd/test_driver_pwm/ip/test_driver_pwm_vio_0_0/test_driver_pwm_vio_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_vio_0_0 || ORIG_REF_NAME==test_driver_pwm_vio_0_0} -quiet] -quiet
+# IP: bd/simu_pi/ip/simu_pi_generateur_encodeur_0_0/simu_pi_generateur_encodeur_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_generateur_encodeur_0_0 || ORIG_REF_NAME==simu_pi_generateur_encodeur_0_0} -quiet] -quiet
 
-# IP: bd/test_driver_pwm/ip/test_driver_pwm_util_vector_logic_0_0/test_driver_pwm_util_vector_logic_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_driver_pwm_util_vector_logic_0_0 || ORIG_REF_NAME==test_driver_pwm_util_vector_logic_0_0} -quiet] -quiet
+# IP: bd/simu_pi/ip/simu_pi_driver_moteur_0_0/simu_pi_driver_moteur_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_driver_moteur_0_0 || ORIG_REF_NAME==simu_pi_driver_moteur_0_0} -quiet] -quiet
 
-# XDC: c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/test_driver_pwm/test_driver_pwm_ooc.xdc
+# IP: bd/simu_pi/ip/simu_pi_decodeur_0_0/simu_pi_decodeur_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_decodeur_0_0 || ORIG_REF_NAME==simu_pi_decodeur_0_0} -quiet] -quiet
+
+# IP: bd/simu_pi/ip/simu_pi_clk_wiz_0_0/simu_pi_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_clk_wiz_0_0 || ORIG_REF_NAME==simu_pi_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/simu_pi/ip/simu_pi_vio_0_0/simu_pi_vio_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_vio_0_0 || ORIG_REF_NAME==simu_pi_vio_0_0} -quiet] -quiet
+
+# IP: bd/simu_pi/ip/simu_pi_util_vector_logic_0_0/simu_pi_util_vector_logic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==simu_pi_util_vector_logic_0_0 || ORIG_REF_NAME==simu_pi_util_vector_logic_0_0} -quiet] -quiet
+
+# XDC: c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/simu_pi/simu_pi_ooc.xdc

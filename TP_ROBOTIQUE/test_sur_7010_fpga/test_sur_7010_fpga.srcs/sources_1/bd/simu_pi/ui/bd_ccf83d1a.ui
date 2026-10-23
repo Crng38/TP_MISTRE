@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.854508",
+   "Default View_TopLeft":"473,-109",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port CLK_50M -pg 1 -lvl 0 -x -30 -y -180 -defaultsOSRD
+preplace port BP_K2 -pg 1 -lvl 0 -x -30 -y 30 -defaultsOSRD
+preplace port LED_D2 -pg 1 -lvl 6 -x 1690 -y 110 -defaultsOSRD
+preplace port LED_D1 -pg 1 -lvl 6 -x 1690 -y 40 -defaultsOSRD
+preplace port LED_D3 -pg 1 -lvl 6 -x 1690 -y 230 -defaultsOSRD
+preplace port LED_D4 -pg 1 -lvl 6 -x 1690 -y 290 -defaultsOSRD
+preplace inst generateur_encodeur_0 -pg 1 -lvl 5 -x 1490 -y 290 -defaultsOSRD -orient R180
+preplace inst decodeur_0 -pg 1 -lvl 4 -x 1010 -y 300 -defaultsOSRD -orient R180
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 400 -y -180 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 3 -x 700 -y -170 -defaultsOSRD
+preplace inst driver_moteur_0 -pg 1 -lvl 4 -x 1010 -y 50 -defaultsOSRD
+preplace inst modele_moteur_0 -pg 1 -lvl 5 -x 1490 -y 30 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 140 -y 30 -defaultsOSRD
+preplace inst pi_BF_0 -pg 1 -lvl 3 -x 700 -y 70 -defaultsOSRD
+preplace netloc clk_in1_0_1 1 0 2 N -180 N
+preplace netloc clk_wiz_0_clk_out1 1 2 4 490 -50 850 -50 1170 370 1630
+preplace netloc reset_0_1 1 1 5 N 30 500J -20 860 -30 1150 400 1640
+preplace netloc pi_BF_0_y_out 1 2 3 520 -40 840 -40 1190
+preplace netloc driver_moteur_0_dir 1 4 2 1160J 110 NJ
+preplace netloc driver_moteur_0_pwm 1 4 2 1180J -50 1650J
+preplace netloc modele_moteur_0_vitesse 1 2 4 530 160 N 160 N 160 1630
+preplace netloc generateur_encodeur_0_encodeur_b 1 4 2 1180 390 1650
+preplace netloc generateur_encodeur_0_encodeur_a 1 4 2 1190 380 1660
+preplace netloc decodeur_0_vitesse 1 2 2 510 300 NJ
+preplace netloc vio_0_probe_out0 1 2 2 540 -60 840
+preplace netloc BP_K2_1 1 0 1 N 30
+levelinfo -pg 1 -30 140 400 700 1010 1490 1690
+pagesize -pg 1 -db -bbox -sgen -140 -330 1790 780
+"
+}
+0

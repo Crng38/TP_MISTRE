@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_decodeur_1_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
@@ -82,6 +83,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.cache/wt [current_project]
 set_property parent.project_path C:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/Matt/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
@@ -92,7 +94,7 @@ set_property ip_output_repo c:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MAC
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/sources_1/new/decodeur.vhd
+read_vhdl -library xil_defaultlib C:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/sources_1/imports/Downloads/decodeur.vhd
 read_ip -quiet c:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/sources_1/bd/design_1/ip/design_1_decodeur_1_0/design_1_decodeur_1_0.xci
 
 OPTRACE "Adding files" END { }

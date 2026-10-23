@@ -275,3 +275,82 @@ timestamp=[2026-10-16 17:24:19], mode=BUILD, duration=0:00:01.157, duration_ms=1
 timestamp=[2026-10-16 17:25:11], mode=BUILD, duration=0:00:01.103, duration_ms=1103, data={name=TP2, configuration=Debug, clean_build=false}
 timestamp=[2026-10-16 17:26:30], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=TP2, configuration=Debug, clean_build=true}
 timestamp=[2026-10-16 17:26:31], mode=BUILD, duration=0:00:01.471, duration_ms=1471, data={name=TP2, configuration=Debug, clean_build=false}
+timestamp=[2026-10-19 09:18:46], mode=WORKBENCH_START, duration=0:00:16.341, duration_ms=16341, data={}
+timestamp=[2026-10-19 09:18:48], mode=WORKBENCH_UI_INIT, duration=0:00:01.273, duration_ms=1273, data={editors_count=5, platform_editors_count=3, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-19 09:18:50], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.331, duration_ms=2331, data={}
+timestamp=[2026-10-21 11:15:24], mode=WORKBENCH_START, duration=0:00:18.609, duration_ms=18609, data={}
+timestamp=[2026-10-21 11:15:26], mode=WORKBENCH_UI_INIT, duration=0:00:01.446, duration_ms=1446, data={editors_count=5, platform_editors_count=3, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-21 11:15:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.862, duration_ms=2862, data={}
+timestamp=[2026-10-22 14:06:50], mode=WORKBENCH_START, duration=0:00:36.740, duration_ms=36740, data={}
+timestamp=[2026-10-22 14:06:53], mode=WORKBENCH_UI_INIT, duration=0:00:02.889, duration_ms=2889, data={editors_count=6, platform_editors_count=3, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-22 14:07:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:04.750, duration_ms=4750, data={}
+timestamp=[2026-10-22 14:08:16], mode=BUILD, duration=0:00:04.960, duration_ms=4960, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:14:36], mode=WORKBENCH_START, duration=0:00:23.466, duration_ms=23466, data={}
+timestamp=[2026-10-22 14:14:38], mode=WORKBENCH_UI_INIT, duration=0:00:02.886, duration_ms=2886, data={editors_count=1, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-22 14:14:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:03.449, duration_ms=3449, data={}
+timestamp=[2026-10-22 14:15:14], mode=BUILD, duration=0:00:01.389, duration_ms=1389, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:15:28], mode=BUILD, duration=0:00:12.949, duration_ms=12949, data={name=TP3_channel14_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:17:49], mode=BUILD, duration=0:00:00.927, duration_ms=927, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:18:43], mode=BUILD, duration=0:00:00.383, duration_ms=383, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:19:24], mode=WORKBENCH_START, duration=0:00:12.376, duration_ms=12376, data={}
+timestamp=[2026-10-22 14:19:26], mode=WORKBENCH_UI_INIT, duration=0:00:01.538, duration_ms=1538, data={editors_count=1, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-22 14:19:28], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.256, duration_ms=2256, data={}
+timestamp=[2026-10-22 14:19:42], mode=BUILD, duration=0:00:00.401, duration_ms=401, data={name=TP3_channel14, configuration=Debug, clean_build=true}
+timestamp=[2026-10-22 14:19:42], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=TP3_channel14_system, configuration=Debug, clean_build=true}
+timestamp=[2026-10-22 14:19:49], mode=BUILD, duration=0:00:02.591, duration_ms=2591, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:20:00], mode=BUILD, duration=0:00:09.932, duration_ms=9932, data={name=TP3_channel14_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:22:59], mode=PLATFORM_GENERATION, duration=0:00:17.971, duration_ms=17971, data={name=PS_Only_ZyboZ7}
+timestamp=[2026-10-22 14:23:02], mode=BUILD, duration=0:00:01.458, duration_ms=1458, data={name=Mes_Perf, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:23:09], mode=BUILD, duration=0:00:06.339, duration_ms=6339, data={name=Mes_Perf_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:23:29], mode=BUILD, duration=0:00:00.402, duration_ms=402, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:23:36], mode=BUILD, duration=0:00:06.614, duration_ms=6614, data={name=TP3_channel14_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:24:13], mode=BUILD, duration=0:00:00.191, duration_ms=191, data={name=TP3_channel14, configuration=Debug, clean_build=true}
+timestamp=[2026-10-22 14:24:16], mode=BUILD, duration=0:00:00.193, duration_ms=193, data={name=TP3_channel14_system, configuration=Debug, clean_build=true}
+timestamp=[2026-10-22 14:27:06], mode=WORKBENCH_START, duration=0:00:11.278, duration_ms=11278, data={}
+timestamp=[2026-10-22 14:27:07], mode=WORKBENCH_UI_INIT, duration=0:00:01.778, duration_ms=1778, data={editors_count=0, platform_editors_count=0, projects_count=22, platform_projects_count=1, active_platform_editor=false, projects=Helloworld,Helloworld_system,Mes_Perf,Mes_Perf_system,Mes_perf_sansFPU,Mes_perf_sansFPU_system,PS_Alone_NoFPU,PS_ET_BRAM,PS_Only_ZyboZ7,RemoteSystemsTempFiles,SISD_SIMD,SISD_SIMD_system,TP2,TP2_system,TP3_channel14,TP3_channel14_system,XADC_SingleCh14,Zynq_Timer48_wrapper,test_dma,test_dma_system,test_timer48,test_timer48_system}
+timestamp=[2026-10-22 14:27:17], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:08.830, duration_ms=8830, data={}
+timestamp=[2026-10-22 14:27:35], mode=BUILD, duration=0:00:01.596, duration_ms=1596, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:27:46], mode=BUILD, duration=0:00:10.500, duration_ms=10500, data={name=TP3_channel14_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:31:27], mode=BUILD, duration=0:00:01.560, duration_ms=1560, data={name=TP3_channel14, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:32:39], mode=APP_CREATION, duration=0:00:08.295, duration_ms=8295, data={name=TP3_depuis_LAPTOP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=XADC_SingleCh14, application_type=application}
+timestamp=[2026-10-22 14:33:20], mode=BUILD, duration=0:00:01.666, duration_ms=1666, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:34:37], mode=BUILD, duration=0:00:00.386, duration_ms=386, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:34:44], mode=BUILD, duration=0:00:07.181, duration_ms=7181, data={name=TP3_depuis_LAPTOP_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:35:31], mode=BUILD, duration=0:00:00.590, duration_ms=590, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:35:46], mode=BUILD, duration=0:00:01.307, duration_ms=1307, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:42:35], mode=BUILD, duration=0:00:00.640, duration_ms=640, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:42:41], mode=BUILD, duration=0:00:06.540, duration_ms=6540, data={name=TP3_depuis_LAPTOP_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:42:46], mode=BUILD, duration=0:00:01.542, duration_ms=1542, data={name=test_dma, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:42:51], mode=BUILD, duration=0:00:01.724, duration_ms=1724, data={name=test_timer48, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:46:25], mode=BUILD, duration=0:00:00.906, duration_ms=906, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:46:40], mode=BUILD, duration=0:00:01.224, duration_ms=1224, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 14:59:48], mode=BUILD, duration=0:00:01.232, duration_ms=1232, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:00:28], mode=BUILD, duration=0:00:01.239, duration_ms=1239, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:01:52], mode=BUILD, duration=0:00:00.525, duration_ms=525, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:02:08], mode=BUILD, duration=0:00:00.514, duration_ms=514, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:02:20], mode=BUILD, duration=0:00:01.286, duration_ms=1286, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:03:33], mode=BUILD, duration=0:00:01.146, duration_ms=1146, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:07:25], mode=BUILD, duration=0:00:00.403, duration_ms=403, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:08:08], mode=BUILD, duration=0:00:01.226, duration_ms=1226, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:09:57], mode=BUILD, duration=0:00:01.205, duration_ms=1205, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:10:41], mode=BUILD, duration=0:00:01.276, duration_ms=1276, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:23:54], mode=BUILD, duration=0:00:01.294, duration_ms=1294, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:24:32], mode=BUILD, duration=0:00:01.227, duration_ms=1227, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:27:06], mode=BUILD, duration=0:00:01.223, duration_ms=1223, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:27:47], mode=BUILD, duration=0:00:01.445, duration_ms=1445, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:28:27], mode=BUILD, duration=0:00:01.211, duration_ms=1211, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:41:04], mode=BUILD, duration=0:00:01.223, duration_ms=1223, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:46:34], mode=BUILD, duration=0:00:01.228, duration_ms=1228, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:50:19], mode=BUILD, duration=0:00:01.235, duration_ms=1235, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 15:54:54], mode=BUILD, duration=0:00:01.159, duration_ms=1159, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:10:59], mode=BUILD, duration=0:00:01.229, duration_ms=1229, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:38:18], mode=BUILD, duration=0:00:01.213, duration_ms=1213, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:42:10], mode=BUILD, duration=0:00:01.233, duration_ms=1233, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:45:46], mode=BUILD, duration=0:00:01.229, duration_ms=1229, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:46:59], mode=BUILD, duration=0:00:01.171, duration_ms=1171, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:50:36], mode=BUILD, duration=0:00:01.208, duration_ms=1208, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:53:25], mode=BUILD, duration=0:00:00.633, duration_ms=633, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:53:41], mode=BUILD, duration=0:00:01.186, duration_ms=1186, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:54:19], mode=BUILD, duration=0:00:01.721, duration_ms=1721, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 16:59:18], mode=BUILD, duration=0:00:01.760, duration_ms=1760, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}
+timestamp=[2026-10-22 18:24:50], mode=BUILD, duration=0:00:03.604, duration_ms=3604, data={name=TP3_depuis_LAPTOP, configuration=Debug, clean_build=false}

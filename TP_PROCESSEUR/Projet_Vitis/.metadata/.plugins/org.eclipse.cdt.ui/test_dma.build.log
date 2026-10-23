@@ -1,4 +1,4 @@
-20:31:20 **** Incremental Build of configuration Debug for project test_dma ****
+14:42:44 **** Build of configuration Debug for project test_dma ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -21,5 +21,5 @@ arm-none-eabi-size test_dma.elf  |tee "test_dma.elf.size"
 'Finished building: test_dma.elf.size'
 ' '
 
-20:31:20 Build Finished (took 716ms)
+14:42:46 Build Finished (took 1s.517ms)
 

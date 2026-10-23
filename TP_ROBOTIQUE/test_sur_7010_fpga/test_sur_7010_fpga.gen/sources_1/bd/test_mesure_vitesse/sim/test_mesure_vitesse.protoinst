@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"test_mesure_vitesse": {
+			"proto_instances": {
+			}
+		}
+	}
+}

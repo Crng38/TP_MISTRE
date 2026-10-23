@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Thu Sep 24 17:00:36 2026
+// Date        : Thu Oct 22 10:48:44 2026
 // Host        : Ordi-Matt running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/Matt/Desktop/Git/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/design_1/ip/design_1_decodeur_1_0/design_1_decodeur_1_0_stub.v
@@ -14,10 +14,12 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "decodeur,Vivado 2020.2" *)
-module design_1_decodeur_1_0(A, B, vitesse, clk)
-/* synthesis syn_black_box black_box_pad_pin="A,B,vitesse[15:0],clk" */;
-  input A;
-  input B;
+module design_1_decodeur_1_0(encodeur_in_a, encodeur_in_b, reset, vitesse, 
+  clk_125MHz)
+/* synthesis syn_black_box black_box_pad_pin="encodeur_in_a,encodeur_in_b,reset,vitesse[15:0],clk_125MHz" */;
+  input encodeur_in_a;
+  input encodeur_in_b;
+  input reset;
   output [15:0]vitesse;
-  input clk;
+  input clk_125MHz;
 endmodule

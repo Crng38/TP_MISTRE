@@ -55,10 +55,11 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_1_decodeur_1_0 IS
   PORT (
-    A : IN STD_LOGIC;
-    B : IN STD_LOGIC;
+    encodeur_in_a : IN STD_LOGIC;
+    encodeur_in_b : IN STD_LOGIC;
+    reset : IN STD_LOGIC;
     vitesse : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    clk : IN STD_LOGIC
+    clk_125MHz : IN STD_LOGIC
   );
 END design_1_decodeur_1_0;
 
@@ -67,24 +68,26 @@ ARCHITECTURE design_1_decodeur_1_0_arch OF design_1_decodeur_1_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_decodeur_1_0_arch: ARCHITECTURE IS "yes";
   COMPONENT decodeur IS
     PORT (
-      A : IN STD_LOGIC;
-      B : IN STD_LOGIC;
+      encodeur_in_a : IN STD_LOGIC;
+      encodeur_in_b : IN STD_LOGIC;
+      reset : IN STD_LOGIC;
       vitesse : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-      clk : IN STD_LOGIC
+      clk_125MHz : IN STD_LOGIC
     );
   END COMPONENT decodeur;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_decodeur_1_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
 BEGIN
   U0 : decodeur
     PORT MAP (
-      A => A,
-      B => B,
+      encodeur_in_a => encodeur_in_a,
+      encodeur_in_b => encodeur_in_b,
+      reset => reset,
       vitesse => vitesse,
-      clk => clk
+      clk_125MHz => clk_125MHz
     );
 END design_1_decodeur_1_0_arch;

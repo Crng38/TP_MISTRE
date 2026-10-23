@@ -5,10 +5,19 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace inst driver_moteur_0 -pg 1 -lvl 2 -x 370 -y 40 -defaultsOSRD
+preplace port clk_125 -pg 1 -lvl 0 -x -100 -y 40 -defaultsOSRD
+preplace port BP2 -pg 1 -lvl 0 -x -100 -y 10 -defaultsOSRD
+preplace port PWM -pg 1 -lvl 3 -x 500 -y 20 -defaultsOSRD
+preplace port DIR -pg 1 -lvl 3 -x 500 -y 50 -defaultsOSRD
 preplace inst vio_0 -pg 1 -lvl 1 -x 30 -y 130 -defaultsOSRD
-levelinfo -pg 1 -80 30 370 490
-pagesize -pg 1 -db -bbox -sgen -80 -190 490 240
+preplace inst driver_moteur_0 -pg 1 -lvl 2 -x 370 -y 40 -defaultsOSRD
+preplace netloc vio_0_probe_out0 1 1 1 130 60n
+preplace netloc clk_125_0_1 1 0 2 -80 40 N
+preplace netloc reset_0_1 1 0 2 NJ 10 130J
+preplace netloc driver_moteur_0_pwm 1 2 1 480J 20n
+preplace netloc driver_moteur_0_dir 1 2 1 NJ 50
+levelinfo -pg 1 -100 30 370 500
+pagesize -pg 1 -db -bbox -sgen -200 -190 590 240
 "
 }
-
+0

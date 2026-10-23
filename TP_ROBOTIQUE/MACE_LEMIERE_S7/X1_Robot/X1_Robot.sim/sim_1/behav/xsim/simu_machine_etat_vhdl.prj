@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../X1_Robot.srcs/sources_1/new/Machine_etat.vhd" \
+"../../../../X1_Robot.srcs/sim_1/new/simu_machine_etat.vhd" \
+
+# Do not sort compile order
+nosort

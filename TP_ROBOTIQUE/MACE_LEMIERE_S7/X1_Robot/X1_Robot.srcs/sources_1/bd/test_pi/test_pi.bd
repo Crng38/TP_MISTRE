@@ -1,0 +1,376 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4AA3E133EF4FDE86",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../X1_Robot.gen/sources_1/bd/test_pi",
+      "name": "test_pi",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "vio_0": "",
+      "pi_BF_0": "",
+      "decodeur_0": "",
+      "driver_moteur_0": "",
+      "util_vector_logic_0": ""
+    },
+    "ports": {
+      "clk_125Mhz": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "test_pi_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "A_droit": {
+        "direction": "I"
+      },
+      "B_droit": {
+        "direction": "I"
+      },
+      "PWM_D": {
+        "direction": "O",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "DIR_D": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "test_pi_vio_0_0",
+        "xci_path": "ip\\test_pi_vio_0_0\\test_pi_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "3"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "pi_BF_0": {
+        "vlnv": "xilinx.com:module_ref:pi_BF:1.0",
+        "xci_name": "test_pi_pi_BF_0_0",
+        "xci_path": "ip\\test_pi_pi_BF_0_0\\test_pi_pi_BF_0_0.xci",
+        "inst_hier_path": "pi_BF_0",
+        "parameters": {
+          "a": {
+            "value": "1"
+          },
+          "b": {
+            "value": "0"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pi_BF",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "test_pi_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "target": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "feedback": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "y_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "test_pi_decodeur_0_0",
+        "xci_path": "ip\\test_pi_decodeur_0_0\\test_pi_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "test_pi_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "test_pi_driver_moteur_0_0",
+        "xci_path": "ip\\test_pi_driver_moteur_0_0\\test_pi_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "test_pi_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pwm": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "dir": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "test_pi_util_vector_logic_0_0",
+        "xci_path": "ip\\test_pi_util_vector_logic_0_0\\test_pi_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_125Mhz",
+          "vio_0/clk",
+          "pi_BF_0/clk_125",
+          "decodeur_0/clk_125MHz",
+          "driver_moteur_0/clk_125"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset",
+          "pi_BF_0/reset",
+          "decodeur_0/reset",
+          "driver_moteur_0/reset"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "pi_BF_0/enable"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "pi_BF_0/target"
+        ]
+      },
+      "encodeur_in_a_0_1": {
+        "ports": [
+          "A_droit",
+          "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "encodeur_in_b_0_1": {
+        "ports": [
+          "B_droit",
+          "decodeur_0/encodeur_in_b"
+        ]
+      },
+      "decodeur_0_vitesse": {
+        "ports": [
+          "decodeur_0/vitesse",
+          "pi_BF_0/feedback",
+          "vio_0/probe_in0"
+        ]
+      },
+      "pi_BF_0_y_out": {
+        "ports": [
+          "pi_BF_0/y_out",
+          "vio_0/probe_in1",
+          "driver_moteur_0/duty"
+        ]
+      },
+      "driver_moteur_0_dir": {
+        "ports": [
+          "driver_moteur_0/dir",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "driver_moteur_0_pwm": {
+        "ports": [
+          "driver_moteur_0/pwm",
+          "PWM_D"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "vio_0/probe_in2",
+          "DIR_D"
+        ]
+      }
+    }
+  }
+}

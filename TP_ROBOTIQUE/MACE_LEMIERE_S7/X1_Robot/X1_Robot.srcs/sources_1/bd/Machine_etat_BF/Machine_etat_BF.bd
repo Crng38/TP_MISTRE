@@ -1,0 +1,456 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x12E23DBDBB7E145D",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../X1_Robot.gen/sources_1/bd/Machine_etat_BF",
+      "name": "Machine_etat_BF",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "driver_moteur_D": "",
+      "driver_moteur_G": "",
+      "Machine_etat_0": "",
+      "decodeur_0": "",
+      "decodeur_1": "",
+      "pi_BF_G": "",
+      "pi_BF_D": ""
+    },
+    "ports": {
+      "DIR_D": {
+        "direction": "O"
+      },
+      "DIR_G": {
+        "direction": "O"
+      },
+      "PWM_D": {
+        "direction": "O"
+      },
+      "PWM_G": {
+        "direction": "O"
+      },
+      "btn_start": {
+        "direction": "I"
+      },
+      "clk_125Mhz": {
+        "direction": "I"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "A_gauche": {
+        "direction": "I"
+      },
+      "B_gauche": {
+        "direction": "I"
+      },
+      "A_droit": {
+        "direction": "I"
+      },
+      "B_droit": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "driver_moteur_D": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "Machine_etat_BF_driver_moteur_D_0",
+        "xci_path": "ip\\Machine_etat_BF_driver_moteur_D_0\\Machine_etat_BF_driver_moteur_D_0.xci",
+        "inst_hier_path": "driver_moteur_D",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "driver_moteur_G": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "Machine_etat_BF_driver_moteur_G_0",
+        "xci_path": "ip\\Machine_etat_BF_driver_moteur_G_0\\Machine_etat_BF_driver_moteur_G_0.xci",
+        "inst_hier_path": "driver_moteur_G",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "Machine_etat_0": {
+        "vlnv": "xilinx.com:module_ref:Machine_etat:1.0",
+        "xci_name": "Machine_etat_BF_Machine_etat_0_0",
+        "xci_path": "ip\\Machine_etat_BF_Machine_etat_0_0\\Machine_etat_BF_Machine_etat_0_0.xci",
+        "inst_hier_path": "Machine_etat_0",
+        "parameters": {
+          "vitesse_rota_D": {
+            "value": "0"
+          },
+          "vitesse_rota_G": {
+            "value": "0"
+          },
+          "vitesse_trans_D": {
+            "value": "-350"
+          },
+          "vitesse_trans_G": {
+            "value": "350"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Machine_etat",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "enable_PI": {
+            "direction": "O"
+          },
+          "commande_vitesse_G": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "commande_vitesse_D": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "Machine_etat_BF_decodeur_0_0",
+        "xci_path": "ip\\Machine_etat_BF_decodeur_0_0\\Machine_etat_BF_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I"
+          }
+        }
+      },
+      "decodeur_1": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "Machine_etat_BF_decodeur_1_0",
+        "xci_path": "ip\\Machine_etat_BF_decodeur_1_0\\Machine_etat_BF_decodeur_1_0.xci",
+        "inst_hier_path": "decodeur_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I"
+          }
+        }
+      },
+      "pi_BF_G": {
+        "vlnv": "xilinx.com:module_ref:pi_BF:1.0",
+        "xci_name": "Machine_etat_BF_pi_BF_0_0",
+        "xci_path": "ip\\Machine_etat_BF_pi_BF_0_0\\Machine_etat_BF_pi_BF_0_0.xci",
+        "inst_hier_path": "pi_BF_G",
+        "parameters": {
+          "a": {
+            "value": "5"
+          },
+          "b": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pi_BF",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "feedback": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "y_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "pi_BF_D": {
+        "vlnv": "xilinx.com:module_ref:pi_BF:1.0",
+        "xci_name": "Machine_etat_BF_pi_BF_1_0",
+        "xci_path": "ip\\Machine_etat_BF_pi_BF_1_0\\Machine_etat_BF_pi_BF_1_0.xci",
+        "inst_hier_path": "pi_BF_D",
+        "parameters": {
+          "a": {
+            "value": "5"
+          },
+          "b": {
+            "value": "1"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pi_BF",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "feedback": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "y_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "btn_start_1": {
+        "ports": [
+          "btn_start",
+          "Machine_etat_0/btn"
+        ]
+      },
+      "clk_125Mhz_1": {
+        "ports": [
+          "clk_125Mhz",
+          "driver_moteur_D/clk_125",
+          "driver_moteur_G/clk_125",
+          "Machine_etat_0/clk",
+          "decodeur_0/clk_125MHz",
+          "decodeur_1/clk_125MHz",
+          "pi_BF_G/clk_125",
+          "pi_BF_D/clk_125"
+        ]
+      },
+      "driver_moteur_D_dir": {
+        "ports": [
+          "driver_moteur_D/dir",
+          "DIR_D"
+        ]
+      },
+      "driver_moteur_D_pwm": {
+        "ports": [
+          "driver_moteur_D/pwm",
+          "PWM_D"
+        ]
+      },
+      "driver_moteur_G_dir": {
+        "ports": [
+          "driver_moteur_G/dir",
+          "DIR_G"
+        ]
+      },
+      "driver_moteur_G_pwm": {
+        "ports": [
+          "driver_moteur_G/pwm",
+          "PWM_G"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "driver_moteur_G/reset",
+          "driver_moteur_D/reset",
+          "Machine_etat_0/reset",
+          "decodeur_0/reset",
+          "decodeur_1/reset",
+          "pi_BF_G/reset",
+          "pi_BF_D/reset"
+        ]
+      },
+      "pi_BF_0_y_out": {
+        "ports": [
+          "pi_BF_G/y_out",
+          "driver_moteur_G/duty"
+        ]
+      },
+      "pi_BF_1_y_out": {
+        "ports": [
+          "pi_BF_D/y_out",
+          "driver_moteur_D/duty"
+        ]
+      },
+      "Machine_etat_0_commande_vitesse_G": {
+        "ports": [
+          "Machine_etat_0/commande_vitesse_G",
+          "pi_BF_G/target"
+        ]
+      },
+      "Machine_etat_0_commande_vitesse_D": {
+        "ports": [
+          "Machine_etat_0/commande_vitesse_D",
+          "pi_BF_D/target"
+        ]
+      },
+      "decodeur_1_vitesse": {
+        "ports": [
+          "decodeur_1/vitesse",
+          "pi_BF_G/feedback"
+        ]
+      },
+      "decodeur_0_vitesse": {
+        "ports": [
+          "decodeur_0/vitesse",
+          "pi_BF_D/feedback"
+        ]
+      },
+      "A_droit_1": {
+        "ports": [
+          "A_droit",
+          "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "B_droit_1": {
+        "ports": [
+          "B_droit",
+          "decodeur_0/encodeur_in_b"
+        ]
+      },
+      "B_gauche_1": {
+        "ports": [
+          "B_gauche",
+          "decodeur_1/encodeur_in_b"
+        ]
+      },
+      "A_gauche_1": {
+        "ports": [
+          "A_gauche",
+          "decodeur_1/encodeur_in_a"
+        ]
+      },
+      "Machine_etat_0_enable_PI": {
+        "ports": [
+          "Machine_etat_0/enable_PI",
+          "pi_BF_G/enable",
+          "pi_BF_D/enable"
+        ]
+      }
+    }
+  }
+}

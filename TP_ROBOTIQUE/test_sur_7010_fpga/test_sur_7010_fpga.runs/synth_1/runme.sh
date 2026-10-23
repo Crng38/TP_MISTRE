@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log test_driver_pwm_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_driver_pwm_wrapper.tcl
+EAStep vivado -log simu_pi_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source simu_pi_wrapper.tcl

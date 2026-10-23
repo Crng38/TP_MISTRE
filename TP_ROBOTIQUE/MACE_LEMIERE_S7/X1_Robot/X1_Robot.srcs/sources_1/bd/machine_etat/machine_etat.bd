@@ -1,0 +1,206 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x911EA105104D271C",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../X1_Robot.gen/sources_1/bd/machine_etat",
+      "name": "machine_etat",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Machine_etat_0": "",
+      "driver_moteur_0": "",
+      "driver_moteur_1": ""
+    },
+    "ports": {
+      "clk_125": {
+        "direction": "I"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "PWM_D": {
+        "direction": "O"
+      },
+      "DIR_D": {
+        "direction": "O"
+      },
+      "PWM_G": {
+        "direction": "O"
+      },
+      "DIR_G": {
+        "direction": "O"
+      },
+      "btn_start": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "Machine_etat_0": {
+        "vlnv": "xilinx.com:module_ref:Machine_etat:1.0",
+        "xci_name": "machine_etat_Machine_etat_0_0",
+        "xci_path": "ip\\machine_etat_Machine_etat_0_0\\machine_etat_Machine_etat_0_0.xci",
+        "inst_hier_path": "Machine_etat_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Machine_etat",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "commande_vitesse_G": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "commande_vitesse_D": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "machine_etat_driver_moteur_0_0",
+        "xci_path": "ip\\machine_etat_driver_moteur_0_0\\machine_etat_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "driver_moteur_1": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "machine_etat_driver_moteur_1_0",
+        "xci_path": "ip\\machine_etat_driver_moteur_1_0\\machine_etat_driver_moteur_1_0.xci",
+        "inst_hier_path": "driver_moteur_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Machine_etat_0_commande_vitesse_G": {
+        "ports": [
+          "Machine_etat_0/commande_vitesse_G",
+          "driver_moteur_0/duty"
+        ]
+      },
+      "Machine_etat_0_commande_vitesse_D": {
+        "ports": [
+          "Machine_etat_0/commande_vitesse_D",
+          "driver_moteur_1/duty"
+        ]
+      },
+      "clk_125_1": {
+        "ports": [
+          "clk_125",
+          "Machine_etat_0/clk",
+          "driver_moteur_0/clk_125",
+          "driver_moteur_1/clk_125"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "Machine_etat_0/reset",
+          "driver_moteur_0/reset",
+          "driver_moteur_1/reset"
+        ]
+      },
+      "driver_moteur_1_pwm": {
+        "ports": [
+          "driver_moteur_1/pwm",
+          "PWM_D"
+        ]
+      },
+      "driver_moteur_0_dir": {
+        "ports": [
+          "driver_moteur_0/dir",
+          "DIR_G"
+        ]
+      },
+      "driver_moteur_0_pwm": {
+        "ports": [
+          "driver_moteur_0/pwm",
+          "PWM_G"
+        ]
+      },
+      "driver_moteur_1_dir": {
+        "ports": [
+          "driver_moteur_1/dir",
+          "DIR_D"
+        ]
+      },
+      "btn_start_1": {
+        "ports": [
+          "btn_start",
+          "Machine_etat_0/btn"
+        ]
+      }
+    }
+  }
+}
