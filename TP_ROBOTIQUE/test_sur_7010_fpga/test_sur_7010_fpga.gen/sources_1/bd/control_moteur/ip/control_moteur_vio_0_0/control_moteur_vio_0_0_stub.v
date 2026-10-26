@@ -1,0 +1,23 @@
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Sun Oct 25 08:36:34 2026
+// Host        : PC_de_Thomas running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/test_sur_7010_fpga/test_sur_7010_fpga.gen/sources_1/bd/control_moteur/ip/control_moteur_vio_0_0/control_moteur_vio_0_0_stub.v
+// Design      : control_moteur_vio_0_0
+// Purpose     : Stub declaration of top-level module interface
+// Device      : xc7z010clg400-1
+// --------------------------------------------------------------------------------
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+(* X_CORE_INFO = "vio,Vivado 2020.2" *)
+module control_moteur_vio_0_0(clk, probe_in0, probe_in1, probe_out0)
+/* synthesis syn_black_box black_box_pad_pin="clk,probe_in0[15:0],probe_in1[0:0],probe_out0[15:0]" */;
+  input clk;
+  input [15:0]probe_in0;
+  input [0:0]probe_in1;
+  output [15:0]probe_out0;
+endmodule

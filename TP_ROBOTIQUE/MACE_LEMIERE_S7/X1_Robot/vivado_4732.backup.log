@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 25 18:19:34 2026
+# Process ID: 4732
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8852 C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\MACE_LEMIERE_S7\X1_Robot\X1_Robot.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.xpr
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/vivado_pid4732.debug)
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 1105.785 ; gain = 0.000
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 18:20:28 2026...

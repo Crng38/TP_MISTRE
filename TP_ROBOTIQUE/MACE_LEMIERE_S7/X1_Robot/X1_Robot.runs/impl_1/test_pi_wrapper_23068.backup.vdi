@@ -1,0 +1,1148 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct 23 17:03:33 2026
+# Process ID: 23068
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1
+# Command line: vivado.exe -log test_pi_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source test_pi_wrapper.tcl -notrace
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper.vdi
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source test_pi_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.cache/ip 
+Command: link_design -top test_pi_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/test_pi/ip/test_pi_decodeur_0_0/test_pi_decodeur_0_0.dcp' for cell 'test_pi_i/decodeur_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/test_pi/ip/test_pi_driver_moteur_0_0/test_pi_driver_moteur_0_0.dcp' for cell 'test_pi_i/driver_moteur_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/test_pi/ip/test_pi_pi_BF_0_0/test_pi_pi_BF_0_0.dcp' for cell 'test_pi_i/pi_BF_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/test_pi/ip/test_pi_vio_0_0/test_pi_vio_0_0.dcp' for cell 'test_pi_i/vio_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1107.984 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: test_pi_i/vio_0 UUID: 07e1e14e-28a4-5c4d-857a-4248aa80134d 
+Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/test_pi/ip/test_pi_vio_0_0/test_pi_vio_0_0.xdc] for cell 'test_pi_i/vio_0'
+Finished Parsing XDC File [c:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.gen/sources_1/bd/test_pi/ip/test_pi_vio_0_0/test_pi_vio_0_0.xdc] for cell 'test_pi_i/vio_0'
+Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc]
+WARNING: [Vivado 12-507] No nets matched 'A1_IBUF'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_start'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PWM_D'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIR_D'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'A_droit'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'B_droit'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_Zynq_TX'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_zynq_RXD'. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.srcs/constrs_1/imports/X1_Robot/Zybo-Z7-ExtensionPedagobot.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1107.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+15 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1107.984 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1107.984 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 17833be59
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1527.934 ; gain = 419.949
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = f83900a7de4d5aea.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1781.984 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 213635a73
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 1e3508d8c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 6 cells
+INFO: [Opt 31-1021] In phase Retarget, 93 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: 26f9977f0
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 77 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 1c6c5746a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Sweep, 962 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clk_125Mhz_IBUF_BUFG_inst to drive 872 load(s) on clock net clk_125Mhz_IBUF_BUFG
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 5 BUFG optimization | Checksum: 247ea00e2
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 6 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 6 Shift Register Optimization | Checksum: 247ea00e2
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 247ea00e2
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 87 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               6  |                                             93  |
+|  Constant propagation         |               0  |               0  |                                             77  |
+|  Sweep                        |               0  |               0  |                                            962  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             87  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1781.984 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1d8bb3249
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1781.984 ; gain = 44.574
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1d8bb3249
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1781.984 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1d8bb3249
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1781.984 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1781.984 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1d8bb3249
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1781.984 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+44 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 1781.984 ; gain = 674.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1781.984 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file test_pi_wrapper_drc_opted.rpt -pb test_pi_wrapper_drc_opted.pb -rpx test_pi_wrapper_drc_opted.rpx
+Command: report_drc -file test_pi_wrapper_drc_opted.rpt -pb test_pi_wrapper_drc_opted.pb -rpx test_pi_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 12176a1a7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f4aa12ef
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.536 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1a6f236d4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1a6f236d4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1a6f236d4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 18b738f2e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 14774780f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 2.3 Global Placement Core
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 3 LUTNM shape to break, 95 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 3, total 3, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 46 nets or cells. Created 3 new cells, deleted 43 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            3  |             43  |                    46  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            3  |             43  |                    46  |           0  |           8  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 19609300c
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 2.3 Global Placement Core | Checksum: 1d0f8d339
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1d0f8d339
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1a5138884
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 214bfcbd5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2149f133c
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 22b987310
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1873e29ea
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1704d318d
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1ec2d350c
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 22b7fe750
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 25b71c7e1
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 25b71c7e1
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 12ff0b0ae
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.488 | TNS=-1701.730 |
+Phase 1 Physical Synthesis Initialization | Checksum: 130abd676
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1e500d8a1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 12ff0b0ae
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-39.318. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 191ebeac7
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 191ebeac7
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 191ebeac7
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 191ebeac7
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1647a2321
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Ending Placer Task | Checksum: e6a144d2
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+85 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 1795.000 ; gain = 3.977
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.355 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file test_pi_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file test_pi_wrapper_utilization_placed.rpt -pb test_pi_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file test_pi_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.156 | TNS=-1686.900 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1f9a8f29b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.682 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.156 | TNS=-1686.900 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 1f9a8f29b
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.707 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.156 | TNS=-1686.900 |
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]. Replicated 4 times.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.128 | TNS=-1685.556 |
+INFO: [Physopt 32-81] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[0]. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.113 | TNS=-1684.836 |
+INFO: [Physopt 32-572] Net test_pi_i/decodeur_0/U0/compteur_buffer[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-663] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[0].  Re-placed instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[0]
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.111 | TNS=-1684.740 |
+INFO: [Physopt 32-81] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[0]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.104 | TNS=-1684.404 |
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN.  Did not re-place instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica
+INFO: [Physopt 32-81] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.094 | TNS=-1683.924 |
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4.  Did not re-place instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica_4
+INFO: [Physopt 32-601] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4. Net driver test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica_4 was replaced.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-39.094 | TNS=-1683.924 |
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4.  Did not re-place instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica_4
+INFO: [Physopt 32-572] Net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k[20]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1__53_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1__53_carry_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__3_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__0_n_0.  Did not re-place instance test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__0
+INFO: [Physopt 32-710] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6__0_n_0. Critical path length was reduced through logic transformation on cell test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6__0_comp.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-38.998 | TNS=-1680.176 |
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0.  Did not re-place instance test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_23__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_21__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_35__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_19__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_30__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_49_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_17__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_25__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_44__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_23__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_40_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_60__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_80_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_98__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_35_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_55__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_75_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_50__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_70__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_91__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_45__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_65__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_60_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_91_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_14__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_44_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_70_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_7_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_16__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_45_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_107_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_29_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_50_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_76_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_111_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_81_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_115_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_5_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_65_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_99_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-38.944 | TNS=-1677.584 |
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_86_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_116_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-38.855 | TNS=-1673.312 |
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[24]_i_1_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4.  Did not re-place instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica_4
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k[20]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1__53_carry_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__3_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0.  Did not re-place instance test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_98__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_91__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_7_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_107_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_111_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_115_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_5_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[24]_i_1_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-38.855 | TNS=-1673.312 |
+Phase 3 Critical Path Optimization | Checksum: 1f9a8f29b
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1795.000 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-38.855 | TNS=-1673.312 |
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4.  Did not re-place instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica_4
+INFO: [Physopt 32-572] Net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[20]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k[20]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1__53_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1__53_carry_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__3_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0.  Did not re-place instance test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_23__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__1_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_21__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_35__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_19__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_30__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_49_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_17__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_25__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_44__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_23__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_40_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_60__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_80_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_98__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_35_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_55__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_75_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_50__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_70__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_91__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_45__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_65__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_60_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_91_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_14__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_44_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_70_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_7_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_16__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_45_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_71_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_107_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_20_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_29_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_50_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_76_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_111_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_39_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_81_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_115_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_5_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_65_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_86_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[24]_i_1_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4.  Did not re-place instance test_pi_i/decodeur_0/U0/compteur_buffer_reg[1]_replica_4
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/compteur_buffer[1]_repN_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k[20]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1__53_carry_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__3_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k1_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/epsilon0_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0.  Did not re-place instance test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_3__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3__1020_carry_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__2_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_12__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_98__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_11__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_10__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_91__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__1_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_8_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_7_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_107_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_9__0_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_111_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_6_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse__0_carry_i_115_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse[0]_INST_0_i_5_n_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/decodeur_0/U0/vitesse_abs3_carry_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net test_pi_i/pi_BF_0/U0/y_k_reg[24]_i_1_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_125Mhz. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-38.855 | TNS=-1673.312 |
+Phase 4 Critical Path Optimization | Checksum: 1f9a8f29b
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-38.855 | TNS=-1673.312 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.301  |         13.588  |            9  |              0  |                     9  |           0  |           2  |  00:00:07  |
+|  Total          |          0.301  |         13.588  |            9  |              0  |                     9  |           0  |           3  |  00:00:07  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1795.000 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 240c614a8
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+472 Infos, 9 Warnings, 8 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1795.000 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.354 . Memory (MB): peak = 1808.906 ; gain = 13.906
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 7325fd86 ConstDB: 0 ShapeSum: e89de841 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: d4992669
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1921.949 ; gain = 110.980
+Post Restoration Checksum: NetGraph: 25db7b4a NumContArr: aebdab1f Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: d4992669
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1921.953 ; gain = 110.984
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: d4992669
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1928.176 ; gain = 117.207
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: d4992669
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1928.176 ; gain = 117.207
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: bd9fe83a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:25 . Memory (MB): peak = 1951.547 ; gain = 140.578
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.623| TNS=-1617.379| WHS=-0.157 | THS=-50.714|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 15d23b0b1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1951.547 ; gain = 140.578
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.623| TNS=-1616.480| WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 12027031c
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1957.590 ; gain = 146.621
+Phase 2 Router Initialization | Checksum: f7fb6993
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1957.590 ; gain = 146.621
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 2296
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 2296
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: f7fb6993
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1957.590 ; gain = 146.621
+Phase 3 Initial Routing | Checksum: 13173faa5
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:26 . Memory (MB): peak = 1957.590 ; gain = 146.621
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 365
+ Number of Nodes with overlaps = 60
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-40.352| TNS=-1743.454| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1c8b921b6
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 1957.590 ; gain = 146.621
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 332
+ Number of Nodes with overlaps = 45
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-40.783| TNS=-1760.271| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2a8ca927e
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1957.590 ; gain = 146.621
+Phase 4 Rip-up And Reroute | Checksum: 2a8ca927e
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1957.590 ; gain = 146.621
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 23f82271d
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:30 . Memory (MB): peak = 1957.590 ; gain = 146.621
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-40.352| TNS=-1743.454| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: ff5d7a8f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: ff5d7a8f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+Phase 5 Delay and Skew Optimization | Checksum: ff5d7a8f
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: af11499d
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-40.352| TNS=-1743.438| WHS=0.035  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: c432d5ea
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+Phase 6 Post Hold Fix | Checksum: c432d5ea
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.393497 %
+  Global Horizontal Routing Utilization  = 0.359533 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 27.027%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 47.7477%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 44.1176%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 33.8235%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 10b51ad85
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 10b51ad85
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1b6bc2740
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-40.352| TNS=-1743.438| WHS=0.035  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1b6bc2740
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 1962.250 ; gain = 151.281
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+491 Infos, 10 Warnings, 8 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1962.250 ; gain = 153.344
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.439 . Memory (MB): peak = 1967.988 ; gain = 5.738
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file test_pi_wrapper_drc_routed.rpt -pb test_pi_wrapper_drc_routed.pb -rpx test_pi_wrapper_drc_routed.rpx
+Command: report_drc -file test_pi_wrapper_drc_routed.rpt -pb test_pi_wrapper_drc_routed.pb -rpx test_pi_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file test_pi_wrapper_methodology_drc_routed.rpt -pb test_pi_wrapper_methodology_drc_routed.pb -rpx test_pi_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file test_pi_wrapper_methodology_drc_routed.rpt -pb test_pi_wrapper_methodology_drc_routed.pb -rpx test_pi_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.runs/impl_1/test_pi_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file test_pi_wrapper_power_routed.rpt -pb test_pi_wrapper_power_summary_routed.pb -rpx test_pi_wrapper_power_routed.rpx
+Command: report_power -file test_pi_wrapper_power_routed.rpt -pb test_pi_wrapper_power_summary_routed.pb -rpx test_pi_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+503 Infos, 10 Warnings, 8 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file test_pi_wrapper_route_status.rpt -pb test_pi_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file test_pi_wrapper_timing_summary_routed.rpt -pb test_pi_wrapper_timing_summary_routed.pb -rpx test_pi_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file test_pi_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file test_pi_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file test_pi_wrapper_bus_skew_routed.rpt -pb test_pi_wrapper_bus_skew_routed.pb -rpx test_pi_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 17:05:55 2026...

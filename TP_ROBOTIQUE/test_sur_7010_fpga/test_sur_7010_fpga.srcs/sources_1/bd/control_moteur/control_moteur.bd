@@ -1,0 +1,608 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1398624FF30F9EBB",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../test_sur_7010_fpga.gen/sources_1/bd/control_moteur",
+      "name": "control_moteur",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "vio_0": "",
+      "util_vector_logic_0": "",
+      "driver_moteur_0": "",
+      "decodeur_0": "",
+      "ila_0": "",
+      "signal_gene_0": ""
+    },
+    "ports": {
+      "GPIO_HEADER_V17": {
+        "direction": "I"
+      },
+      "GPIO_HEADER_Y18": {
+        "direction": "I"
+      },
+      "BP_K2": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "CLK_50M": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "control_moteur_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "GPIO_HEADER_U15": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_V15": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_W15": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_P15": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_V18": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_U17": {
+        "direction": "O"
+      },
+      "GPIO_HEADER_W18": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "control_moteur_clk_wiz_0_0",
+        "xci_path": "ip\\control_moteur_clk_wiz_0_0\\control_moteur_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "200.0"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "154.207"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "164.985"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "125"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "8.000"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "50.0"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "control_moteur_vio_0_0",
+        "xci_path": "ip\\control_moteur_vio_0_0\\control_moteur_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "2"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "control_moteur_util_vector_logic_0_0",
+        "xci_path": "ip\\control_moteur_util_vector_logic_0_0\\control_moteur_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "0"
+          }
+        }
+      },
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "control_moteur_driver_moteur_0_0",
+        "xci_path": "ip\\control_moteur_driver_moteur_0_0\\control_moteur_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk_125": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "control_moteur_decodeur_0_0",
+        "xci_path": "ip\\control_moteur_decodeur_0_0\\control_moteur_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "control_moteur_ila_0_0",
+        "xci_path": "ip\\control_moteur_ila_0_0\\control_moteur_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "ALL_PROBE_SAME_MU": {
+            "value": "true"
+          },
+          "ALL_PROBE_SAME_MU_CNT": {
+            "value": "2"
+          },
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_DATA_DEPTH": {
+            "value": "8192"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE0_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE10_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE11_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE12_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE13_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE14_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE15_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE16_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE17_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE18_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE19_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE1_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE20_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE21_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE22_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE23_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE24_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE25_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE26_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE27_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE28_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE29_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE2_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE30_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE31_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE32_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE33_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE34_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE35_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE36_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE37_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE38_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE39_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE3_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE40_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE41_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE42_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE43_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE4_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE5_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE6_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE7_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE8_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE9_MU_CNT": {
+            "value": "2"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          }
+        }
+      },
+      "signal_gene_0": {
+        "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
+        "xci_name": "control_moteur_signal_gene_0_0",
+        "xci_path": "ip\\control_moteur_signal_gene_0_0\\control_moteur_signal_gene_0_0.xci",
+        "inst_hier_path": "signal_gene_0",
+        "parameters": {
+          "division_horloge": {
+            "value": "25000"
+          },
+          "nb_pulse_etat_haut": {
+            "value": "12500"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signal_gene",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "encodeur_in_a_0_1": {
+        "ports": [
+          "GPIO_HEADER_V17",
+          "GPIO_HEADER_U17",
+          "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "encodeur_in_b_0_1": {
+        "ports": [
+          "GPIO_HEADER_Y18",
+          "GPIO_HEADER_V18",
+          "decodeur_0/encodeur_in_b"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "driver_moteur_0/reset",
+          "decodeur_0/reset",
+          "signal_gene_0/rst"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "CLK_50M",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "driver_moteur_0_pwm": {
+        "ports": [
+          "driver_moteur_0/pwm",
+          "GPIO_HEADER_U15",
+          "GPIO_HEADER_P15"
+        ]
+      },
+      "driver_moteur_0_dir": {
+        "ports": [
+          "driver_moteur_0/dir",
+          "GPIO_HEADER_V15",
+          "vio_0/probe_in1",
+          "GPIO_HEADER_W15"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "vio_0/clk",
+          "driver_moteur_0/clk_125",
+          "decodeur_0/clk_125MHz",
+          "ila_0/clk",
+          "signal_gene_0/clk"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "driver_moteur_0/duty",
+          "ila_0/probe1"
+        ]
+      },
+      "decodeur_0_vitesse": {
+        "ports": [
+          "decodeur_0/vitesse",
+          "vio_0/probe_in0",
+          "ila_0/probe2"
+        ]
+      },
+      "BP_K2_1": {
+        "ports": [
+          "BP_K2",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "signal_gene_0_clk_out": {
+        "ports": [
+          "signal_gene_0/clk_out",
+          "ila_0/probe0",
+          "GPIO_HEADER_W18"
+        ]
+      }
+    }
+  }
+}

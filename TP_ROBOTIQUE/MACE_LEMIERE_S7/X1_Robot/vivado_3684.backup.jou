@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 25 17:54:59 2026
+# Process ID: 3684
+# Current directory: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14132 C:\Users\Thomas\Desktop\TP_MISTRE\TP_ROBOTIQUE\MACE_LEMIERE_S7\X1_Robot\X1_Robot.xpr
+# Log file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/vivado.log
+# Journal file: C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot\vivado.jou
+#-----------------------------------------------------------
+start_gui
+oopen_project C:/Users/Thomas/Desktop/TP_MISTRE/TP_ROBOTIQUE/MACE_LEMIERE_S7/X1_Robot/X1_Robot.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simu_machine_etat [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+source simu_machine_etat.tcl
+update_compile_order -fileset sim_1
+restart
+run 50 ms
+run 1 ms
+relaunch_sim
+run 1 ms
+relaunch_sim
+run 1 us
+close_sim
