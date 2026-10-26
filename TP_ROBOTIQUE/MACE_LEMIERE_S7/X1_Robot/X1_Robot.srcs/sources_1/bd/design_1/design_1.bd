@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x715982E1FB4699E4",
+      "boundary_crc": "0x60D5C53228D29FC9",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../X1_Robot.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -15,18 +15,21 @@
       "transmissionDonnee_0": "",
       "RAZ": "",
       "DecodBin_ASCII_0": "",
-      "mult_gen_0": "",
-      "PWM_D": "",
-      "PWM_G": "",
-      "util_vector_logic_0": "",
       "Diviseur_0": "",
+      "driver_moteur_D": "",
+      "driver_moteur_G": "",
+      "vio_0": "",
+      "ila_0": "",
+      "Diviseur_1": "",
+      "ila_1": "",
+      "decodeur_0": "",
       "decodeur_1": ""
     },
     "ports": {
-      "H2": {
+      "clk_125Mhz": {
         "direction": "I"
       },
-      "RESET2": {
+      "reset": {
         "type": "rst",
         "direction": "I",
         "parameters": {
@@ -40,22 +43,34 @@
           }
         }
       },
-      "DIR2": {
+      "DIR_G": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "PWM_G": {
         "direction": "O"
       },
-      "PWM2": {
+      "DIR_D": {
         "direction": "O"
       },
-      "DIR3": {
+      "PWM_D": {
         "direction": "O"
       },
-      "PWM3": {
-        "direction": "O"
-      },
-      "A1": {
+      "A_gauche": {
         "direction": "I"
       },
-      "B1": {
+      "B_gauche": {
         "direction": "I"
       },
       "UART_Zynq_TX": {
@@ -64,22 +79,7 @@
       "uart_zynq_RXD": {
         "direction": "I"
       },
-      "sw": {
-        "type": "data",
-        "direction": "I",
-        "left": "3",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
-      "btn": {
-        "direction": "I"
-      },
-      "btn2": {
+      "btn_start": {
         "direction": "I",
         "parameters": {
           "PortType": {
@@ -91,6 +91,12 @@
             "value_src": "ip_prop"
           }
         }
+      },
+      "A_droit": {
+        "direction": "I"
+      },
+      "B_droit": {
+        "direction": "I"
       }
     },
     "components": {
@@ -132,7 +138,17 @@
             "direction": "I"
           },
           "debutTransmission": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "data": {
             "direction": "I",
@@ -178,146 +194,6 @@
           }
         }
       },
-      "mult_gen_0": {
-        "vlnv": "xilinx.com:ip:mult_gen:12.0",
-        "xci_name": "design_1_mult_gen_0_0",
-        "xci_path": "ip\\design_1_mult_gen_0_0\\design_1_mult_gen_0_0.xci",
-        "inst_hier_path": "mult_gen_0",
-        "parameters": {
-          "ConstValue": {
-            "value": "416"
-          },
-          "MultType": {
-            "value": "Constant_Coefficient_Multiplier"
-          },
-          "OutputWidthHigh": {
-            "value": "15"
-          },
-          "PortAType": {
-            "value": "Unsigned"
-          },
-          "PortAWidth": {
-            "value": "4"
-          },
-          "Use_Custom_Output_Width": {
-            "value": "true"
-          }
-        }
-      },
-      "PWM_D": {
-        "vlnv": "xilinx.com:module_ref:PWM:1.0",
-        "xci_name": "design_1_PWM_0_0",
-        "xci_path": "ip\\design_1_PWM_0_0\\design_1_PWM_0_0.xci",
-        "inst_hier_path": "PWM_D",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "PWM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "H": {
-            "direction": "I"
-          },
-          "RESET": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "DIRECTION": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "Cyclique": {
-            "direction": "I",
-            "left": "15",
-            "right": "0",
-            "parameters": {
-              "LAYERED_METADATA": {
-                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "DIR": {
-            "direction": "O"
-          },
-          "PWM_D": {
-            "direction": "O"
-          }
-        }
-      },
-      "PWM_G": {
-        "vlnv": "xilinx.com:module_ref:PWM:1.0",
-        "xci_name": "design_1_PWM_D_0",
-        "xci_path": "ip\\design_1_PWM_D_0\\design_1_PWM_D_0.xci",
-        "inst_hier_path": "PWM_G",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "PWM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "H": {
-            "direction": "I"
-          },
-          "RESET": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "DIRECTION": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "Cyclique": {
-            "direction": "I",
-            "left": "15",
-            "right": "0",
-            "parameters": {
-              "LAYERED_METADATA": {
-                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 16}",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "DIR": {
-            "direction": "O"
-          },
-          "PWM_D": {
-            "direction": "O"
-          }
-        }
-      },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "design_1_util_vector_logic_0_0",
-        "xci_path": "ip\\design_1_util_vector_logic_0_0\\design_1_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
       "Diviseur_0": {
         "vlnv": "xilinx.com:module_ref:Diviseur:1.0",
         "xci_name": "design_1_Diviseur_0_0",
@@ -343,6 +219,252 @@
           }
         }
       },
+      "driver_moteur_D": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "design_1_driver_moteur_0_0",
+        "xci_path": "ip\\design_1_driver_moteur_0_0\\design_1_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_D",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "driver_moteur_G": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "design_1_driver_moteur_1_0",
+        "xci_path": "ip\\design_1_driver_moteur_1_0\\design_1_driver_moteur_1_0.xci",
+        "inst_hier_path": "driver_moteur_G",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_1_vio_0_0",
+        "xci_path": "ip\\design_1_vio_0_0\\design_1_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "2"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          },
+          "C_PROBE_OUT0_INIT_VAL": {
+            "value": "0x0"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE_OUT1_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "xci_path": "ip\\design_1_ila_0_0\\design_1_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "ALL_PROBE_SAME_MU_CNT": {
+            "value": "2"
+          },
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_DATA_DEPTH": {
+            "value": "8192"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE0_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE1_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "Diviseur_1": {
+        "vlnv": "xilinx.com:module_ref:Diviseur:1.0",
+        "xci_name": "design_1_Diviseur_0_1",
+        "xci_path": "ip\\design_1_Diviseur_0_1\\design_1_Diviseur_0_1.xci",
+        "inst_hier_path": "Diviseur_1",
+        "parameters": {
+          "division_horloge": {
+            "value": "25000"
+          },
+          "nb_pulse_haut": {
+            "value": "12500"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Diviseur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clk_us": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "ila_1": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_1",
+        "xci_path": "ip\\design_1_ila_0_1\\design_1_ila_0_1.xci",
+        "inst_hier_path": "ila_1",
+        "parameters": {
+          "ALL_PROBE_SAME_MU_CNT": {
+            "value": "2"
+          },
+          "C_ADV_TRIGGER": {
+            "value": "true"
+          },
+          "C_DATA_DEPTH": {
+            "value": "8192"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE0_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE1_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "design_1_decodeur_0_0",
+        "xci_path": "ip\\design_1_decodeur_0_0\\design_1_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I"
+          }
+        }
+      },
       "decodeur_1": {
         "vlnv": "xilinx.com:module_ref:decodeur:1.0",
         "xci_name": "design_1_decodeur_1_0",
@@ -354,10 +476,14 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "A": {
+          "encodeur_in_a": {
             "direction": "I"
           },
-          "B": {
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
             "direction": "I"
           },
           "vitesse": {
@@ -365,73 +491,17 @@
             "left": "15",
             "right": "0"
           },
-          "clk": {
-            "type": "clk",
+          "clk_125MHz": {
             "direction": "I"
           }
         }
       }
     },
     "nets": {
-      "H_1": {
-        "ports": [
-          "H2",
-          "transmissionDonnee_0/H",
-          "module_RS232_0/CLOCK",
-          "mult_gen_0/CLK",
-          "PWM_D/H",
-          "PWM_G/H",
-          "Diviseur_0/clk"
-        ]
-      },
-      "RESET_0_1": {
-        "ports": [
-          "RESET2",
-          "PWM_D/RESET",
-          "PWM_G/RESET"
-        ]
-      },
-      "PWM_0_DIR": {
-        "ports": [
-          "PWM_D/DIR",
-          "DIR2"
-        ]
-      },
-      "PWM": {
-        "ports": [
-          "PWM_D/PWM_D",
-          "PWM2"
-        ]
-      },
-      "PWM_G_DIR": {
-        "ports": [
-          "PWM_G/DIR",
-          "DIR3"
-        ]
-      },
-      "PWM_G_PWM_D": {
-        "ports": [
-          "PWM_G/PWM_D",
-          "PWM3"
-        ]
-      },
-      "A1_1": {
-        "ports": [
-          "A1",
-          "decodeur_1/A"
-        ]
-      },
-      "B1_1": {
-        "ports": [
-          "B1",
-          "decodeur_1/B"
-        ]
-      },
       "Diviseur_0_clk_us": {
         "ports": [
           "Diviseur_0/clk_us",
-          "transmissionDonnee_0/T1us",
-          "decodeur_1/clk"
+          "transmissionDonnee_0/T1us"
         ]
       },
       "xlconstant_4_dout": {
@@ -452,12 +522,6 @@
           "module_RS232_0/EN"
         ]
       },
-      "decodeur_1_vitesse": {
-        "ports": [
-          "decodeur_1/vitesse",
-          "DecodBin_ASCII_0/DataIn"
-        ]
-      },
       "module_RS232_0_uart_txd": {
         "ports": [
           "module_RS232_0/uart_txd",
@@ -470,42 +534,125 @@
           "module_RS232_0/uart_rxd"
         ]
       },
-      "A_0_1": {
-        "ports": [
-          "sw",
-          "mult_gen_0/A"
-        ]
-      },
-      "mult_gen_0_P": {
-        "ports": [
-          "mult_gen_0/P",
-          "PWM_D/Cyclique",
-          "PWM_G/Cyclique"
-        ]
-      },
-      "debutTransmission_0_1": {
-        "ports": [
-          "btn",
-          "transmissionDonnee_0/debutTransmission"
-        ]
-      },
-      "DIRECTION_0_1": {
-        "ports": [
-          "btn2",
-          "PWM_G/DIRECTION",
-          "util_vector_logic_0/Op1"
-        ]
-      },
-      "util_vector_logic_0_Res": {
-        "ports": [
-          "util_vector_logic_0/Res",
-          "PWM_D/DIRECTION"
-        ]
-      },
       "DecodBin_ASCII_0_DataOut": {
         "ports": [
           "DecodBin_ASCII_0/DataOut",
           "transmissionDonnee_0/data"
+        ]
+      },
+      "RESET2_1": {
+        "ports": [
+          "reset",
+          "driver_moteur_D/reset",
+          "driver_moteur_G/reset",
+          "decodeur_0/reset",
+          "decodeur_1/reset"
+        ]
+      },
+      "driver_moteur_D_pwm": {
+        "ports": [
+          "driver_moteur_D/pwm",
+          "PWM_D"
+        ]
+      },
+      "driver_moteur_D_dir": {
+        "ports": [
+          "driver_moteur_D/dir",
+          "DIR_D"
+        ]
+      },
+      "driver_moteur_G_pwm": {
+        "ports": [
+          "driver_moteur_G/pwm",
+          "PWM_G"
+        ]
+      },
+      "A1_1": {
+        "ports": [
+          "A_gauche",
+          "decodeur_0/encodeur_in_a"
+        ]
+      },
+      "B1_1": {
+        "ports": [
+          "B_gauche",
+          "decodeur_0/encodeur_in_b"
+        ]
+      },
+      "decodeur_0_vitesse": {
+        "ports": [
+          "decodeur_0/vitesse",
+          "vio_0/probe_in0",
+          "ila_0/probe1",
+          "DecodBin_ASCII_0/DataIn"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "driver_moteur_G/duty",
+          "ila_0/probe0"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "driver_moteur_D/duty",
+          "ila_1/probe0"
+        ]
+      },
+      "H_1": {
+        "ports": [
+          "clk_125Mhz",
+          "transmissionDonnee_0/H",
+          "module_RS232_0/CLOCK",
+          "Diviseur_0/clk",
+          "driver_moteur_G/clk_125",
+          "driver_moteur_D/clk_125",
+          "vio_0/clk",
+          "ila_0/clk",
+          "Diviseur_1/clk",
+          "ila_1/clk",
+          "decodeur_0/clk_125MHz",
+          "decodeur_1/clk_125MHz"
+        ]
+      },
+      "btn_1": {
+        "ports": [
+          "btn_start",
+          "transmissionDonnee_0/debutTransmission"
+        ]
+      },
+      "Diviseur_1_clk_us": {
+        "ports": [
+          "Diviseur_1/clk_us",
+          "ila_0/probe2",
+          "ila_1/probe2"
+        ]
+      },
+      "encodeur_in_a_0_1": {
+        "ports": [
+          "A_droit",
+          "decodeur_1/encodeur_in_a"
+        ]
+      },
+      "encodeur_in_b_0_1": {
+        "ports": [
+          "B_droit",
+          "decodeur_1/encodeur_in_b"
+        ]
+      },
+      "decodeur_1_vitesse": {
+        "ports": [
+          "decodeur_1/vitesse",
+          "vio_0/probe_in1",
+          "ila_1/probe1"
+        ]
+      },
+      "driver_moteur_G_dir": {
+        "ports": [
+          "driver_moteur_G/dir",
+          "DIR_G"
         ]
       }
     }

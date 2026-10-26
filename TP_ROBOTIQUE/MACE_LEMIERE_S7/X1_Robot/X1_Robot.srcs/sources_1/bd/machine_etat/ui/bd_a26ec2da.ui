@@ -1,0 +1,32 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.1043",
+   "Default View_TopLeft":"-523,-487",
+   "ExpandedHierarchyInLayout":"",
+   "commentid":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk_125 -pg 1 -lvl 0 -x -360 -y -350 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -360 -y -300 -defaultsOSRD
+preplace port PWM_D -pg 1 -lvl 3 -x 430 -y -140 -defaultsOSRD
+preplace port DIR_D -pg 1 -lvl 3 -x 430 -y -120 -defaultsOSRD
+preplace port PWM_G -pg 1 -lvl 3 -x 430 -y -280 -defaultsOSRD
+preplace port DIR_G -pg 1 -lvl 3 -x 430 -y -260 -defaultsOSRD
+preplace port btn_start -pg 1 -lvl 0 -x -360 -y -150 -defaultsOSRD
+preplace inst Machine_etat_0 -pg 1 -lvl 1 -x -160 -y -200 -defaultsOSRD
+preplace inst driver_moteur_0 -pg 1 -lvl 2 -x 300 -y -270 -defaultsOSRD
+preplace inst driver_moteur_1 -pg 1 -lvl 2 -x 300 -y -130 -defaultsOSRD
+preplace netloc Machine_etat_0_commande_vitesse_G 1 1 1 20 -250n
+preplace netloc Machine_etat_0_commande_vitesse_D 1 1 1 0 -190n
+preplace netloc clk_125_1 1 0 2 -330 -120 10
+preplace netloc reset_1 1 0 2 -340 -280 30
+preplace netloc driver_moteur_1_pwm 1 2 1 N -140
+preplace netloc driver_moteur_0_dir 1 2 1 N -260
+preplace netloc driver_moteur_0_pwm 1 2 1 N -280
+preplace netloc driver_moteur_1_dir 1 2 1 N -120
+preplace netloc btn_start_1 1 0 1 -320 -180n
+levelinfo -pg 1 -360 -160 300 430
+pagesize -pg 1 -db -bbox -sgen -470 -390 540 160
+"
+}
+

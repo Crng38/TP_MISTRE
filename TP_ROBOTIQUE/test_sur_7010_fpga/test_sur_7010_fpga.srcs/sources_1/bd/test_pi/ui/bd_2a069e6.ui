@@ -1,14 +1,12 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.06354",
-   "Default View_TopLeft":"-1467,-574",
+   "Default View_ScaleFactor":"1.5",
+   "Default View_TopLeft":"-1533,-721",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port CLK_50M -pg 1 -lvl 0 -x -1360 -y -420 -defaultsOSRD
 preplace port BP_K2 -pg 1 -lvl 0 -x -1360 -y -360 -defaultsOSRD
-preplace inst pulse_generator_0 -pg 1 -lvl 2 -x -710 -y -350 -defaultsOSRD
-preplace inst signal_gene_0 -pg 1 -lvl 2 -x -710 -y -40 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -x -710 -y -460 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 2 -x -710 -y -580 -defaultsOSRD
 preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x -420 -y -580 -defaultsOSRD
@@ -16,6 +14,8 @@ preplace inst util_vector_logic_1 -pg 1 -lvl 1 -x -1010 -y -360 -defaultsOSRD
 preplace inst mult_gen_0 -pg 1 -lvl 3 -x -420 -y -350 -defaultsOSRD
 preplace inst xlconstant_1 -pg 1 -lvl 3 -x -420 -y -80 -defaultsOSRD
 preplace inst ila_0 -pg 1 -lvl 5 -x 170 -y -420 -defaultsOSRD
+preplace inst pulse_generator_0 -pg 1 -lvl 2 -x -710 -y -350 -defaultsOSRD
+preplace inst signal_gene_0 -pg 1 -lvl 2 -x -710 -y -40 -defaultsOSRD
 preplace inst pi_0 -pg 1 -lvl 4 -x -110 -y -270 -defaultsOSRD
 preplace netloc clk_in1_0_1 1 0 2 N -420 -870
 preplace netloc xlconstant_0_dout 1 2 1 N -580

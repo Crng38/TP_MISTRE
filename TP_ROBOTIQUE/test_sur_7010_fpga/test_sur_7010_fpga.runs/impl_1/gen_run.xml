@@ -1,40 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1791204349">
-  <File Type="PA-TCL" Name="test_driver_pwm_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="test_driver_pwm_wrapper_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="test_driver_pwm_wrapper.msk"/>
-  <File Type="RDI-RDI" Name="test_driver_pwm_wrapper.vdi"/>
-  <File Type="BG-BIT" Name="test_driver_pwm_wrapper.bit"/>
-  <File Type="BG-DRC" Name="test_driver_pwm_wrapper.drc"/>
-  <File Type="BG-BGN" Name="test_driver_pwm_wrapper.bgn"/>
-  <File Type="BG-BIN" Name="test_driver_pwm_wrapper.bin"/>
-  <File Type="BITSTR-RBT" Name="test_driver_pwm_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="test_driver_pwm_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="test_driver_pwm_wrapper_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="test_driver_pwm_wrapper.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="test_driver_pwm_wrapper.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1792733380">
+  <File Type="BITSTR-BMM" Name="simu_pi_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="simu_pi_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="simu_pi_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="simu_pi_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="simu_pi_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="simu_pi_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="simu_pi_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="simu_pi_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="simu_pi_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="simu_pi_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="simu_pi_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="simu_pi_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="simu_pi_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="simu_pi_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="simu_pi_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="simu_pi_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="simu_pi_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="simu_pi_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="simu_pi_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="simu_pi_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="simu_pi_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="simu_pi_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="simu_pi_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="simu_pi_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="simu_pi_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="simu_pi_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="simu_pi_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="simu_pi_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="simu_pi_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="simu_pi_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="simu_pi_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="simu_pi_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="simu_pi_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="simu_pi_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="simu_pi_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="simu_pi_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="simu_pi_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="simu_pi_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="simu_pi_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="simu_pi_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="simu_pi_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="simu_pi_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="simu_pi_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="simu_pi_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="simu_pi_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="simu_pi_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="simu_pi_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="simu_pi_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="simu_pi_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="simu_pi_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="simu_pi_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="simu_pi_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="simu_pi_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="simu_pi_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="simu_pi_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="simu_pi_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="simu_pi_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="simu_pi_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="simu_pi_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="simu_pi_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="simu_pi_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="simu_pi_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="simu_pi_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="simu_pi_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="simu_pi_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="simu_pi_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="simu_pi_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="simu_pi_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="test_driver_pwm_wrapper.ltx"/>
-  <File Type="RCFI_FILE" Name="test_driver_pwm_wrapper.rcfi"/>
+  <File Type="BITSTR-LTX" Name="simu_pi_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="simu_pi_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="simu_pi_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="simu_pi_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="simu_pi_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="test_driver_pwm_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="test_driver_pwm_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="test_driver_pwm_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="test_driver_pwm_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="test_driver_pwm_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="test_driver_pwm_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="test_driver_pwm_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="test_driver_pwm_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="test_driver_pwm_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="test_driver_pwm_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="test_driver_pwm_wrapper_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="test_driver_pwm_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="test_driver_pwm_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="PDI-FILE" Name="test_driver_pwm_wrapper.pdi"/>
-  <File Type="CFI_FILE" Name="test_driver_pwm_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="test_driver_pwm_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="test_driver_pwm_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="test_driver_pwm_wrapper.rbd"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/driver_moteur.vhd">
@@ -43,15 +83,41 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/test_driver_pwm/test_driver_pwm.bd">
+    <File Path="$PSRCDIR/sources_1/new/pi_BF.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/filtre_moteur.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/simu_pi/simu_pi.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PGENDIR/sources_1/bd/test_driver_pwm/hdl/test_driver_pwm_wrapper.vhd">
+    <File Path="$PGENDIR/sources_1/bd/simu_pi/hdl/simu_pi_wrapper.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/generateur_encodeur.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decodeur.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -86,13 +152,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/decodeur.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/test_mesure_vitesse/test_mesure_vitesse.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -112,14 +171,6 @@
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/dsp_macro_0/dsp_macro_0.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -145,9 +196,40 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/test_pwm_driver/test_pwm_driver.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/test_pwm_driver/hdl/test_pwm_driver_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/test_mesure_vitesse_2/test_mesure_vitesse_2.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/mesure_statique_dyna/mesure_statique_dyna.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="test_driver_pwm_wrapper"/>
+      <Option Name="TopModule" Val="simu_pi_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -169,7 +251,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -179,22 +263,17 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_module_RS232_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_clk_wiz_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_driver_pwm_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_pi_signal_gene_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_transmissionDonnee_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_signal_gene_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_pi_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_DecodBin_ASCII_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_pi_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_pi_mult_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_pi_pulse_generator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_pi_BF_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_pi_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_vio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_generateur_frequence_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_mesure_vitesse_decodeur_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_driver_pwm_driver_moteur_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="test_driver_pwm_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_driver_moteur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simu_pi_filtre_moteur_0_0"/>
 </GenRun>

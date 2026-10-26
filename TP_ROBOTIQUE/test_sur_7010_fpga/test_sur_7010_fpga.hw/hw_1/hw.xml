@@ -7,9 +7,9 @@
   <device name="xc7z010_1" gui_info="dashboard1=hw_vios[xc7z010_1/hw_vio_1=VIO_PROBES_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z010_1" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/test_driver_pwm_wrapper.ltx"/>
-      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/test_driver_pwm_wrapper.ltx"/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/test_driver_pwm_wrapper.bit"/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/simu_pi_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/simu_pi_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/simu_pi_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
@@ -20,6 +20,12 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="simu_pi_i/decodeur_0_vitesse[15:0]" gui_info="hw_vios/hw_vio_1=0"/>
+    <Object name="simu_pi_i/filtre_moteur_0_sortie[15:0]" gui_info="hw_vios/hw_vio_1=0"/>
+    <Object name="simu_pi_i/modele_moteur_0_vitesse[15:0]" gui_info="hw_vios/hw_vio_1=1"/>
+    <Object name="simu_pi_i/pi_BF_0_y_out[15:0]" gui_info="hw_vios/hw_vio_1=1"/>
+    <Object name="simu_pi_i/vio_0_probe_out0[15:0]" gui_info="hw_vios/hw_vio_1=2"/>
+    <Object name="simu_pi_i/vio_0_probe_out1" gui_info="hw_vios/hw_vio_1=4"/>
     <Object name="test_driver_pwm_i/vio_0_probe_out0[15:0]" gui_info="hw_vios/hw_vio_1=0"/>
     <Object name="test_mesure_vitesse_i/decodeur_0_vitesse[15:0]" gui_info="hw_vios/hw_vio_1=1"/>
     <Object name="test_mesure_vitesse_i/util_vector_logic_0_Res" gui_info="hw_vios/hw_vio_1=1"/>
@@ -32,8 +38,11 @@
     <Object name="test_pi_i/pulse_generator_0_sig_out" gui_info="Trigger Setup=0"/>
     <Object name="test_pi_i/util_vector_logic_1_Res" gui_info="Trigger Setup=0"/>
   </ObjectList>
+  <ObjectList object_type="hw_sysmon" gui_info="">
+    <Object name="XADC" gui_info="hw_vios=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
+  </ObjectList>
   <ObjectList object_type="hw_vio" gui_info="">
-    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	786	Name	0	2147483647	15	404	404	Value	1	2147483647	15	132	132	Activity	2	2147483647	15	71	71	Direction	3	2147483647	15	84	84	VIO	4	2147483647	15	95	95			1	6	1	Name	Value	Activity	Direction	VIO"/>
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	814	Name	0	2147483647	15	398	398	Value	1	2147483647	15	122	122	Activity	2	2147483647	15	93	93	Direction	3	2147483647	15	106	106	VIO	4	2147483647	15	95	95			1	6	1	Name	Value	Activity	Direction	VIO"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
@@ -140,6 +149,126 @@
         <net name="test_pi_i/util_vector_logic_1_Res"/>
       </nets>
     </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="simu_pi_i/decodeur_0_vitesse[15]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[14]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[13]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[12]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[11]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[10]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[9]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[8]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[7]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[6]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[5]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[4]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[3]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[2]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[1]"/>
+        <net name="simu_pi_i/decodeur_0_vitesse[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[15]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[14]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[13]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[12]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[11]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[10]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[9]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[8]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[7]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[6]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[5]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[4]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[3]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[2]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[1]"/>
+        <net name="simu_pi_i/filtre_moteur_0_sortie[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[15]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[14]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[13]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[12]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[11]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[10]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[9]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[8]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[7]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[6]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[5]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[4]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[3]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[2]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[1]"/>
+        <net name="simu_pi_i/modele_moteur_0_vitesse[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="simu_pi_i/pi_BF_0_y_out[15]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[14]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[13]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[12]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[11]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[10]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[9]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[8]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[7]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[6]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[5]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[4]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[3]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[2]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[1]"/>
+        <net name="simu_pi_i/pi_BF_0_y_out[0]"/>
+      </nets>
+    </probe>
     <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
@@ -171,6 +300,51 @@
       </nets>
     </probe>
     <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="100"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="simu_pi_i/vio_0_probe_out0[15]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[14]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[13]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[12]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[11]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[10]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[9]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[8]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[7]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[6]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[5]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[4]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[3]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[2]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[1]"/>
+        <net name="simu_pi_i/vio_0_probe_out0[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="1"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="simu_pi_i/vio_0_probe_out1"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>

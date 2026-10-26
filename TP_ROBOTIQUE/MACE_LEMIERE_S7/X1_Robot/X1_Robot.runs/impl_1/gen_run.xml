@@ -1,102 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1790262014">
-  <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="design_1_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="OPT-DRC" Name="design_1_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
-  <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="design_1_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="design_1_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="design_1_wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="design_1_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="design_1_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="design_1_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="design_1_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="design_1_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="design_1_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="design_1_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="design_1_wrapper.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="design_1_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="design_1_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="design_1_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="design_1_wrapper.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="design_1_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="design_1_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="design_1_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="design_1_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="design_1_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="design_1_wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="design_1_wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_1_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="design_1_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="design_1_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="design_1_wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="design_1_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="design_1_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="design_1_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="design_1_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_1_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_1_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="design_1_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="design_1_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="design_1_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="design_1_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="design_1_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="design_1_wrapper.nky"/>
-  <File Type="PDI-FILE" Name="design_1_wrapper.pdi"/>
-  <File Type="RCFI_FILE" Name="design_1_wrapper.rcfi"/>
-  <File Type="CFI_FILE" Name="design_1_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="design_1_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="design_1_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="design_1_wrapper.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1792671215">
+  <File Type="BITSTR-BMM" Name="test_pi_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="test_pi_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="test_pi_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="test_pi_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="test_pi_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="test_pi_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="test_pi_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="test_pi_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="test_pi_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="test_pi_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="test_pi_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="test_pi_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="test_pi_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="test_pi_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="test_pi_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="test_pi_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="test_pi_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="test_pi_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="test_pi_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="test_pi_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="test_pi_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="test_pi_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="test_pi_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="test_pi_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="test_pi_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="test_pi_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="test_pi_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="test_pi_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="test_pi_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="test_pi_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="test_pi_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="test_pi_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="test_pi_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="test_pi_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="test_pi_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="test_pi_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="test_pi_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="test_pi_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="test_pi_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="test_pi_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="test_pi_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="test_pi_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="test_pi_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="test_pi_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="test_pi_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="test_pi_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="test_pi_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="test_pi_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="test_pi_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="test_pi_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="test_pi_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="test_pi_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="test_pi_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="test_pi_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="test_pi_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="test_pi_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="test_pi_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="test_pi_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="test_pi_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="test_pi_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="test_pi_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="test_pi_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="test_pi_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="test_pi_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="test_pi_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="test_pi_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="test_pi_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="test_pi_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="design_1_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
-  <File Type="BG-BGN" Name="design_1_wrapper.bgn"/>
-  <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
+  <File Type="BITSTR-LTX" Name="test_pi_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="test_pi_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="test_pi_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="test_pi_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="test_pi_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/PWM.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/pi_BF.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="E:/pi_BF.vhd"/>
+        <Attr Name="ImportTime" Val="1792652358"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/decodeur.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/decodeur.vhd"/>
+        <Attr Name="ImportTime" Val="1791035652"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/driver_moteur.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/driver_moteur.vhd"/>
+        <Attr Name="ImportTime" Val="1791192162"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/test_pi/test_pi.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/test_pi/hdl/test_pi_wrapper.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/decodeur.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Machine_etat.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Diviseur.vhd">
+    <File Path="$PSRCDIR/sources_1/bd/test_machine_etat/test_machine_etat.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/test_machine_etat/hdl/test_machine_etat_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Machine_etat_BF/Machine_etat_BF.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/Machine_etat_BF/hdl/Machine_etat_BF_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/transmissionDonnee.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/transmissionDonnee.vhd"/>
         <Attr Name="ImportTime" Val="1790249339"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -105,14 +162,23 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Downloads/DecodBin_ASCII.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/DecodBin_ASCII.vhd"/>
         <Attr Name="ImportTime" Val="1789980902"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Diviseur.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -120,13 +186,30 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/pi.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Downloads/pi.vhd"/>
+        <Attr Name="ImportTime" Val="1791185616"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/registre.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopModule" Val="test_pi_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -150,9 +233,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -166,10 +247,26 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_module_RS232_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Diviseur_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_transmissionDonnee_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_driver_moteur_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_pi_pi_BF_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DecodBin_ASCII_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_util_vector_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_mult_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_PWM_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_driver_moteur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_machine_etat_driver_moteur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_Diviseur_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_machine_etat_driver_moteur_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_driver_moteur_G_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_driver_moteur_D_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_Machine_etat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_decodeur_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_decodeur_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_PWM_D_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_pi_BF_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_pi_BF_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_decodeur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Machine_etat_BF_decodeur_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_machine_etat_Machine_etat_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_pi_decodeur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_pi_driver_moteur_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="test_pi_vio_0_0"/>
 </GenRun>

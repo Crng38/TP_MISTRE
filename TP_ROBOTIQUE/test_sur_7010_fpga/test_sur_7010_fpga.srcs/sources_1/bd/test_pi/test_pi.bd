@@ -10,8 +10,6 @@
       "tool_version": "2020.2"
     },
     "design_tree": {
-      "pulse_generator_0": "",
-      "signal_gene_0": "",
       "clk_wiz_0": "",
       "xlconstant_0": "",
       "util_vector_logic_0": "",
@@ -19,6 +17,8 @@
       "mult_gen_0": "",
       "xlconstant_1": "",
       "ila_0": "",
+      "pulse_generator_0": "",
+      "signal_gene_0": "",
       "pi_0": ""
     },
     "ports": {
@@ -36,96 +36,6 @@
       }
     },
     "components": {
-      "pulse_generator_0": {
-        "vlnv": "xilinx.com:module_ref:pulse_generator:1.0",
-        "xci_name": "test_pi_pulse_generator_0_0",
-        "xci_path": "ip\\test_pi_pulse_generator_0_0\\test_pi_pulse_generator_0_0.xci",
-        "inst_hier_path": "pulse_generator_0",
-        "parameters": {
-          "nb_clk_pulse_high": {
-            "value": "10"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pulse_generator",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "sig_bp": {
-            "direction": "I",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "test_pi_clk_in1_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "sig_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "signal_gene_0": {
-        "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
-        "xci_name": "test_pi_signal_gene_0_0",
-        "xci_path": "ip\\test_pi_signal_gene_0_0\\test_pi_signal_gene_0_0.xci",
-        "inst_hier_path": "signal_gene_0",
-        "parameters": {
-          "division_horloge": {
-            "value": "10000"
-          },
-          "nb_pulse_etat_haut": {
-            "value": "5000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "signal_gene",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "test_pi_clk_in1_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_out": {
-            "direction": "O"
-          }
-        }
-      },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "test_pi_clk_wiz_0_0",
@@ -345,6 +255,72 @@
           }
         }
       },
+      "pulse_generator_0": {
+        "vlnv": "xilinx.com:module_ref:pulse_generator:1.0",
+        "xci_name": "test_pi_pulse_generator_0_0",
+        "xci_path": "ip\\test_pi_pulse_generator_0_0\\test_pi_pulse_generator_0_0.xci",
+        "inst_hier_path": "pulse_generator_0",
+        "parameters": {
+          "nb_clk_pulse_high": {
+            "value": "10"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pulse_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sig_bp": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "sig_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "signal_gene_0": {
+        "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
+        "xci_name": "test_pi_signal_gene_0_0",
+        "xci_path": "ip\\test_pi_signal_gene_0_0\\test_pi_signal_gene_0_0.xci",
+        "inst_hier_path": "signal_gene_0",
+        "parameters": {
+          "division_horloge": {
+            "value": "10000"
+          },
+          "nb_pulse_etat_haut": {
+            "value": "5000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "signal_gene",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
       "pi_0": {
         "vlnv": "xilinx.com:module_ref:pi:1.0",
         "xci_name": "test_pi_pi_0_0",
@@ -444,8 +420,8 @@
       "signal_gene_0_clk_out": {
         "ports": [
           "signal_gene_0/clk_out",
-          "pulse_generator_0/clk",
-          "ila_0/clk"
+          "ila_0/clk",
+          "pulse_generator_0/clk"
         ]
       },
       "pi_0_y_out": {

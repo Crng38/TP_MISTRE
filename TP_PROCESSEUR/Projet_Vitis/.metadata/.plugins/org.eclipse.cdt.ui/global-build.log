@@ -1,30 +1,42 @@
-Nothing to build in platform 'PS_Only_ZyboZ7'
-
-17:26:29 **** Clean-only build of configuration Debug for project TP2 ****
-make clean 
-rm -rf  ./src/TP2_filter_FIR.o  ./src/TP2_filter_FIR.d  TP2.elf.size  TP2.elf
-rm: ne peut enlever `TP2.elf': Permission denied
-make: [makefile:55: clean] Error 1 (ignored)
-' '
-17:26:30 **** Incremental Build of configuration Debug for project TP2 ****
+18:24:46 **** Incremental Build of configuration Debug for project TP3_depuis_LAPTOP ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/TP2_filter_FIR.c'
+'Building file: ../src/TP1_Mes_Perf.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O3 -g3 -c -fmessage-length=0 -MT"src/TP2_filter_FIR.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/TP2_filter_FIR.d" -MT"src/TP2_filter_FIR.o" -o "src/TP2_filter_FIR.o" "../src/TP2_filter_FIR.c"
-'Finished building: ../src/TP2_filter_FIR.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/TP1_Mes_Perf.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/XADC_SingleCh14/export/XADC_SingleCh14/sw/XADC_SingleCh14/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/TP1_Mes_Perf.d" -MT"src/TP1_Mes_Perf.o" -o "src/TP1_Mes_Perf.o" "../src/TP1_Mes_Perf.c"
+../src/TP1_Mes_Perf.c: In function 'main':
+../src/TP1_Mes_Perf.c:94:4: warning: implicit declaration of function 'init_GPIO' [-Wimplicit-function-declaration]
+   94 |    init_GPIO(); //Init GPIO
+      |    ^~~~~~~~~
+../src/TP1_Mes_Perf.c:67:17: warning: unused variable 'CntValue1' [-Wunused-variable]
+   67 |    volatile u32 CntValue1 = 0;
+      |                 ^~~~~~~~~
+../src/TP1_Mes_Perf.c:65:27: warning: unused variable 'iWait' [-Wunused-variable]
+   65 |    volatile unsigned long iWait; //to make a non optimized wait loop
+      |                           ^~~~~
+../src/TP1_Mes_Perf.c: At top level:
+../src/TP1_Mes_Perf.c:183:6: warning: conflicting types for 'init_GPIO'
+  183 | void init_GPIO(void)
+      |      ^~~~~~~~~
+../src/TP1_Mes_Perf.c:94:4: note: previous implicit declaration of 'init_GPIO' was here
+   94 |    init_GPIO(); //Init GPIO
+      |    ^~~~~~~~~
+../src/TP1_Mes_Perf.c:43:16: warning: 'Intc' defined but not used [-Wunused-variable]
+   43 | static XScuGic Intc; //Instance pour les IT
+      |                ^~~~
+'Finished building: ../src/TP1_Mes_Perf.c'
 ' '
-'Building target: TP2.elf'
+'Building target: TP3_depuis_LAPTOP.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/PS_Only_ZyboZ7/export/PS_Only_ZyboZ7/sw/PS_Only_ZyboZ7/standalone_ps7_cortexa9_0/bsplib/lib -o "TP2.elf"  ./src/TP2_filter_FIR.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: TP2.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Thomas/Desktop/TP_MISTRE/TP_PROCESSEUR/Projet_Vitis/XADC_SingleCh14/export/XADC_SingleCh14/sw/XADC_SingleCh14/standalone_ps7_cortexa9_0/bsplib/lib -o "TP3_depuis_LAPTOP.elf"  ./src/TP1_Mes_Perf.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TP3_depuis_LAPTOP.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size TP2.elf  |tee "TP2.elf.size"
+arm-none-eabi-size TP3_depuis_LAPTOP.elf  |tee "TP3_depuis_LAPTOP.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  54884	   4684	  23696	  83264	  14540	TP2.elf
-'Finished building: TP2.elf.size'
+  41576	   1176	  24680	  67432	  10768	TP3_depuis_LAPTOP.elf
+'Finished building: TP3_depuis_LAPTOP.elf.size'
 ' '

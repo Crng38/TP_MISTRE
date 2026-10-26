@@ -52,7 +52,7 @@ end driver_moteur; --Fin de déclaration
 
 architecture Behavioral of driver_moteur is --Architecture du driver
     --Liste des signaux internes
-    signal compteur: integer range 0 to 125000000/pwm_frequency -1 := 20000; --Signal de compteur
+    signal compteur: integer range 0 to 125000000/pwm_frequency -1 := 0; --Signal de compteur
 begin
     compteur_increment: process(clk_125) --Process sensible à l'horloge 125 MHz pour le compteur
     begin

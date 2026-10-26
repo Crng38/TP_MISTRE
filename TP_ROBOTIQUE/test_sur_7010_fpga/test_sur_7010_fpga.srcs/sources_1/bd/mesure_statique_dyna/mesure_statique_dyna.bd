@@ -10,12 +10,12 @@
       "tool_version": "2020.2"
     },
     "design_tree": {
-      "pi_0": "",
-      "driver_moteur_0": "",
-      "decodeur_0": "",
       "vio_0": "",
       "ila_0": "",
-      "signal_gene_0": ""
+      "decodeur_0": "",
+      "signal_gene_0": "",
+      "pi_0": "",
+      "driver_moteur_0": ""
     },
     "ports": {
       "clk_125_0": {
@@ -39,103 +39,6 @@
       }
     },
     "components": {
-      "pi_0": {
-        "vlnv": "xilinx.com:module_ref:pi:1.0",
-        "xci_name": "mesure_statique_dyna_pi_0_0",
-        "xci_path": "ip\\mesure_statique_dyna_pi_0_0\\mesure_statique_dyna_pi_0_0.xci",
-        "inst_hier_path": "pi_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pi",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_125": {
-            "direction": "I"
-          },
-          "target": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "feedback": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "y_out": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "driver_moteur_0": {
-        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
-        "xci_name": "mesure_statique_dyna_driver_moteur_0_0",
-        "xci_path": "ip\\mesure_statique_dyna_driver_moteur_0_0\\mesure_statique_dyna_driver_moteur_0_0.xci",
-        "inst_hier_path": "driver_moteur_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "driver_moteur",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk_125": {
-            "direction": "I"
-          },
-          "pwm": {
-            "direction": "O"
-          },
-          "dir": {
-            "direction": "O"
-          },
-          "duty": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "decodeur_0": {
-        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
-        "xci_name": "mesure_statique_dyna_decodeur_0_0",
-        "xci_path": "ip\\mesure_statique_dyna_decodeur_0_0\\mesure_statique_dyna_decodeur_0_0.xci",
-        "inst_hier_path": "decodeur_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "decodeur",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "encodeur_in_a": {
-            "direction": "I"
-          },
-          "encodeur_in_b": {
-            "direction": "I"
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "vitesse": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "clk_125MHz": {
-            "direction": "I"
-          }
-        }
-      },
       "vio_0": {
         "vlnv": "xilinx.com:ip:vio:3.0",
         "xci_name": "mesure_statique_dyna_vio_0_0",
@@ -203,6 +106,37 @@
           }
         }
       },
+      "decodeur_0": {
+        "vlnv": "xilinx.com:module_ref:decodeur:1.0",
+        "xci_name": "mesure_statique_dyna_decodeur_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_decodeur_0_0\\mesure_statique_dyna_decodeur_0_0.xci",
+        "inst_hier_path": "decodeur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodeur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "encodeur_in_a": {
+            "direction": "I"
+          },
+          "encodeur_in_b": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "vitesse": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk_125MHz": {
+            "direction": "I"
+          }
+        }
+      },
       "signal_gene_0": {
         "vlnv": "xilinx.com:module_ref:signal_gene:1.0",
         "xci_name": "mesure_statique_dyna_signal_gene_0_0",
@@ -232,27 +166,93 @@
             "direction": "O"
           }
         }
+      },
+      "pi_0": {
+        "vlnv": "xilinx.com:module_ref:pi:1.0",
+        "xci_name": "mesure_statique_dyna_pi_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_pi_0_0\\mesure_statique_dyna_pi_0_0.xci",
+        "inst_hier_path": "pi_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pi",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "target": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "feedback": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "y_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "driver_moteur_0": {
+        "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
+        "xci_name": "mesure_statique_dyna_driver_moteur_0_0",
+        "xci_path": "ip\\mesure_statique_dyna_driver_moteur_0_0\\mesure_statique_dyna_driver_moteur_0_0.xci",
+        "inst_hier_path": "driver_moteur_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "driver_moteur",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_125": {
+            "direction": "I"
+          },
+          "pwm": {
+            "direction": "O"
+          },
+          "dir": {
+            "direction": "O"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
       "clk_125_0_1": {
         "ports": [
           "clk_125_0",
-          "driver_moteur_0/clk_125",
-          "decodeur_0/clk_125MHz",
           "vio_0/clk",
           "ila_0/clk",
+          "decodeur_0/clk_125MHz",
           "signal_gene_0/clk",
-          "pi_0/clk_125"
+          "pi_0/clk_125",
+          "driver_moteur_0/clk_125"
         ]
       },
       "reset_0_1": {
         "ports": [
           "reset_0",
-          "driver_moteur_0/reset",
           "decodeur_0/reset",
           "signal_gene_0/rst",
-          "pi_0/reset"
+          "pi_0/reset",
+          "driver_moteur_0/reset"
         ]
       },
       "encodeur_in_a_0_1": {
@@ -282,23 +282,23 @@
       "vio_0_probe_out0": {
         "ports": [
           "pi_0/y_out",
-          "driver_moteur_0/duty",
-          "ila_0/probe1"
+          "ila_0/probe1",
+          "driver_moteur_0/duty"
         ]
       },
       "decodeur_0_vitesse": {
         "ports": [
           "decodeur_0/vitesse",
           "vio_0/probe_in0",
-          "pi_0/feedback",
-          "ila_0/probe2"
+          "ila_0/probe2",
+          "pi_0/feedback"
         ]
       },
       "vio_0_probe_out1": {
         "ports": [
           "vio_0/probe_out0",
-          "pi_0/target",
-          "ila_0/probe0"
+          "ila_0/probe0",
+          "pi_0/target"
         ]
       },
       "signal_gene_0_clk_out": {

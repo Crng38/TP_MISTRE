@@ -7,12 +7,11 @@
       "name": "test_pwm_driver",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
-      "driver_moteur_0": "",
-      "vio_0": ""
+      "vio_0": "",
+      "driver_moteur_0": ""
     },
     "ports": {
       "clk_125": {
@@ -20,17 +19,7 @@
       },
       "BP2": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "PWM": {
         "direction": "O"
@@ -40,6 +29,20 @@
       }
     },
     "components": {
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "test_pwm_driver_vio_0_0",
+        "xci_path": "ip\\test_pwm_driver_vio_0_0\\test_pwm_driver_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
       "driver_moteur_0": {
         "vlnv": "xilinx.com:module_ref:driver_moteur:1.0",
         "xci_name": "test_pwm_driver_driver_moteur_0_0",
@@ -70,20 +73,6 @@
             "right": "0"
           }
         }
-      },
-      "vio_0": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "test_pwm_driver_vio_0_0",
-        "xci_path": "ip\\test_pwm_driver_vio_0_0\\test_pwm_driver_vio_0_0.xci",
-        "inst_hier_path": "vio_0",
-        "parameters": {
-          "C_NUM_PROBE_IN": {
-            "value": "0"
-          },
-          "C_PROBE_OUT0_WIDTH": {
-            "value": "16"
-          }
-        }
       }
     },
     "nets": {
@@ -96,8 +85,8 @@
       "clk_125_0_1": {
         "ports": [
           "clk_125",
-          "driver_moteur_0/clk_125",
-          "vio_0/clk"
+          "vio_0/clk",
+          "driver_moteur_0/clk_125"
         ]
       },
       "reset_0_1": {
