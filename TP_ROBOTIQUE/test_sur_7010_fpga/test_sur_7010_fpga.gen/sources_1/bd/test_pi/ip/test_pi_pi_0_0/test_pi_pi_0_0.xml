@@ -129,14 +129,19 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.b">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>div_a</spirit:name>
+        <spirit:displayName>Div A</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.div_a">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>div_b</spirit:name>
+        <spirit:displayName>Div B</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.div_b">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>Fe</spirit:name>
         <spirit:displayName>Fe</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Fe">5000</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>coeff_decalage</spirit:name>
-        <spirit:displayName>Coeff Decalage</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.coeff_decalage">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>clipping_low</spirit:name>
@@ -163,14 +168,19 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.b">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>div_a</spirit:name>
+      <spirit:displayName>Div A</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.div_a">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>div_b</spirit:name>
+      <spirit:displayName>Div B</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.div_b">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>Fe</spirit:name>
       <spirit:displayName>Fe</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Fe">5000</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>coeff_decalage</spirit:name>
-      <spirit:displayName>Coeff Decalage</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.coeff_decalage">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clipping_low</spirit:name>

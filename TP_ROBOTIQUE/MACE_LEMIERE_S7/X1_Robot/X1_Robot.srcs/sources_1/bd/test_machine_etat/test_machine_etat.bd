@@ -7,8 +7,7 @@
       "name": "test_machine_etat",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
       "driver_moteur_G": "",
@@ -149,8 +148,8 @@
       "clk_125Mhz_1": {
         "ports": [
           "clk_125Mhz",
-          "driver_moteur_D/clk_125",
           "driver_moteur_G/clk_125",
+          "driver_moteur_D/clk_125",
           "Machine_etat_0/clk"
         ]
       },

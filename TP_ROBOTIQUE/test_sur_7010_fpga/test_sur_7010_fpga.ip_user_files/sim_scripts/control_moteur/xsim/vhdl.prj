@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"../../../bd/control_moteur/ip/control_moteur_clk_wiz_0_0/control_moteur_clk_wiz_0_0_sim_netlist.vhdl" \
+"../../../bd/control_moteur/ip/control_moteur_vio_0_0/sim/control_moteur_vio_0_0.vhd" \
+"../../../bd/control_moteur/ip/control_moteur_util_vector_logic_0_0/control_moteur_util_vector_logic_0_0_sim_netlist.vhdl" \
+"../../../bd/control_moteur/ip/control_moteur_driver_moteur_0_0/sim/control_moteur_driver_moteur_0_0.vhd" \
+"../../../bd/control_moteur/ip/control_moteur_decodeur_0_0/sim/control_moteur_decodeur_0_0.vhd" \
+"../../../bd/control_moteur/ip/control_moteur_ila_0_0/sim/control_moteur_ila_0_0.vhd" \
+"../../../bd/control_moteur/ip/control_moteur_signal_gene_0_0/sim/control_moteur_signal_gene_0_0.vhd" \
+"../../../bd/control_moteur/sim/control_moteur.vhd" \
+
+nosort

@@ -7,8 +7,7 @@
       "name": "Machine_etat_BF",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
       "driver_moteur_D": "",
@@ -375,8 +374,8 @@
       "reset_1": {
         "ports": [
           "reset",
-          "driver_moteur_G/reset",
           "driver_moteur_D/reset",
+          "driver_moteur_G/reset",
           "Machine_etat_0/reset",
           "decodeur_0/reset",
           "decodeur_1/reset",

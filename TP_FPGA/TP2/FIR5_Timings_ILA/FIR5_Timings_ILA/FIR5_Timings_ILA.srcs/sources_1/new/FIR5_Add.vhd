@@ -27,7 +27,7 @@ begin
 	begin
 		if (Clk'EVENT and CLk='1') then
 			y <= SUM(30 downto 15);		--div by 2^15
-			-SUM <= M0+M1+M2+M3+M4;
+			SUM <= M0+M1+M2+M3+M4;
 		end if;
 	end process;
 

@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.5",
-   "Default View_TopLeft":"-405,-206",
+   "Default View_TopLeft":"-405,-207",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -15,8 +15,8 @@ preplace inst vio_0 -pg 1 -lvl 1 -x 430 -y 140 -defaultsOSRD
 preplace inst ila_0 -pg 1 -lvl 3 -x 970 -y 320 -defaultsOSRD
 preplace inst decodeur_0 -pg 1 -lvl 1 -x 430 -y 310 -defaultsOSRD
 preplace inst signal_gene_0 -pg 1 -lvl 2 -x 700 -y 460 -defaultsOSRD
-preplace inst pi_0 -pg 1 -lvl 3 -x 970 -y 150 -defaultsOSRD
 preplace inst driver_moteur_0 -pg 1 -lvl 1 -x 430 -y -30 -defaultsOSRD
+preplace inst pi_0 -pg 1 -lvl 3 -x 970 -y 150 -defaultsOSRD
 preplace netloc clk_125_0_1 1 0 3 40 220 590 220 820
 preplace netloc reset_0_1 1 0 3 30 60 580 120 N
 preplace netloc encodeur_in_a_0_1 1 0 1 20 280n

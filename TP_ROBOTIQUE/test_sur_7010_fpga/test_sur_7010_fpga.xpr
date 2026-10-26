@@ -48,20 +48,20 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="207"/>
+    <Option Name="WTXSimLaunchSim" Val="210"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="15"/>
-    <Option Name="WTModelSimExportSim" Val="15"/>
-    <Option Name="WTQuestaExportSim" Val="15"/>
-    <Option Name="WTIesExportSim" Val="15"/>
-    <Option Name="WTVcsExportSim" Val="15"/>
-    <Option Name="WTRivieraExportSim" Val="15"/>
-    <Option Name="WTActivehdlExportSim" Val="15"/>
+    <Option Name="WTXSimExportSim" Val="17"/>
+    <Option Name="WTModelSimExportSim" Val="17"/>
+    <Option Name="WTQuestaExportSim" Val="17"/>
+    <Option Name="WTIesExportSim" Val="17"/>
+    <Option Name="WTVcsExportSim" Val="17"/>
+    <Option Name="WTRivieraExportSim" Val="17"/>
+    <Option Name="WTActivehdlExportSim" Val="17"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -102,20 +102,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_clk_wiz_0_0/simu_pi_clk_wiz_0_0.xci">
-          <Proxy FileSetName="simu_pi_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_driver_moteur_0_0/simu_pi_driver_moteur_0_0.xci">
-          <Proxy FileSetName="simu_pi_driver_moteur_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_pi_BF_0_0/simu_pi_pi_BF_0_0.xci">
-          <Proxy FileSetName="simu_pi_pi_BF_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_vio_0_0/simu_pi_vio_0_0.xci">
           <Proxy FileSetName="simu_pi_vio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_filtre_moteur_0_0/simu_pi_filtre_moteur_0_0.xci">
           <Proxy FileSetName="simu_pi_filtre_moteur_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_pi_BF_0_0/simu_pi_pi_BF_0_0.xci">
+          <Proxy FileSetName="simu_pi_pi_BF_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_clk_wiz_0_0/simu_pi_clk_wiz_0_0.xci">
+          <Proxy FileSetName="simu_pi_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="simu_pi.bd" FileRelPathName="ip/simu_pi_driver_moteur_0_0/simu_pi_driver_moteur_0_0.xci">
+          <Proxy FileSetName="simu_pi_driver_moteur_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/simu_pi/hdl/simu_pi_wrapper.vhd">
@@ -175,14 +175,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="test_mesure_vitesse.bd" FileRelPathName="ip/test_mesure_vitesse_module_RS232_0_0/test_mesure_vitesse_module_RS232_0_0.xci">
-          <Proxy FileSetName="test_mesure_vitesse_module_RS232_0_0"/>
+        <CompFileExtendedInfo CompFileName="test_mesure_vitesse.bd" FileRelPathName="ip/test_mesure_vitesse_transmissionDonnee_0_1/test_mesure_vitesse_transmissionDonnee_0_1.xci">
+          <Proxy FileSetName="test_mesure_vitesse_transmissionDonnee_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mesure_vitesse.bd" FileRelPathName="ip/test_mesure_vitesse_clk_wiz_1/test_mesure_vitesse_clk_wiz_1.xci">
           <Proxy FileSetName="test_mesure_vitesse_clk_wiz_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="test_mesure_vitesse.bd" FileRelPathName="ip/test_mesure_vitesse_transmissionDonnee_0_1/test_mesure_vitesse_transmissionDonnee_0_1.xci">
-          <Proxy FileSetName="test_mesure_vitesse_transmissionDonnee_0_1"/>
+        <CompFileExtendedInfo CompFileName="test_mesure_vitesse.bd" FileRelPathName="ip/test_mesure_vitesse_module_RS232_0_0/test_mesure_vitesse_module_RS232_0_0.xci">
+          <Proxy FileSetName="test_mesure_vitesse_module_RS232_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="test_mesure_vitesse.bd" FileRelPathName="ip/test_mesure_vitesse_vio_0_0/test_mesure_vitesse_vio_0_0.xci">
           <Proxy FileSetName="test_mesure_vitesse_vio_0_0"/>
@@ -257,6 +257,22 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/mesure_statique_dyna/mesure_statique_dyna.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/control_moteur/control_moteur.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/test_moteur_perso_pi/test_moteur_perso_pi.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -524,9 +540,7 @@
     </Run>
     <Run Id="simu_pi_driver_moteur_0_0_synth_1" Type="Ft3:Synth" SrcSet="simu_pi_driver_moteur_0_0" Part="xc7z010clg400-1" ConstrsSet="simu_pi_driver_moteur_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simu_pi_driver_moteur_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simu_pi_driver_moteur_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -536,9 +550,7 @@
     </Run>
     <Run Id="simu_pi_pi_BF_0_0_synth_1" Type="Ft3:Synth" SrcSet="simu_pi_pi_BF_0_0" Part="xc7z010clg400-1" ConstrsSet="simu_pi_pi_BF_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simu_pi_pi_BF_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simu_pi_pi_BF_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -548,9 +560,7 @@
     </Run>
     <Run Id="simu_pi_filtre_moteur_0_0_synth_1" Type="Ft3:Synth" SrcSet="simu_pi_filtre_moteur_0_0" Part="xc7z010clg400-1" ConstrsSet="simu_pi_filtre_moteur_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/simu_pi_filtre_moteur_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simu_pi_filtre_moteur_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -560,9 +570,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -733,9 +741,7 @@
     </Run>
     <Run Id="simu_pi_driver_moteur_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="simu_pi_driver_moteur_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simu_pi_driver_moteur_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simu_pi_driver_moteur_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -752,9 +758,7 @@
     </Run>
     <Run Id="simu_pi_pi_BF_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="simu_pi_pi_BF_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simu_pi_pi_BF_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simu_pi_pi_BF_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -771,9 +775,7 @@
     </Run>
     <Run Id="simu_pi_filtre_moteur_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="simu_pi_filtre_moteur_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="simu_pi_filtre_moteur_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/simu_pi_filtre_moteur_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"test_machine_etat": {
-			"proto_instances": {
-			}
-		}
-	}
-}

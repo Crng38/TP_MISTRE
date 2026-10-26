@@ -41,8 +41,9 @@ architecture Behavioral of sim_pi is
     generic (
         a: integer := 10; --Coefficient a de l'équation aux différences
         b: integer := 1; --Coefficient b de l'équation aux différences
+        div_a: integer := 1; --Coefficient de division calcul y_k
+        div_b: integer := 1; --Coefficient de division calcul y_k
         Fe: integer := 5000; --Valeur de la fréquence d'échzntillonage
-        coeff_decalage: integer := 0; --Coefficient de pre/post shifting
         clipping_low: integer := -6249; --Clipping bas
         clipping_high: integer := 6249); --Clipping haut
     Port ( reset : in STD_LOGIC; --Signal de reset du système

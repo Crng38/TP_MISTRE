@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"Machine_etat_BF": {
-			"proto_instances": {
-			}
-		}
-	}
-}

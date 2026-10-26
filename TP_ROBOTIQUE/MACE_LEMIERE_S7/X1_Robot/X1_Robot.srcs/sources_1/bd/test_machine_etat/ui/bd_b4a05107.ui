@@ -1,31 +1,31 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-296,-324",
+   "Default View_ScaleFactor":"1.5",
+   "Default View_TopLeft":"-626,-506",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port clk_125Mhz -pg 1 -lvl 0 -x -30 -y -220 -defaultsOSRD
 preplace port reset -pg 1 -lvl 0 -x -30 -y -190 -defaultsOSRD
 preplace port btn_start -pg 1 -lvl 0 -x -30 -y -60 -defaultsOSRD
-preplace port PWM_G -pg 1 -lvl 3 -x 680 -y -200 -defaultsOSRD
+preplace port PWM_G -pg 1 -lvl 3 -x 680 -y -210 -defaultsOSRD
 preplace port DIR_G -pg 1 -lvl 3 -x 680 -y -180 -defaultsOSRD
-preplace port PWM_D -pg 1 -lvl 3 -x 680 -y 0 -defaultsOSRD
+preplace port PWM_D -pg 1 -lvl 3 -x 680 -y -10 -defaultsOSRD
 preplace port DIR_D -pg 1 -lvl 3 -x 680 -y 20 -defaultsOSRD
 preplace inst driver_moteur_G -pg 1 -lvl 2 -x 470 -y -190 -defaultsOSRD
 preplace inst driver_moteur_D -pg 1 -lvl 2 -x 470 -y 10 -defaultsOSRD
 preplace inst Machine_etat_0 -pg 1 -lvl 1 -x 170 -y -80 -defaultsOSRD
-preplace netloc clk_125Mhz_1 1 0 2 0 -170 340
+preplace netloc clk_125Mhz_1 1 0 2 0 -170 330
 preplace netloc btn_start_1 1 0 1 N -60
-preplace netloc Machine_etat_0_commande_vitesse_G 1 1 1 350 -170n
-preplace netloc Machine_etat_0_commande_vitesse_D 1 1 1 330 -60n
-preplace netloc reset_1 1 0 2 -10 -160 360
-preplace netloc driver_moteur_D_pwm 1 2 1 N 0
+preplace netloc Machine_etat_0_commande_vitesse_G 1 1 1 340 -170n
+preplace netloc Machine_etat_0_commande_vitesse_D 1 1 1 320 -60n
+preplace netloc reset_1 1 0 2 -10 -160 350
+preplace netloc driver_moteur_D_pwm 1 2 1 580 -10n
 preplace netloc driver_moteur_D_dir 1 2 1 N 20
 preplace netloc driver_moteur_G_dir 1 2 1 N -180
-preplace netloc driver_moteur_G_pwm 1 2 1 N -200
+preplace netloc driver_moteur_G_pwm 1 2 1 580 -210n
 levelinfo -pg 1 -30 170 470 680
-pagesize -pg 1 -db -bbox -sgen -160 -370 790 160
+pagesize -pg 1 -db -bbox -sgen -160 -370 780 160
 "
 }
 0

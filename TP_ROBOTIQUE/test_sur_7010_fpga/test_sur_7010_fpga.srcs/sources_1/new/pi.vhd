@@ -36,8 +36,9 @@ entity pi is
     generic (
         a: integer := 10; --Coefficient a de l'équation aux différences
         b: integer := 1; --Coefficient b de l'équation aux différences
+        div_a: integer := 1; --Coefficient de division calcul y_k
+        div_b: integer := 1; --Coefficient de division calcul y_k
         Fe: integer := 5000; --Valeur de la fréquence d'échzntillonage
-        coeff_decalage: integer := 0; --Coefficient de pre/post shifting
         clipping_low: integer := -6249; --Clipping bas
         clipping_high: integer := 6249); --Clipping haut
     Port ( reset : in STD_LOGIC; --Signal de reset du système
@@ -50,8 +51,9 @@ end pi;
 architecture Behavioral of pi is
     signal compteur : integer := 0; --Compteur pour la synchronissité
     signal y_k: integer := 0; --Représentation interne en integer signal de sortie
+    signal y_k_1: integer := 0; --Représentation interne en integer signal de sortie
     signal epsilon_k_1: integer range -32768 to 32767 := 0; --Signal représentant la valeur d'entrée précédente 
-    signal epsilon: integer := 0; --Différence calculée en interne sous forme de integer
+    signal epsilon_k: integer := 0; --Différence calculée en interne sous forme de integer
     signal y_out_sign: signed(32 downto 0) := (others => '0'); --Valeur de sortie sous forme de signé à shifter
 begin
     -- Composant
@@ -60,12 +62,15 @@ begin
         if(rising_edge(clk_125)) then --Si front montant horloge
             if (reset = '1') then --Si reset actif
                 compteur <= 0; --RAZ compteur
-                y_k <= 0; --RAZ signal interne
+                epsilon_k_1 <= 0; --RAZ
+                epsilon_k <= 0; --RAZ
+                y_k_1 <= 0; --RAZ
             else
                 if(compteur = 125000000/Fe -1) then --Si le compteur est à la valeur maximale
                     compteur <= 0; --RAZ compteur
-                    y_k <= y_k + a*(epsilon - epsilon_k_1) + b*(epsilon + epsilon_k_1); --Calcul valeur sortie actuelle sous forme d'équation
-                    epsilon_k_1 <= epsilon; --Sauvegarde de la valeur précédente de espilon
+                    y_k_1 <= y_k; --Sauvegarde de la valeur précédente de yk
+                    epsilon_k_1 <= epsilon_k; --Sauvegarde de la valeur précédente de espilon
+                    epsilon_k <= to_integer(signed(target)) - to_integer(signed(feedback)); --Calcul epsilon
                 else --Sinon
                     compteur <= compteur + 1; --Incrémentation compteur
                 end if;
@@ -74,9 +79,8 @@ begin
     end process;
     
     --Combinatoire de sortie
-    epsilon <= 0 when (reset = '1')  else (to_integer(signed(target)) - to_integer(signed(feedback))); --Calcul epsilon à tout instant
-    y_out_sign <= (others => '0') when (reset = '1') else shift_right(to_signed(y_k, 33), coeff_decalage); --hift de la sortie
-    y_out <= std_logic_vector(y_out_sign(15 downto 0)) when ((to_integer(y_out_sign) >= clipping_low) and (to_integer(y_out_sign) <= clipping_high)) --Assignation sortie
-        else std_logic_vector(to_signed(clipping_low, 16)) when (to_integer(y_out_sign) < clipping_low) --Clipping low
+    y_k <= y_k_1 + a/div_a*(epsilon_k - epsilon_k_1) + b/div_b*(epsilon_k + epsilon_k_1); --Calcul valeur sortie actuelle sous forme d'équation
+    y_out <= std_logic_vector(to_signed(y_k, 16)) when (y_k >= clipping_low) and (y_k <= clipping_high) --Assignation sortie
+        else std_logic_vector(to_signed(clipping_low, 16)) when (y_k < clipping_low) --Clipping low
         else std_logic_vector(to_signed(clipping_high, 16)); --Clipping high
 end Behavioral;
